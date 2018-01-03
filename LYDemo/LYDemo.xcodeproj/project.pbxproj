@@ -8,24 +8,59 @@
 
 /* Begin PBXBuildFile section */
 		C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */; };
-		C61B36301FFB8BBD0080BFDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B362F1FFB8BBD0080BFDE /* ViewController.m */; };
 		C61B36331FFB8BBD0080BFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B36311FFB8BBD0080BFDE /* Main.storyboard */; };
 		C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61B36341FFB8BBD0080BFDE /* Assets.xcassets */; };
 		C61B36381FFB8BBD0080BFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B36361FFB8BBD0080BFDE /* LaunchScreen.storyboard */; };
 		C61B363B1FFB8BBD0080BFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B363A1FFB8BBD0080BFDE /* main.m */; };
+		C63A16231FFC78A70030974E /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16221FFC78A70030974E /* Tools.m */; };
+		C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16241FFC79FA0030974E /* NSString+Valid.m */; };
+		C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16271FFC79FA0030974E /* UIImageView+RotateImgV.m */; };
+		C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */; };
+		C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16301FFCBC980030974E /* AppDelegate+RootController.m */; };
+		C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16341FFCBE990030974E /* BaseTabBarController.m */; };
+		C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16361FFCBE9A0030974E /* BaseViewController.m */; };
+		C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16371FFCBE9A0030974E /* BaseNavigationController.m */; };
+		C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16421FFCCFC70030974E /* HomeViewController.m */; };
+		C63A16461FFCD0540030974E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16451FFCD0540030974E /* MineViewController.m */; };
+		C63A16491FFCD0640030974E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16481FFCD0640030974E /* SecondViewController.m */; };
+		C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A164B1FFCD06F0030974E /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C61B36281FFB8BBD0080BFDE /* LYDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61B362B1FFB8BBD0080BFDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C61B362E1FFB8BBD0080BFDE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C61B362F1FFB8BBD0080BFDE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C61B36321FFB8BBD0080BFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C61B36341FFB8BBD0080BFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61B36371FFB8BBD0080BFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C61B36391FFB8BBD0080BFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61B363A1FFB8BBD0080BFDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C63A16171FFC73CF0030974E /* LYDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDemo.pch; sourceTree = "<group>"; };
+		C63A16201FFC78880030974E /* LYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCategory.h; sourceTree = "<group>"; };
+		C63A16211FFC78A70030974E /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		C63A16221FFC78A70030974E /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		C63A16241FFC79FA0030974E /* NSString+Valid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Valid.m"; sourceTree = "<group>"; };
+		C63A16251FFC79FA0030974E /* NSString+Valid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Valid.h"; sourceTree = "<group>"; };
+		C63A16261FFC79FA0030974E /* UIImageView+RotateImgV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RotateImgV.h"; sourceTree = "<group>"; };
+		C63A16271FFC79FA0030974E /* UIImageView+RotateImgV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RotateImgV.m"; sourceTree = "<group>"; };
+		C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
+		C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
+		C63A16301FFCBC980030974E /* AppDelegate+RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RootController.m"; sourceTree = "<group>"; };
+		C63A16311FFCBC980030974E /* AppDelegate+RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RootController.h"; sourceTree = "<group>"; };
+		C63A16341FFCBE990030974E /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		C63A16351FFCBE990030974E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C63A16361FFCBE9A0030974E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C63A16371FFCBE9A0030974E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		C63A16381FFCBE9A0030974E /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		C63A16391FFCBE9A0030974E /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		C63A16411FFCCFC70030974E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C63A16421FFCCFC70030974E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C63A16441FFCD0540030974E /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		C63A16451FFCD0540030974E /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		C63A16471FFCD0640030974E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C63A16481FFCD0640030974E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C63A164A1FFCD06F0030974E /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		C63A164B1FFCD06F0030974E /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +93,129 @@
 		C61B362A1FFB8BBD0080BFDE /* LYDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C63A16191FFC74F30030974E /* Classes */,
+				C63A16181FFC74DA0030974E /* Resource */,
+				C63A161A1FFC75050030974E /* Libs */,
 				C61B362B1FFB8BBD0080BFDE /* AppDelegate.h */,
 				C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */,
-				C61B362E1FFB8BBD0080BFDE /* ViewController.h */,
-				C61B362F1FFB8BBD0080BFDE /* ViewController.m */,
-				C61B36311FFB8BBD0080BFDE /* Main.storyboard */,
-				C61B36341FFB8BBD0080BFDE /* Assets.xcassets */,
-				C61B36361FFB8BBD0080BFDE /* LaunchScreen.storyboard */,
-				C61B36391FFB8BBD0080BFDE /* Info.plist */,
-				C61B363A1FFB8BBD0080BFDE /* main.m */,
+				C63A16311FFCBC980030974E /* AppDelegate+RootController.h */,
+				C63A16301FFCBC980030974E /* AppDelegate+RootController.m */,
+				C63A16161FFC716C0030974E /* Supporting Files */,
 			);
 			path = LYDemo;
+			sourceTree = "<group>";
+		};
+		C63A16161FFC716C0030974E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C61B36311FFB8BBD0080BFDE /* Main.storyboard */,
+				C61B36361FFB8BBD0080BFDE /* LaunchScreen.storyboard */,
+				C61B36341FFB8BBD0080BFDE /* Assets.xcassets */,
+				C61B36391FFB8BBD0080BFDE /* Info.plist */,
+				C61B363A1FFB8BBD0080BFDE /* main.m */,
+				C63A16171FFC73CF0030974E /* LYDemo.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C63A16181FFC74DA0030974E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C63A16191FFC74F30030974E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C63A163F1FFCC0DE0030974E /* Home */,
+				C63A16401FFCC5CC0030974E /* Second */,
+				C63A163E1FFCC09D0030974E /* Third */,
+				C63A163D1FFCC0930030974E /* Mine */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C63A161A1FFC75050030974E /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				C63A161F1FFC75990030974E /* ThirdPart */,
+				C63A161B1FFC755A0030974E /* Category */,
+				C63A16331FFCBE500030974E /* BaseActions */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		C63A161B1FFC755A0030974E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16201FFC78880030974E /* LYCategory.h */,
+				C63A16211FFC78A70030974E /* Tools.h */,
+				C63A16221FFC78A70030974E /* Tools.m */,
+				C63A16251FFC79FA0030974E /* NSString+Valid.h */,
+				C63A16241FFC79FA0030974E /* NSString+Valid.m */,
+				C63A16261FFC79FA0030974E /* UIImageView+RotateImgV.h */,
+				C63A16271FFC79FA0030974E /* UIImageView+RotateImgV.m */,
+				C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */,
+				C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C63A161F1FFC75990030974E /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		C63A16331FFCBE500030974E /* BaseActions */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16391FFCBE9A0030974E /* BaseNavigationController.h */,
+				C63A16371FFCBE9A0030974E /* BaseNavigationController.m */,
+				C63A16381FFCBE9A0030974E /* BaseTabBarController.h */,
+				C63A16341FFCBE990030974E /* BaseTabBarController.m */,
+				C63A16351FFCBE990030974E /* BaseViewController.h */,
+				C63A16361FFCBE9A0030974E /* BaseViewController.m */,
+			);
+			path = BaseActions;
+			sourceTree = "<group>";
+		};
+		C63A163D1FFCC0930030974E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16441FFCD0540030974E /* MineViewController.h */,
+				C63A16451FFCD0540030974E /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		C63A163E1FFCC09D0030974E /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				C63A164A1FFCD06F0030974E /* ThirdViewController.h */,
+				C63A164B1FFCD06F0030974E /* ThirdViewController.m */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		C63A163F1FFCC0DE0030974E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16411FFCCFC70030974E /* HomeViewController.h */,
+				C63A16421FFCCFC70030974E /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C63A16401FFCC5CC0030974E /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16471FFCD0640030974E /* SecondViewController.h */,
+				C63A16481FFCD0640030974E /* SecondViewController.m */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +289,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C61B36301FFB8BBD0080BFDE /* ViewController.m in Sources */,
+				C63A16231FFC78A70030974E /* Tools.m in Sources */,
+				C63A16491FFCD0640030974E /* SecondViewController.m in Sources */,
+				C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */,
+				C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */,
+				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
+				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
+				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
+				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,
+				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
+				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
+				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
+				C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +439,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE26F429EL;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -298,6 +457,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE26F429EL;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
