@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (RotateImgV)
+
+/** 图片旋转360° */
 - (void)rotate360DegreeWithImageView;
+
+/** 停止旋转 */
 - (void)stopRotate;
+
 @end

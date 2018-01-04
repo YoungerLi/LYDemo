@@ -24,6 +24,10 @@
 		C63A16461FFCD0540030974E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16451FFCD0540030974E /* MineViewController.m */; };
 		C63A16491FFCD0640030974E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16481FFCD0640030974E /* SecondViewController.m */; };
 		C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A164B1FFCD06F0030974E /* ThirdViewController.m */; };
+		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
+		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
+		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
+		C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326DD1FFE1EE700A98E29 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,12 @@
 		C63A16481FFCD0640030974E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C63A164A1FFCD06F0030974E /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		C63A164B1FFCD06F0030974E /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		C66326D11FFE000F00A98E29 /* IronMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IronMan.jpg; sourceTree = "<group>"; };
+		C66326D61FFE0C5400A98E29 /* FontNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontNameViewController.h; sourceTree = "<group>"; };
+		C66326D71FFE0C5400A98E29 /* FontNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontNameViewController.m; sourceTree = "<group>"; };
+		C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简丫丫.ttf"; sourceTree = "<group>"; };
+		C66326DC1FFE1EE700A98E29 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C66326DD1FFE1EE700A98E29 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,8 @@
 		C63A16181FFC74DA0030974E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C66326D11FFE000F00A98E29 /* IronMan.jpg */,
+				C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 			children = (
 				C63A16441FFCD0540030974E /* MineViewController.h */,
 				C63A16451FFCD0540030974E /* MineViewController.m */,
+				C66326D01FFDC81A00A98E29 /* Controllers */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -216,6 +229,41 @@
 				C63A16481FFCD0640030974E /* SecondViewController.m */,
 			);
 			path = Second;
+			sourceTree = "<group>";
+		};
+		C66326D01FFDC81A00A98E29 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C66326D31FFE0BEC00A98E29 /* FontName */,
+				C66326D41FFE0C0C00A98E29 /* Bezier */,
+				C66326DB1FFE1EC700A98E29 /* WebView */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C66326D31FFE0BEC00A98E29 /* FontName */ = {
+			isa = PBXGroup;
+			children = (
+				C66326D61FFE0C5400A98E29 /* FontNameViewController.h */,
+				C66326D71FFE0C5400A98E29 /* FontNameViewController.m */,
+			);
+			name = FontName;
+			sourceTree = "<group>";
+		};
+		C66326D41FFE0C0C00A98E29 /* Bezier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Bezier;
+			sourceTree = "<group>";
+		};
+		C66326DB1FFE1EC700A98E29 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
+				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +327,8 @@
 				C61B36381FFB8BBD0080BFDE /* LaunchScreen.storyboard in Resources */,
 				C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */,
 				C61B36331FFB8BBD0080BFDE /* Main.storyboard in Resources */,
+				C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */,
+				C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +348,9 @@
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,
+				C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
+				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
@@ -439,6 +491,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE26F429EL;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -457,6 +510,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZE26F429EL;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
