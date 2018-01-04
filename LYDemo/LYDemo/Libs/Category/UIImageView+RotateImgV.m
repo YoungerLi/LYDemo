@@ -19,7 +19,9 @@
     rotationAnimation.repeatCount = 1;
     [self.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
+
 - (void)stopRotate {
     [self.layer removeAllAnimations];
 }
+
 @end

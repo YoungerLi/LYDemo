@@ -69,7 +69,7 @@
         item.title = titleArray[index];
         [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];//选中状态
         [item setTitleTextAttributes:attribute forState:UIControlStateNormal];//一般状态
-        item.titlePositionAdjustment = UIOffsetMake(0, -3);  //上移5pt
+        item.titlePositionAdjustment = UIOffsetMake(0, -3);  //上移3pt
         //设置图片
         UIImage *image = [UIImage imageNamed:imageArray[index]];
         UIImage *selectImage = [UIImage originalImageWithImageName:imageSelectArray[index]];

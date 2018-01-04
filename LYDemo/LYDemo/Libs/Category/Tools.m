@@ -117,37 +117,35 @@
 + (CGFloat)getMyHeightWithString:(NSString *)string width:(CGFloat)width font:(CGFloat)fontSize {
     return [self getMyHeightWithString:string size:CGSizeMake(width, MAXFLOAT) font:fontSize];
 }
-// 自适应高度（无限制）（字体无比例）
-+ (CGFloat)getMyHeightWithString:(NSString *)string width:(CGFloat)width rFont:(CGFloat)fontSize {
-    return [self getMyHeightWithString:string size:CGSizeMake(width, MAXFLOAT) rFont:fontSize];
-}
-
 // 自适应高度（有限制）（字体有比例）
 + (CGFloat)getMyHeightWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
     CGSize mySize = [self getMySizeWithString:string size:size font:fontSize];
     return mySize.height;
+}
+// 自适应宽度（字体有比例）
++ (CGFloat)getMyWidthWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
+    CGSize mySize = [self getMySizeWithString:string size:size font:fontSize];
+    return mySize.width;
+}
+// 自适应size（字体有比例）
++ (CGSize)getMySizeWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
+    CGRect frame = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:UIFont(fontSize)} context:nil];
+    return frame.size;
+}
+
+// 自适应高度（无限制）（字体无比例）
++ (CGFloat)getMyHeightWithString:(NSString *)string width:(CGFloat)width rFont:(CGFloat)fontSize {
+    return [self getMyHeightWithString:string size:CGSizeMake(width, MAXFLOAT) rFont:fontSize];
 }
 // 自适应高度（有限制）（字体无比例）
 + (CGFloat)getMyHeightWithString:(NSString *)string size:(CGSize)size rFont:(CGFloat)fontSize {
     CGSize mySize = [self getMySizeWithString:string size:size rFont:fontSize];
     return mySize.height;
 }
-
-// 自适应宽度（字体有比例）
-+ (CGFloat)getMyWidthWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
-    CGSize mySize = [self getMySizeWithString:string size:size font:fontSize];
-    return mySize.width;
-}
 // 自适应宽度（字体无比例）
 + (CGFloat)getMyWidthWithString:(NSString *)string size:(CGSize)size rFont:(CGFloat)fontSize {
     CGSize mySize = [self getMySizeWithString:string size:size rFont:fontSize];
     return mySize.width;
-}
-
-// 自适应size（字体有比例）
-+ (CGSize)getMySizeWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
-    CGRect frame = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:UIFont(fontSize)} context:nil];
-    return frame.size;
 }
 // 自适应size（字体无比例）
 + (CGSize)getMySizeWithString:(NSString *)string size:(CGSize)size rFont:(CGFloat)fontSize {
