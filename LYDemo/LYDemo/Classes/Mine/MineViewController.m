@@ -46,6 +46,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
+    cell.textLabel.font = [UIFont fontWithName:@"迷你简丫丫" size:18];
     cell.textLabel.text       = self.nameArray[indexPath.row];
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
     

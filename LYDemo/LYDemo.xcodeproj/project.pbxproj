@@ -236,7 +236,9 @@
 			children = (
 				C66326D31FFE0BEC00A98E29 /* FontName */,
 				C66326D41FFE0C0C00A98E29 /* Bezier */,
-				C66326DB1FFE1EC700A98E29 /* WebView */,
+				C66326DB1FFE1EC700A98E29 /* WKWebView */,
+				C689783F1FFF1D6600454D6A /* Delegate */,
+				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,13 +259,27 @@
 			name = Bezier;
 			sourceTree = "<group>";
 		};
-		C66326DB1FFE1EC700A98E29 /* WebView */ = {
+		C66326DB1FFE1EC700A98E29 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
 				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
 				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
 			);
-			name = WebView;
+			name = WKWebView;
+			sourceTree = "<group>";
+		};
+		C676E7521FFF82F900230716 /* Copy&MutableCopy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Copy&MutableCopy";
+			sourceTree = "<group>";
+		};
+		C689783F1FFF1D6600454D6A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

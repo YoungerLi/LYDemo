@@ -14,17 +14,9 @@
 
 @implementation BaseViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    MSLog(@"[Super class]%@", [self class]);
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+//    MSLog(@"[Super class]%@", [self class]);
 }
 
 - (void)viewDidLoad {

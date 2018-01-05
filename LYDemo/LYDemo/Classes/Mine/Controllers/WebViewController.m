@@ -7,12 +7,13 @@
 //
 
 #import "WebViewController.h"
+#import <WebKit/WebKit.h>
 
-#define URLString @"http://m.test.langfangtong.cn/activity/report"
+#define URLString @"http://m.langfangtong.cn/activity/report"
 
-@interface WebViewController ()<UIWebViewDelegate>
+@interface WebViewController ()<WKNavigationDelegate>
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
@@ -29,63 +30,77 @@
 
 
 
-#pragma mark - private methods
+#pragma mark - Private Methods
 
 - (void)loadRequest
 {
-    NSURL *URL = [NSURL URLWithString:URLString];
+    NSMutableDictionary *cookieDic = [NSMutableDictionary dictionary];
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in [storage cookies]) {
+        [cookieDic setObject:cookie.value forKey:cookie.name];
+    }
+    NSLog(@"cookieDic = %@", cookieDic);
+    NSMutableString *cookieValue = [NSMutableString stringWithFormat:@""];
+    for (NSString *key in cookieDic) {
+        [cookieValue appendString:[NSString stringWithFormat:@"%@=%@;", key, cookieDic[key]]];
+    }
+//    [cookieValue appendString:@"aid=14743"];
     
-    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                                 [URL host], NSHTTPCookieDomain,
-                                                                 [URL path], NSHTTPCookiePath,
-                                                                 @"aid",     NSHTTPCookieName,
-                                                                 @"10277",    NSHTTPCookieValue, nil]];
-    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+    NSLog(@"cookieValue = %@", cookieValue);
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    [request addValue:cookieValue forHTTPHeaderField:@"Cookie"];
     [self.webView loadRequest:request];
 }
 
 
 
 
-#pragma mark - UIWebViewDelegate
+#pragma mark - WKNavigationDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
-    NSLog(@"网页开始加载");
+    NSLog(@"页面开始加载");
 }
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation
 {
-    NSLog(@"网页加载完成 ✅");
+    NSLog(@"内容开始返回");
 }
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
-    NSLog(@"网页加载失败 ❎");
+    NSLog(@"页面加载完成");
 }
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
-    NSString *clickSchem = [[request URL] absoluteString];
-    NSLog(@"clickSchem == %@", clickSchem);
+    NSLog(@"页面加载失败");
+}
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
+{
+    NSLog(@"decidePolicyForNavigationResponse");
     
-    return YES;
+    NSHTTPURLResponse *response = (NSHTTPURLResponse *)navigationResponse.response;
+    NSArray *cookies = [NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields] forURL:response.URL];
+    NSLog(@"URL = %@", response.URL);
+    NSLog(@"cookie = %@", cookies);
+    for (NSHTTPCookie *cookie in cookies) {
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+    }
+    
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
+
 
 
 
 #pragma mark - Getters and Setters
 
-- (UIWebView *)webView
+- (WKWebView *)webView
 {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT)];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT)];
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _webView.backgroundColor = WHITECOLOR;
-        _webView.scalesPageToFit = YES;
-        _webView.delegate = self;
+        _webView.navigationDelegate = self;
     }
     return _webView;
 }
