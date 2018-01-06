@@ -313,7 +313,7 @@
 				TargetAttributes = {
 					C61B36271FFB8BBD0080BFDE = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -505,16 +505,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZE26F429EL;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.LYDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "800f702c-4622-4a74-aeb3-01964b1e7de3";
+				PROVISIONING_PROFILE_SPECIFIER = "Demo-dev";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -524,16 +525,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZE26F429EL;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.LYDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "800f702c-4622-4a74-aeb3-01964b1e7de3";
+				PROVISIONING_PROFILE_SPECIFIER = "Demo-dev";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -34,20 +34,22 @@
 
 - (void)loadRequest
 {
+    //先取出容器中的cookie
     NSMutableDictionary *cookieDic = [NSMutableDictionary dictionary];
     NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     for (NSHTTPCookie *cookie in [storage cookies]) {
         [cookieDic setObject:cookie.value forKey:cookie.name];
     }
-    NSLog(@"cookieDic = %@", cookieDic);
+    
+    //cookie去重，重组
     NSMutableString *cookieValue = [NSMutableString stringWithFormat:@""];
     for (NSString *key in cookieDic) {
         [cookieValue appendString:[NSString stringWithFormat:@"%@=%@;", key, cookieDic[key]]];
     }
-//    [cookieValue appendString:@"aid=14743"];
-    
+    [cookieValue appendString:@"aid=7324"];
     NSLog(@"cookieValue = %@", cookieValue);
     
+    //添加cookie，加载网页
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     [request addValue:cookieValue forHTTPHeaderField:@"Cookie"];
     [self.webView loadRequest:request];
@@ -58,6 +60,24 @@
 
 #pragma mark - WKNavigationDelegate
 
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    NSString *absoluteString = navigationAction.request.URL.absoluteString;
+    NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
+    
+    if ([absoluteString isEqualToString:@"lftapp://login"]) {
+        [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+}
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
+{
+    NSLog(@"收到响应后，决定是否跳转：clickSchem = %@", navigationResponse.response.URL.absoluteString);
+
+    decisionHandler(WKNavigationResponsePolicyAllow);
+}
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
     NSLog(@"页面开始加载");
@@ -73,20 +93,6 @@
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
     NSLog(@"页面加载失败");
-}
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
-{
-    NSLog(@"decidePolicyForNavigationResponse");
-    
-    NSHTTPURLResponse *response = (NSHTTPURLResponse *)navigationResponse.response;
-    NSArray *cookies = [NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields] forURL:response.URL];
-    NSLog(@"URL = %@", response.URL);
-    NSLog(@"cookie = %@", cookies);
-    for (NSHTTPCookie *cookie in cookies) {
-        [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
-    }
-    
-    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 
 
