@@ -101,6 +101,8 @@
 
 /** 自定义某些个文字的颜色大小 */
 + (NSMutableAttributedString *)attributString:(NSString *)string range:(NSRange)range color:(UIColor *)color font:(CGFloat)font;
+/** 为某些个文字添加下划线 */
++ (NSMutableAttributedString *)attributAddLineString:(NSString *)string range:(NSRange)range;
 
 
 

@@ -18,6 +18,8 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Thor";
     
+    NSString *UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSLog(@"UUID == %@", UUID);
     
 }
 

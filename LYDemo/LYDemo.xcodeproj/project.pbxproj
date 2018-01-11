@@ -24,6 +24,7 @@
 		C63A16461FFCD0540030974E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16451FFCD0540030974E /* MineViewController.m */; };
 		C63A16491FFCD0640030974E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16481FFCD0640030974E /* SecondViewController.m */; };
 		C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A164B1FFCD06F0030974E /* ThirdViewController.m */; };
+		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
 		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
@@ -65,6 +66,8 @@
 		C63A16481FFCD0640030974E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C63A164A1FFCD06F0030974E /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		C63A164B1FFCD06F0030974E /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		C646EA5E2007590D00BF17BE /* PaoMaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
+		C646EA5F2007590D00BF17BE /* PaoMaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
 		C66326D11FFE000F00A98E29 /* IronMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IronMan.jpg; sourceTree = "<group>"; };
 		C66326D61FFE0C5400A98E29 /* FontNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontNameViewController.h; sourceTree = "<group>"; };
 		C66326D71FFE0C5400A98E29 /* FontNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontNameViewController.m; sourceTree = "<group>"; };
@@ -231,6 +234,15 @@
 			path = Second;
 			sourceTree = "<group>";
 		};
+		C646EA5D200758D300BF17BE /* PaoMa */ = {
+			isa = PBXGroup;
+			children = (
+				C646EA5E2007590D00BF17BE /* PaoMaViewController.h */,
+				C646EA5F2007590D00BF17BE /* PaoMaViewController.m */,
+			);
+			name = PaoMa;
+			sourceTree = "<group>";
+		};
 		C66326D01FFDC81A00A98E29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +251,7 @@
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
 				C689783F1FFF1D6600454D6A /* Delegate */,
 				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
+				C646EA5D200758D300BF17BE /* PaoMa */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +374,7 @@
 				C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */,
 				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
+				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,

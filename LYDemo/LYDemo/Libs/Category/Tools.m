@@ -186,6 +186,14 @@
     }
     return attributedStr;
 }
+//为某些个文字添加下划线
++ (NSMutableAttributedString *)attributAddLineString:(NSString *)string range:(NSRange)range
+{
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:string];
+    [attributedStr addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:range];
+    return attributedStr;
+}
+
 
 
 

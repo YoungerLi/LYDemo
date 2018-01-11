@@ -104,6 +104,7 @@
                       @"MasonryViewController",             //Masonry布局
                       @"NSTimerViewController",             //定时器
                       @"BubbleSequenceViewController",      //冒泡排序
+                      @"PaoMaViewController",               //跑马灯
                       nil];
     }
     return _dataArray;
@@ -131,6 +132,7 @@
                       @"Masonry布局",
                       @"定时器",
                       @"冒泡排序",
+                      @"跑马灯",
                       nil];
     }
     return _nameArray;
