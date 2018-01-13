@@ -29,6 +29,11 @@
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
 		C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326DD1FFE1EE700A98E29 /* WebViewController.m */; };
+		C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C66D7E25200A04DA00BE7D9A /* LYKeychain.m */; };
+		C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */; };
+		C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E2603200893CD007691E8 /* UIView+LYExtension.m */; };
+		C66E260B2008A71D007691E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66E260A2008A427007691E8 /* Security.framework */; };
+		C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E260E2008B0D2007691E8 /* UUIDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,15 @@
 		C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简丫丫.ttf"; sourceTree = "<group>"; };
 		C66326DC1FFE1EE700A98E29 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C66326DD1FFE1EE700A98E29 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C66D7E24200A04DA00BE7D9A /* LYKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYKeychain.h; sourceTree = "<group>"; };
+		C66D7E25200A04DA00BE7D9A /* LYKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYKeychain.m; sourceTree = "<group>"; };
+		C66D7E27200A08DE00BE7D9A /* UUIDKeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUIDKeychainManager.h; sourceTree = "<group>"; };
+		C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDKeychainManager.m; sourceTree = "<group>"; };
+		C66E2602200893CD007691E8 /* UIView+LYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExtension.h"; sourceTree = "<group>"; };
+		C66E2603200893CD007691E8 /* UIView+LYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYExtension.m"; sourceTree = "<group>"; };
+		C66E260A2008A427007691E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C66E260D2008B0D2007691E8 /* UUIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
+		C66E260E2008B0D2007691E8 /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +107,7 @@
 			children = (
 				C61B362A1FFB8BBD0080BFDE /* LYDemo */,
 				C61B36291FFB8BBD0080BFDE /* Products */,
+				C66E26092008A426007691E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +185,8 @@
 				C63A16221FFC78A70030974E /* Tools.m */,
 				C63A16251FFC79FA0030974E /* NSString+Valid.h */,
 				C63A16241FFC79FA0030974E /* NSString+Valid.m */,
+				C66E2602200893CD007691E8 /* UIView+LYExtension.h */,
+				C66E2603200893CD007691E8 /* UIView+LYExtension.m */,
 				C63A16261FFC79FA0030974E /* UIImageView+RotateImgV.h */,
 				C63A16271FFC79FA0030974E /* UIImageView+RotateImgV.m */,
 				C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */,
@@ -180,6 +198,7 @@
 		C63A161F1FFC75990030974E /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				C66D7E23200A04C100BE7D9A /* LYKeychain */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";
@@ -252,6 +271,7 @@
 				C689783F1FFF1D6600454D6A /* Delegate */,
 				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
 				C646EA5D200758D300BF17BE /* PaoMa */,
+				C66E260C2008B0A1007691E8 /* UUID */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +299,34 @@
 				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
 			);
 			name = WKWebView;
+			sourceTree = "<group>";
+		};
+		C66D7E23200A04C100BE7D9A /* LYKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				C66D7E24200A04DA00BE7D9A /* LYKeychain.h */,
+				C66D7E25200A04DA00BE7D9A /* LYKeychain.m */,
+			);
+			path = LYKeychain;
+			sourceTree = "<group>";
+		};
+		C66E26092008A426007691E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66E260A2008A427007691E8 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C66E260C2008B0A1007691E8 /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				C66E260D2008B0D2007691E8 /* UUIDViewController.h */,
+				C66E260E2008B0D2007691E8 /* UUIDViewController.m */,
+				C66D7E27200A08DE00BE7D9A /* UUIDKeychainManager.h */,
+				C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */,
+			);
+			name = UUID;
 			sourceTree = "<group>";
 		};
 		C676E7521FFF82F900230716 /* Copy&MutableCopy */ = {
@@ -375,13 +423,17 @@
 				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
 				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
+				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,
 				C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */,
+				C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */,
+				C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
+				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
 				C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */,
@@ -458,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -507,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

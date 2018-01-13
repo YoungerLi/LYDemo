@@ -105,6 +105,7 @@
                       @"NSTimerViewController",             //定时器
                       @"BubbleSequenceViewController",      //冒泡排序
                       @"PaoMaViewController",               //跑马灯
+                      @"UUIDViewController",                //获取设备唯一标识符
                       nil];
     }
     return _dataArray;
@@ -133,6 +134,7 @@
                       @"定时器",
                       @"冒泡排序",
                       @"跑马灯",
+                      @"获取设备唯一标识符",
                       nil];
     }
     return _nameArray;
