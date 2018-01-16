@@ -106,6 +106,7 @@
                       @"BubbleSequenceViewController",      //冒泡排序
                       @"PaoMaViewController",               //跑马灯
                       @"UUIDViewController",                //获取设备唯一标识符
+                      @"CopyViewController",                //浅复制与深复制
                       nil];
     }
     return _dataArray;
@@ -135,6 +136,7 @@
                       @"冒泡排序",
                       @"跑马灯",
                       @"获取设备唯一标识符",
+                      @"浅复制与深复制",
                       nil];
     }
     return _nameArray;

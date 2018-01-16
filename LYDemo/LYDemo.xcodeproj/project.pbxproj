@@ -25,6 +25,8 @@
 		C63A16491FFCD0640030974E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16481FFCD0640030974E /* SecondViewController.m */; };
 		C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A164B1FFCD06F0030974E /* ThirdViewController.m */; };
 		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
+		C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B6200DA1360080AF4D /* CopyViewController.m */; };
+		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
 		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
@@ -73,6 +75,10 @@
 		C63A164B1FFCD06F0030974E /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		C646EA5E2007590D00BF17BE /* PaoMaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
 		C646EA5F2007590D00BF17BE /* PaoMaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
+		C65C39B5200DA1360080AF4D /* CopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
+		C65C39B6200DA1360080AF4D /* CopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
+		C65C39B8200DA1F20080AF4D /* CopyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyModel.h; sourceTree = "<group>"; };
+		C65C39B9200DA1F20080AF4D /* CopyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyModel.m; sourceTree = "<group>"; };
 		C66326D11FFE000F00A98E29 /* IronMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IronMan.jpg; sourceTree = "<group>"; };
 		C66326D61FFE0C5400A98E29 /* FontNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontNameViewController.h; sourceTree = "<group>"; };
 		C66326D71FFE0C5400A98E29 /* FontNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontNameViewController.m; sourceTree = "<group>"; };
@@ -269,9 +275,9 @@
 				C66326D41FFE0C0C00A98E29 /* Bezier */,
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
 				C689783F1FFF1D6600454D6A /* Delegate */,
-				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
 				C646EA5D200758D300BF17BE /* PaoMa */,
 				C66E260C2008B0A1007691E8 /* UUID */,
+				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +338,10 @@
 		C676E7521FFF82F900230716 /* Copy&MutableCopy */ = {
 			isa = PBXGroup;
 			children = (
+				C65C39B5200DA1360080AF4D /* CopyViewController.h */,
+				C65C39B6200DA1360080AF4D /* CopyViewController.m */,
+				C65C39B8200DA1F20080AF4D /* CopyModel.h */,
+				C65C39B9200DA1F20080AF4D /* CopyModel.m */,
 			);
 			name = "Copy&MutableCopy";
 			sourceTree = "<group>";
@@ -417,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63A16231FFC78A70030974E /* Tools.m in Sources */,
+				C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */,
 				C63A16491FFCD0640030974E /* SecondViewController.m in Sources */,
 				C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */,
 				C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */,
@@ -431,6 +442,7 @@
 				C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */,
 				C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
+				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,

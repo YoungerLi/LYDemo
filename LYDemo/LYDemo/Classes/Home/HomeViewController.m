@@ -18,15 +18,6 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Captain America";
     
-    
-    NSMutableArray *array1 = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
-    NSMutableArray *array2 = [array1 mutableCopy];
-    
-    [array2 removeLastObject];
-    
-    NSLog(@"array1 == %@", array1);
-    NSLog(@"array2 == %@", array2);
-    
 }
 
 
