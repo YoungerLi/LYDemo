@@ -27,12 +27,20 @@
     [self loadRequest];
 }
 
-
+//进度条
 
 
 #pragma mark - Private Methods
 
 - (void)loadRequest
+{
+    //添加cookie，加载网页
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    [request addValue:[self getCookies] forHTTPHeaderField:@"Cookie"];
+    [self.webView loadRequest:request];
+}
+
+- (NSMutableString *)getCookies
 {
     //先取出容器中的cookie
     NSMutableDictionary *cookieDic = [NSMutableDictionary dictionary];
@@ -48,11 +56,7 @@
     }
     [cookieValue appendString:@"aid=7324"];
     NSLog(@"cookieValue = %@", cookieValue);
-    
-    //添加cookie，加载网页
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
-    [request addValue:cookieValue forHTTPHeaderField:@"Cookie"];
-    [self.webView loadRequest:request];
+    return cookieValue;
 }
 
 
@@ -65,17 +69,31 @@
     NSString *absoluteString = navigationAction.request.URL.absoluteString;
     NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
     
-    if ([absoluteString isEqualToString:@"lftapp://login"]) {
-        [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
-        decisionHandler(WKNavigationActionPolicyCancel);
+    WKNavigationActionPolicy policy = WKNavigationActionPolicyAllow;
+    
+    //WKWebView的cookie会出现丢失的问题，所以在此判断如果cookie丢失了就重新添加
+    NSDictionary *headerFields = navigationAction.request.allHTTPHeaderFields;
+    NSString *cookie = headerFields[@"Cookie"];
+    NSLog(@"[cookie] = %@", cookie);
+    if (cookie == nil) {
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:navigationAction.request.URL];
+        [request addValue:[self getCookies] forHTTPHeaderField:@"Cookie"];
+        [webView loadRequest:request];
+        policy = WKNavigationActionPolicyCancel;
+        
     } else {
-        decisionHandler(WKNavigationActionPolicyAllow);
+        if ([absoluteString isEqualToString:@"lftapp://login"]) {
+            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+            policy = WKNavigationActionPolicyCancel;
+        }
     }
+    
+    decisionHandler(policy);
 }
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
 {
     NSLog(@"收到响应后，决定是否跳转：clickSchem = %@", navigationResponse.response.URL.absoluteString);
-
+    
     decisionHandler(WKNavigationResponsePolicyAllow);
 }
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
@@ -88,7 +106,7 @@
 }
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
-    NSLog(@"页面加载完成");
+    NSLog(@"页面加载完成, %@", webView.title);
 }
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
