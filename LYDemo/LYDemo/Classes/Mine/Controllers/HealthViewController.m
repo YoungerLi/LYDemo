@@ -1,27 +1,27 @@
 //
-//  SecondViewController.m
+//  HealthViewController.m
 //  LYDemo
 //
-//  Created by liyang on 2018/1/3.
+//  Created by liyang on 2018/1/25.
 //  Copyright © 2018年 kosien. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "HealthViewController.h"
 #import "LYHealthManager.h"
 
-@interface SecondViewController ()
+@interface HealthViewController ()
 {
     UIButton *_button;
 }
 @end
 
-@implementation SecondViewController
+@implementation HealthViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Iron Man";
+    self.navigationItem.title = @"健康数据";
     
-    _button = [Tools createButtonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:@"点击获取步数" addTarget:self action:@selector(click)];
+    _button = [Tools createButtonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:nil addTarget:self action:@selector(click)];
     [self.view addSubview:_button];
 }
 
@@ -35,7 +35,5 @@
         }
     }];
 }
-
-
 
 @end

@@ -55,7 +55,7 @@
         [cookieValue appendString:[NSString stringWithFormat:@"%@=%@;", key, cookieDic[key]]];
     }
     [cookieValue appendString:@"aid=7324"];
-    NSLog(@"cookieValue = %@", cookieValue);
+    
     return cookieValue;
 }
 
@@ -66,9 +66,6 @@
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    NSString *absoluteString = navigationAction.request.URL.absoluteString;
-    NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
-    
     WKNavigationActionPolicy policy = WKNavigationActionPolicyAllow;
     
     //WKWebView的cookie会出现丢失的问题，所以在此判断如果cookie丢失了就重新添加
@@ -82,8 +79,19 @@
         policy = WKNavigationActionPolicyCancel;
         
     } else {
-        if ([absoluteString isEqualToString:@"lftapp://login"]) {
-            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+        NSString *absoluteString = navigationAction.request.URL.absoluteString;
+        NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
+        
+        if ([absoluteString hasPrefix:@"lftapp://"]) {
+            if ([absoluteString isEqualToString:@"lftapp://login"]) {
+                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+            } else if ([absoluteString isEqualToString:@"lftapp://shopCart"]) {
+                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"购物车"];
+            } else if ([absoluteString hasPrefix:@"lftapp://tel"]) {
+                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"打电话"];
+            } else if ([absoluteString hasPrefix:@"lftapp://goodDetail"]) {
+                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"商品详情"];
+            }
             policy = WKNavigationActionPolicyCancel;
         }
     }
@@ -107,6 +115,7 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     NSLog(@"页面加载完成, %@", webView.title);
+    self.title = webView.title;
 }
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {

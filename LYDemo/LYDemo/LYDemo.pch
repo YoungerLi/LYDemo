@@ -49,6 +49,7 @@
 
 #pragma mark -------------------------System
 #import <Security/Security.h>
+#import <HealthKit/HealthKit.h>
 
 
 

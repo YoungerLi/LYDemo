@@ -107,6 +107,7 @@
                       @"PaoMaViewController",               //跑马灯
                       @"UUIDViewController",                //获取设备唯一标识符
                       @"CopyViewController",                //浅复制与深复制
+                      @"HealthViewController",              //健康数据
                       nil];
     }
     return _dataArray;
@@ -137,6 +138,7 @@
                       @"跑马灯",
                       @"获取设备唯一标识符",
                       @"浅复制与深复制",
+                      @"健康数据",
                       nil];
     }
     return _nameArray;

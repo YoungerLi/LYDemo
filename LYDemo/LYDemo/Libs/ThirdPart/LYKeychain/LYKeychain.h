@@ -20,6 +20,6 @@
 + (id)load:(NSString *)service;
 
 /** 删除数据 */
-+ (void)delete:(NSString *)service;
++ (void)deleteData:(NSString *)service;
 
 @end
