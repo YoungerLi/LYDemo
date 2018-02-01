@@ -59,7 +59,7 @@
 
 #pragma mark - 删除
 
-+ (void)delete:(NSString *)service
++ (void)deleteData:(NSString *)service
 {
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
     SecItemDelete((CFDictionaryRef)keychainQuery);

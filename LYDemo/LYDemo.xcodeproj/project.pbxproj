@@ -24,6 +24,9 @@
 		C63A16461FFCD0540030974E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16451FFCD0540030974E /* MineViewController.m */; };
 		C63A16491FFCD0640030974E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16481FFCD0640030974E /* SecondViewController.m */; };
 		C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A164B1FFCD06F0030974E /* ThirdViewController.m */; };
+		C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E9B46201978E9008D04C5 /* HealthKit.framework */; };
+		C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B49201980A4008D04C5 /* LYHealthManager.m */; };
+		C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */; };
 		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
 		C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B6200DA1360080AF4D /* CopyViewController.m */; };
 		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
@@ -52,6 +55,7 @@
 		C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E2603200893CD007691E8 /* UIView+LYExtension.m */; };
 		C66E260B2008A71D007691E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66E260A2008A427007691E8 /* Security.framework */; };
 		C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E260E2008B0D2007691E8 /* UUIDViewController.m */; };
+		C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66FFF21202196B7004A6F45 /* NSTimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +93,12 @@
 		C63A16481FFCD0640030974E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C63A164A1FFCD06F0030974E /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		C63A164B1FFCD06F0030974E /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		C63E9B43201978AF008D04C5 /* LYDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LYDemo.entitlements; sourceTree = "<group>"; };
+		C63E9B46201978E9008D04C5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C63E9B48201980A4008D04C5 /* LYHealthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHealthManager.h; sourceTree = "<group>"; };
+		C63E9B49201980A4008D04C5 /* LYHealthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHealthManager.m; sourceTree = "<group>"; };
+		C63E9B4C2019DAB0008D04C5 /* HealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
+		C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		C646EA5E2007590D00BF17BE /* PaoMaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
 		C646EA5F2007590D00BF17BE /* PaoMaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
 		C65C39B5200DA1360080AF4D /* CopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
@@ -126,6 +136,8 @@
 		C66E260A2008A427007691E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C66E260D2008B0D2007691E8 /* UUIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
 		C66E260E2008B0D2007691E8 /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
+		C66FFF20202196B7004A6F45 /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
+		C66FFF21202196B7004A6F45 /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
+				C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +173,7 @@
 		C61B362A1FFB8BBD0080BFDE /* LYDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C63E9B43201978AF008D04C5 /* LYDemo.entitlements */,
 				C63A16191FFC74F30030974E /* Classes */,
 				C63A16181FFC74DA0030974E /* Resource */,
 				C63A161A1FFC75050030974E /* Libs */,
@@ -236,6 +250,7 @@
 		C63A161F1FFC75990030974E /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				C63E9B4F2019DED6008D04C5 /* LYHealthManager */,
 				C66D7E23200A04C100BE7D9A /* LYKeychain */,
 			);
 			path = ThirdPart;
@@ -291,6 +306,24 @@
 			path = Second;
 			sourceTree = "<group>";
 		};
+		C63E9B4B2019DA6E008D04C5 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				C63E9B4C2019DAB0008D04C5 /* HealthViewController.h */,
+				C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */,
+			);
+			name = HealthKit;
+			sourceTree = "<group>";
+		};
+		C63E9B4F2019DED6008D04C5 /* LYHealthManager */ = {
+			isa = PBXGroup;
+			children = (
+				C63E9B48201980A4008D04C5 /* LYHealthManager.h */,
+				C63E9B49201980A4008D04C5 /* LYHealthManager.m */,
+			);
+			path = LYHealthManager;
+			sourceTree = "<group>";
+		};
 		C646EA5D200758D300BF17BE /* PaoMa */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,10 +339,12 @@
 				C66326D31FFE0BEC00A98E29 /* FontName */,
 				C66326D41FFE0C0C00A98E29 /* Bezier */,
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
+				C66FFF1F202196AC004A6F45 /* NSTimer */,
 				C689783F1FFF1D6600454D6A /* Delegate */,
 				C646EA5D200758D300BF17BE /* PaoMa */,
 				C66E260C2008B0A1007691E8 /* UUID */,
 				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
+				C63E9B4B2019DA6E008D04C5 /* HealthKit */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +418,7 @@
 		C66E26092008A426007691E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
 				C66E260A2008A427007691E8 /* Security.framework */,
 			);
 			name = Frameworks;
@@ -397,6 +433,15 @@
 				C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */,
 			);
 			name = UUID;
+			sourceTree = "<group>";
+		};
+		C66FFF1F202196AC004A6F45 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C66FFF20202196B7004A6F45 /* NSTimerViewController.h */,
+				C66FFF21202196B7004A6F45 /* NSTimerViewController.m */,
+			);
+			name = NSTimer;
 			sourceTree = "<group>";
 		};
 		C676E7521FFF82F900230716 /* Copy&MutableCopy */ = {
@@ -449,6 +494,11 @@
 					C61B36271FFB8BBD0080BFDE = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -508,6 +558,8 @@
 			files = (
 				C63A16231FFC78A70030974E /* Tools.m in Sources */,
 				C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */,
+				C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */,
+				C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */,
 				C63A16491FFCD0640030974E /* SecondViewController.m in Sources */,
 				C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */,
 				C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */,
@@ -528,6 +580,7 @@
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
+				C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */,
 				C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZE26F429EL;
@@ -682,6 +736,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZE26F429EL;
