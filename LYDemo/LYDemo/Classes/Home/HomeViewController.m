@@ -17,9 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Captain America";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarClick) name:@"tabBarClick" object:nil];
     
 }
 
 
+- (void)tabBarClick
+{
+    if (self.tabBarController.selectedIndex == 0) {
+        NSLog(@"刷新 = 美国队长");
+    }
+}
 
 @end

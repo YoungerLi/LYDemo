@@ -14,6 +14,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.tabBarSelectedIndex = 0;
     
     BaseTabBarController *tabBar = [[BaseTabBarController alloc] init];
     tabBar.delegate = self;
@@ -22,9 +23,17 @@
     [self.window makeKeyAndVisible];
 }
 
+
+
+
+#pragma mark - UITabBarControllerDelegate
+
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    
+    if (tabBarController.selectedIndex == self.tabBarSelectedIndex) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"tabBarClick" object:nil];
+    }
+    self.tabBarSelectedIndex = tabBarController.selectedIndex;
 }
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
