@@ -50,6 +50,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [_timer invalidate];
+    _timer = nil;
     [super viewWillDisappear:animated];
 }
 

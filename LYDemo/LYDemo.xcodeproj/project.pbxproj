@@ -56,6 +56,7 @@
 		C66E260B2008A71D007691E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66E260A2008A427007691E8 /* Security.framework */; };
 		C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E260E2008B0D2007691E8 /* UUIDViewController.m */; };
 		C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66FFF21202196B7004A6F45 /* NSTimerViewController.m */; };
+		C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17B19202599480081FBFA /* WKWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,8 @@
 		C66E260E2008B0D2007691E8 /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 		C66FFF20202196B7004A6F45 /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
 		C66FFF21202196B7004A6F45 /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
+		C6C17B18202599480081FBFA /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		C6C17B19202599480081FBFA /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +371,8 @@
 		C66326DB1FFE1EC700A98E29 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				C6C17B18202599480081FBFA /* WKWebViewController.h */,
+				C6C17B19202599480081FBFA /* WKWebViewController.m */,
 				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
 				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
 			);
@@ -576,6 +581,7 @@
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
 				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
+				C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,

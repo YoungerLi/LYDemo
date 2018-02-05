@@ -30,6 +30,7 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
+    // 二次点击TabBar刷新页面
     if (tabBarController.selectedIndex == self.tabBarSelectedIndex) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"tabBarClick" object:nil];
     }

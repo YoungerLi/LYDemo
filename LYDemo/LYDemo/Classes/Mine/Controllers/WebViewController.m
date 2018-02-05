@@ -7,13 +7,13 @@
 //
 
 #import "WebViewController.h"
-#import <WebKit/WebKit.h>
 
 #define URLString @"http://m.langfangtong.cn/activity/report"
+//#define URLString @"http://opanel.langfangtong.cn/lunbo/showPage?id=15"
 
-@interface WebViewController ()<WKNavigationDelegate>
+@interface WebViewController ()<UIWebViewDelegate>
 
-@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) UIWebView *webView;
 
 @end
 
@@ -27,97 +27,66 @@
     [self loadRequest];
 }
 
-//进度条
+
 
 
 #pragma mark - Private Methods
 
 - (void)loadRequest
 {
-    //添加cookie，加载网页
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
-    [request addValue:[self getCookies] forHTTPHeaderField:@"Cookie"];
+    //清空cookie
+    for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    }
+    
+    //添加cookie
+    NSURL *URL = [NSURL URLWithString:URLString];
+    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                               [URL host], NSHTTPCookieDomain,
+                                                               [URL path], NSHTTPCookiePath,
+                                                               @"aid",     NSHTTPCookieName,
+                                                               @"7324",    NSHTTPCookieValue, nil]];
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+    
+    //加载网址
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self.webView loadRequest:request];
 }
 
-- (NSMutableString *)getCookies
+
+
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    //先取出容器中的cookie
-    NSMutableDictionary *cookieDic = [NSMutableDictionary dictionary];
-    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    for (NSHTTPCookie *cookie in [storage cookies]) {
-        [cookieDic setObject:cookie.value forKey:cookie.name];
-    }
+    NSString *absoluteString = request.URL.absoluteString;
+    NSLog(@"absoluteString == %@", absoluteString);
     
-    //cookie去重，重组
-    NSMutableString *cookieValue = [NSMutableString stringWithFormat:@""];
-    for (NSString *key in cookieDic) {
-        [cookieValue appendString:[NSString stringWithFormat:@"%@=%@;", key, cookieDic[key]]];
-    }
-    [cookieValue appendString:@"aid=7324"];
-    
-    return cookieValue;
-}
-
-
-
-
-#pragma mark - WKNavigationDelegate
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
-{
-    WKNavigationActionPolicy policy = WKNavigationActionPolicyAllow;
-    
-    //WKWebView的cookie会出现丢失的问题，所以在此判断如果cookie丢失了就重新添加
-    NSDictionary *headerFields = navigationAction.request.allHTTPHeaderFields;
-    NSString *cookie = headerFields[@"Cookie"];
-    NSLog(@"[cookie] = %@", cookie);
-    if (cookie == nil) {
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:navigationAction.request.URL];
-        [request addValue:[self getCookies] forHTTPHeaderField:@"Cookie"];
-        [webView loadRequest:request];
-        policy = WKNavigationActionPolicyCancel;
-        
-    } else {
-        NSString *absoluteString = navigationAction.request.URL.absoluteString;
-        NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
-        
-        if ([absoluteString hasPrefix:@"lftapp://"]) {
-            if ([absoluteString isEqualToString:@"lftapp://login"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
-            } else if ([absoluteString isEqualToString:@"lftapp://shopCart"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"购物车"];
-            } else if ([absoluteString hasPrefix:@"lftapp://tel"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"打电话"];
-            } else if ([absoluteString hasPrefix:@"lftapp://goodDetail"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"商品详情"];
-            }
-            policy = WKNavigationActionPolicyCancel;
+    if ([absoluteString hasPrefix:@"lftapp://"]) {
+        if ([absoluteString isEqualToString:@"lftapp://login"]) {
+            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+        } else if ([absoluteString isEqualToString:@"lftapp://shopCart"]) {
+            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"购物车"];
+        } else if ([absoluteString hasPrefix:@"lftapp://tel"]) {
+            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"打电话"];
+        } else if ([absoluteString hasPrefix:@"lftapp://goodDetail"]) {
+            [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"商品详情"];
         }
+        return NO;
     }
     
-    decisionHandler(policy);
+    return YES;
 }
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
-{
-    NSLog(@"收到响应后，决定是否跳转：clickSchem = %@", navigationResponse.response.URL.absoluteString);
-    
-    decisionHandler(WKNavigationResponsePolicyAllow);
-}
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+- (void)webViewDidStartLoad:(UIWebView *)webView
 {
     NSLog(@"页面开始加载");
 }
-- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation
+- (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"内容开始返回");
+    NSLog(@"页面加载成功");
 }
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
-{
-    NSLog(@"页面加载完成, %@", webView.title);
-    self.title = webView.title;
-}
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"页面加载失败");
 }
@@ -125,15 +94,16 @@
 
 
 
-#pragma mark - Getters and Setters
+#pragma mark - Getters
 
-- (WKWebView *)webView
+- (UIWebView *)webView
 {
-    if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT)];
+    if (_webView == nil) {
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT)];
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _webView.backgroundColor = WHITECOLOR;
-        _webView.navigationDelegate = self;
+        _webView.scalesPageToFit = YES;
+        _webView.delegate = self;
     }
     return _webView;
 }
