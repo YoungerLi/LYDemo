@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"定时器";
     
     
@@ -27,8 +26,6 @@
     [testButton setTitle:@"开启定时器" forState:UIControlStateNormal];
     [testButton addTarget:self action:@selector(testButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:testButton];
-    
-    
     
 }
 

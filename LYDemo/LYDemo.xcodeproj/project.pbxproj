@@ -34,6 +34,7 @@
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
 		C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326DD1FFE1EE700A98E29 /* WebViewController.m */; };
+		C66C689220298218007628A7 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66C689020298218007628A7 /* GCDViewController.m */; };
 		C66D544E20181C17009FF2F3 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C66D543C20181C17009FF2F3 /* home@2x.png */; };
 		C66D544F20181C17009FF2F3 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C66D543D20181C17009FF2F3 /* home@3x.png */; };
 		C66D545020181C17009FF2F3 /* home_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C66D543E20181C17009FF2F3 /* home_select@2x.png */; };
@@ -112,6 +113,8 @@
 		C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简丫丫.ttf"; sourceTree = "<group>"; };
 		C66326DC1FFE1EE700A98E29 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C66326DD1FFE1EE700A98E29 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C66C689020298218007628A7 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		C66C689120298218007628A7 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		C66D543C20181C17009FF2F3 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		C66D543D20181C17009FF2F3 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
 		C66D543E20181C17009FF2F3 /* home_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_select@2x.png"; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 				C66326D31FFE0BEC00A98E29 /* FontName */,
 				C66326D41FFE0C0C00A98E29 /* Bezier */,
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
+				C66C688F202981F2007628A7 /* GCD */,
 				C66FFF1F202196AC004A6F45 /* NSTimer */,
 				C689783F1FFF1D6600454D6A /* Delegate */,
 				C646EA5D200758D300BF17BE /* PaoMa */,
@@ -371,12 +375,21 @@
 		C66326DB1FFE1EC700A98E29 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				C6C17B18202599480081FBFA /* WKWebViewController.h */,
-				C6C17B19202599480081FBFA /* WKWebViewController.m */,
 				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
 				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
+				C6C17B18202599480081FBFA /* WKWebViewController.h */,
+				C6C17B19202599480081FBFA /* WKWebViewController.m */,
 			);
 			name = WKWebView;
+			sourceTree = "<group>";
+		};
+		C66C688F202981F2007628A7 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C66C689120298218007628A7 /* GCDViewController.h */,
+				C66C689020298218007628A7 /* GCDViewController.m */,
+			);
+			name = GCD;
 			sourceTree = "<group>";
 		};
 		C66D543820181BCE009FF2F3 /* Common */ = {
@@ -572,6 +585,7 @@
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
 				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
 				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
+				C66C689220298218007628A7 /* GCDViewController.m in Sources */,
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,

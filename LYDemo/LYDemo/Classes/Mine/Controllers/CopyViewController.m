@@ -51,7 +51,7 @@
     MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
 
-// 深复制方法一
+// 深复制方法二
 - (void)deepCopy2
 {
     //该方法是将数组归档，然后再解档。需要在model对象里遵循NSCoding协议
