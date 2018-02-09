@@ -28,6 +28,8 @@
 		C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B49201980A4008D04C5 /* LYHealthManager.m */; };
 		C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */; };
 		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
+		C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B75202BF15D0094E87E /* BezierViewController.m */; };
+		C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B78202BF1650094E87E /* UIBezierPathView.m */; };
 		C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B6200DA1360080AF4D /* CopyViewController.m */; };
 		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
 		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
@@ -103,6 +105,10 @@
 		C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
 		C646EA5E2007590D00BF17BE /* PaoMaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
 		C646EA5F2007590D00BF17BE /* PaoMaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
+		C6510B75202BF15D0094E87E /* BezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierViewController.m; sourceTree = "<group>"; };
+		C6510B76202BF15D0094E87E /* BezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierViewController.h; sourceTree = "<group>"; };
+		C6510B78202BF1650094E87E /* UIBezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBezierPathView.m; sourceTree = "<group>"; };
+		C6510B79202BF1650094E87E /* UIBezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBezierPathView.h; sourceTree = "<group>"; };
 		C65C39B5200DA1360080AF4D /* CopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
 		C65C39B6200DA1360080AF4D /* CopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		C65C39B8200DA1F20080AF4D /* CopyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyModel.h; sourceTree = "<group>"; };
@@ -368,6 +374,10 @@
 		C66326D41FFE0C0C00A98E29 /* Bezier */ = {
 			isa = PBXGroup;
 			children = (
+				C6510B76202BF15D0094E87E /* BezierViewController.h */,
+				C6510B75202BF15D0094E87E /* BezierViewController.m */,
+				C6510B79202BF1650094E87E /* UIBezierPathView.h */,
+				C6510B78202BF1650094E87E /* UIBezierPathView.m */,
 			);
 			name = Bezier;
 			sourceTree = "<group>";
@@ -582,6 +592,7 @@
 				C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */,
 				C63A16291FFC79FA0030974E /* UIImageView+RotateImgV.m in Sources */,
 				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
+				C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */,
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
 				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
 				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
@@ -594,6 +605,7 @@
 				C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
 				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
+				C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
