@@ -33,7 +33,20 @@
     MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
     
     [self deepCopy1];
-//    [self deepCopy2];
+}
+
+
+// 浅复制
+- (void)shallowCopy
+{
+    NSMutableArray *mArray = [NSMutableArray arrayWithArray:_dataArray];
+    for (CopyModel *model in mArray) {
+        if ([model.age isEqualToString:@"20"]) {
+            model.name = @"liyang";
+        }
+    }
+    MSLog(@"mArray == %p, %@", mArray, mArray);
+    MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
 
 
@@ -50,6 +63,7 @@
     MSLog(@"mArray == %p, %@", mArray, mArray);
     MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
+
 
 // 深复制方法二
 - (void)deepCopy2

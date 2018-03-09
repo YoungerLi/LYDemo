@@ -85,12 +85,6 @@
 
 #pragma mark - ********** 展示AlertView
 
-/** 展示 LYAlertView */
-+ (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message;
-
-/** 展示 LYAlertView */
-+ (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle;
-
 /** 展示系统 UIAlertView */
 + (void)showAlertViewOfSystemWithTitle:(NSString *)title andMessage:(NSString *)message;
 

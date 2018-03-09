@@ -58,7 +58,6 @@
     NSArray *titleArray = @[@"美国队长", @"钢铁侠", @"雷神", @"绿巨人"];
     NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor grayColor]};
     NSDictionary *selectAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor orangeColor]};
-    
     //图片
     NSArray *imageArray = @[@"home", @"msgBoard", @"shop", @"me"];
     NSArray *imageSelectArray = @[@"home_select", @"msgBoard_select", @"shop_select", @"me_select"];
@@ -67,14 +66,12 @@
     for (UITabBarItem *item in self.tabBar.items) {
         //设置文字
         item.title = titleArray[index];
-        [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];//选中状态
-        [item setTitleTextAttributes:attribute forState:UIControlStateNormal];//一般状态
+        [item setTitleTextAttributes:attribute forState:UIControlStateNormal];  //一般状态
+        [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];  //选中状态
         item.titlePositionAdjustment = UIOffsetMake(0, -3);  //上移3pt
         //设置图片
-        UIImage *image = [UIImage imageNamed:imageArray[index]];
-        UIImage *selectImage = [UIImage originalImageWithImageName:imageSelectArray[index]];
-        item.image = image;
-        item.selectedImage = selectImage;
+        item.image = [UIImage imageNamed:imageArray[index]];    //一般状态
+        item.selectedImage = [UIImage originalImageWithImageName:imageSelectArray[index]];  //选中状态
         
         index++;
     }

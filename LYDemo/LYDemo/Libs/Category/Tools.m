@@ -156,16 +156,6 @@
 
 
 
-//展示LYAlertView
-+ (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message {
-    [self showAlertViewWithTitle:title message:message buttonTitle:@"确定"];
-}
-//展示LYAlertView
-+ (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle
-{
-//    LYAlertCustom *alert = [[LYAlertCustom alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:nil confirmButtonTitle:buttonTitle];
-//    [alert show];
-}
 //展示系统的alert
 + (void)showAlertViewOfSystemWithTitle:(NSString *)title andMessage:(NSString *)message
 {

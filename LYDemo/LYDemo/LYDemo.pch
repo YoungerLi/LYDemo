@@ -36,7 +36,7 @@
 #pragma mark -------------------------ThirdPart
 
 #import "LYKeychain.h"
-
+#import "LYSpeechSynthesizer.h"
 
 
 
@@ -48,9 +48,19 @@
 
 
 #pragma mark -------------------------System
+
 #import <Security/Security.h>
 #import <HealthKit/HealthKit.h>
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
+
+
+#pragma mark -------------------------System
+
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
 
 
 

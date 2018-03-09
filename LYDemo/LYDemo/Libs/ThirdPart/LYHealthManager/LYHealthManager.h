@@ -11,6 +11,9 @@
 typedef void(^LYHealthAuthorizationBlock)(BOOL success, NSError *error);    //获取权限block
 typedef void(^LYHealthResultBlock)(NSInteger steps, NSError *error);        //获取步数block
 
+/**
+ 这是一个获取手机健康数据的类
+ */
 @interface LYHealthManager : NSObject
 
 /** 单例 */

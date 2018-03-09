@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0026B7AB050C4BC8D604D4AD /* libPods-LYDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B3CB7DA9EB7635964ACEEF /* libPods-LYDemo.a */; };
 		C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */; };
 		C61B36331FFB8BBD0080BFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B36311FFB8BBD0080BFDE /* Main.storyboard */; };
 		C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61B36341FFB8BBD0080BFDE /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
 		C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B75202BF15D0094E87E /* BezierViewController.m */; };
 		C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B78202BF1650094E87E /* UIBezierPathView.m */; };
+		C6585585202D97B2005AAC69 /* LYSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6585584202D97B2005AAC69 /* LYSpeechSynthesizer.m */; };
 		C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B6200DA1360080AF4D /* CopyViewController.m */; };
 		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
 		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
@@ -60,9 +62,14 @@
 		C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E260E2008B0D2007691E8 /* UUIDViewController.m */; };
 		C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66FFF21202196B7004A6F45 /* NSTimerViewController.m */; };
 		C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17B19202599480081FBFA /* WKWebViewController.m */; };
+		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
+		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32B3CB7DA9EB7635964ACEEF /* libPods-LYDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3A87205056319D42429D43 /* Pods-LYDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9B67FAC31D49778428557633 /* Pods-LYDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C61B36281FFB8BBD0080BFDE /* LYDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61B362B1FFB8BBD0080BFDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -109,6 +116,8 @@
 		C6510B76202BF15D0094E87E /* BezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierViewController.h; sourceTree = "<group>"; };
 		C6510B78202BF1650094E87E /* UIBezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBezierPathView.m; sourceTree = "<group>"; };
 		C6510B79202BF1650094E87E /* UIBezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBezierPathView.h; sourceTree = "<group>"; };
+		C6585583202D97B2005AAC69 /* LYSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSpeechSynthesizer.h; sourceTree = "<group>"; };
+		C6585584202D97B2005AAC69 /* LYSpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSpeechSynthesizer.m; sourceTree = "<group>"; };
 		C65C39B5200DA1360080AF4D /* CopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
 		C65C39B6200DA1360080AF4D /* CopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		C65C39B8200DA1F20080AF4D /* CopyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyModel.h; sourceTree = "<group>"; };
@@ -150,6 +159,10 @@
 		C66FFF21202196B7004A6F45 /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
 		C6C17B18202599480081FBFA /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		C6C17B19202599480081FBFA /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		C6C4F2CC2049430000CB5E5D /* AFDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadViewController.h; sourceTree = "<group>"; };
+		C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadViewController.m; sourceTree = "<group>"; };
+		C6C4F2D0204955A400CB5E5D /* LocalNotiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotiViewController.h; sourceTree = "<group>"; };
+		C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,18 +172,29 @@
 			files = (
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
 				C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */,
+				0026B7AB050C4BC8D604D4AD /* libPods-LYDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74B4F323ACE12542AFDEA91F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B67FAC31D49778428557633 /* Pods-LYDemo.debug.xcconfig */,
+				7B3A87205056319D42429D43 /* Pods-LYDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C61B361F1FFB8BBD0080BFDE = {
 			isa = PBXGroup;
 			children = (
 				C61B362A1FFB8BBD0080BFDE /* LYDemo */,
 				C61B36291FFB8BBD0080BFDE /* Products */,
 				C66E26092008A426007691E8 /* Frameworks */,
+				74B4F323ACE12542AFDEA91F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,8 +258,8 @@
 		C63A161A1FFC75050030974E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				C63A161F1FFC75990030974E /* ThirdPart */,
 				C63A161B1FFC755A0030974E /* Category */,
+				C63A161F1FFC75990030974E /* ThirdPart */,
 				C63A16331FFCBE500030974E /* BaseActions */,
 			);
 			path = Libs;
@@ -262,6 +286,7 @@
 		C63A161F1FFC75990030974E /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */,
 				C63E9B4F2019DED6008D04C5 /* LYHealthManager */,
 				C66D7E23200A04C100BE7D9A /* LYKeychain */,
 			);
@@ -345,11 +370,22 @@
 			name = PaoMa;
 			sourceTree = "<group>";
 		};
+		C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				C6585583202D97B2005AAC69 /* LYSpeechSynthesizer.h */,
+				C6585584202D97B2005AAC69 /* LYSpeechSynthesizer.m */,
+			);
+			path = LYSpeechSynthesizer;
+			sourceTree = "<group>";
+		};
 		C66326D01FFDC81A00A98E29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C66326D31FFE0BEC00A98E29 /* FontName */,
 				C66326D41FFE0C0C00A98E29 /* Bezier */,
+				C6C4F2CB204942E200CB5E5D /* AFDownload */,
+				C6C4F2CF2049558A00CB5E5D /* LocalNotification */,
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
 				C66C688F202981F2007628A7 /* GCD */,
 				C66FFF1F202196AC004A6F45 /* NSTimer */,
@@ -448,6 +484,7 @@
 			children = (
 				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
 				C66E260A2008A427007691E8 /* Security.framework */,
+				32B3CB7DA9EB7635964ACEEF /* libPods-LYDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -490,6 +527,24 @@
 			name = Delegate;
 			sourceTree = "<group>";
 		};
+		C6C4F2CB204942E200CB5E5D /* AFDownload */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4F2CC2049430000CB5E5D /* AFDownloadViewController.h */,
+				C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */,
+			);
+			name = AFDownload;
+			sourceTree = "<group>";
+		};
+		C6C4F2CF2049558A00CB5E5D /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4F2D0204955A400CB5E5D /* LocalNotiViewController.h */,
+				C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */,
+			);
+			name = LocalNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,9 +552,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C61B363E1FFB8BBD0080BFDE /* Build configuration list for PBXNativeTarget "LYDemo" */;
 			buildPhases = (
+				27B528AE39D10052740A5DD1 /* [CP] Check Pods Manifest.lock */,
 				C61B36241FFB8BBD0080BFDE /* Sources */,
 				C61B36251FFB8BBD0080BFDE /* Frameworks */,
 				C61B36261FFB8BBD0080BFDE /* Resources */,
+				AC4EA2D2E886D4AFCD30A936 /* [CP] Embed Pods Frameworks */,
+				29C82BFF361F82A9145E1C64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -579,6 +637,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27B528AE39D10052740A5DD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29C82BFF361F82A9145E1C64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4EA2D2E886D4AFCD30A936 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C61B36241FFB8BBD0080BFDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -603,13 +712,16 @@
 				C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */,
 				C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */,
 				C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */,
+				C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
+				C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */,
 				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
 				C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
+				C6585585202D97B2005AAC69 /* LYSpeechSynthesizer.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
 				C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */,
@@ -745,6 +857,7 @@
 		};
 		C61B363F1FFB8BBD0080BFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B67FAC31D49778428557633 /* Pods-LYDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
@@ -766,6 +879,7 @@
 		};
 		C61B36401FFB8BBD0080BFDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B3A87205056319D42429D43 /* Pods-LYDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
