@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    NSLog(@"程序启动");
     [self createRootViewControllers];
     
     return YES;
@@ -50,7 +50,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSLog(@"程序重新激活");
+    NSLog(@"程序激活");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

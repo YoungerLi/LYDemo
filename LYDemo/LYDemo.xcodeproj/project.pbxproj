@@ -64,6 +64,7 @@
 		C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17B19202599480081FBFA /* WKWebViewController.m */; };
 		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
 		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
+		C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54191206395A1007A1C36 /* FileManagerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +164,8 @@
 		C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadViewController.m; sourceTree = "<group>"; };
 		C6C4F2D0204955A400CB5E5D /* LocalNotiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotiViewController.h; sourceTree = "<group>"; };
 		C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiViewController.m; sourceTree = "<group>"; };
+		C6D54191206395A1007A1C36 /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
+		C6D54192206395A2007A1C36 /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +390,7 @@
 				C6C4F2CB204942E200CB5E5D /* AFDownload */,
 				C6C4F2CF2049558A00CB5E5D /* LocalNotification */,
 				C66326DB1FFE1EC700A98E29 /* WKWebView */,
+				C6D5419020639595007A1C36 /* FileManager */,
 				C66C688F202981F2007628A7 /* GCD */,
 				C66FFF1F202196AC004A6F45 /* NSTimer */,
 				C689783F1FFF1D6600454D6A /* Delegate */,
@@ -543,6 +547,15 @@
 				C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */,
 			);
 			name = LocalNotification;
+			sourceTree = "<group>";
+		};
+		C6D5419020639595007A1C36 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54192206395A2007A1C36 /* FileManagerViewController.h */,
+				C6D54191206395A1007A1C36 /* FileManagerViewController.m */,
+			);
+			name = FileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,6 +732,7 @@
 				C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */,
+				C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
 				C6585585202D97B2005AAC69 /* LYSpeechSynthesizer.m in Sources */,

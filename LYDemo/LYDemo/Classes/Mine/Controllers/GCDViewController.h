@@ -6,8 +6,8 @@
 //  Copyright © 2017年 kosienDGL. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface GCDViewController : UIViewController
+@interface GCDViewController : BaseViewController
 
 @end
