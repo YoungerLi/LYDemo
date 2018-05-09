@@ -65,6 +65,8 @@
 		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
 		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
 		C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54191206395A1007A1C36 /* FileManagerViewController.m */; };
+		C6F6721A209DA2AF00735D75 /* LYCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */; };
+		C6F6721D209DA2CA00735D75 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6721C209DA2CA00735D75 /* CountDownViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,10 @@
 		C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiViewController.m; sourceTree = "<group>"; };
 		C6D54191206395A1007A1C36 /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		C6D54192206395A2007A1C36 /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
+		C6F67218209DA2AF00735D75 /* LYCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCountDownLabel.h; sourceTree = "<group>"; };
+		C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCountDownLabel.m; sourceTree = "<group>"; };
+		C6F6721B209DA2CA00735D75 /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		C6F6721C209DA2CA00735D75 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +295,7 @@
 		C63A161F1FFC75990030974E /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				C6F67217209DA2AF00735D75 /* LYCountDownLabel */,
 				C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */,
 				C63E9B4F2019DED6008D04C5 /* LYHealthManager */,
 				C66D7E23200A04C100BE7D9A /* LYKeychain */,
@@ -398,6 +405,7 @@
 				C66E260C2008B0A1007691E8 /* UUID */,
 				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
 				C63E9B4B2019DA6E008D04C5 /* HealthKit */,
+				C6F67213209DA24600735D75 /* CountDown */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -558,6 +566,24 @@
 			name = FileManager;
 			sourceTree = "<group>";
 		};
+		C6F67213209DA24600735D75 /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				C6F6721B209DA2CA00735D75 /* CountDownViewController.h */,
+				C6F6721C209DA2CA00735D75 /* CountDownViewController.m */,
+			);
+			name = CountDown;
+			sourceTree = "<group>";
+		};
+		C6F67217209DA2AF00735D75 /* LYCountDownLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C6F67218209DA2AF00735D75 /* LYCountDownLabel.h */,
+				C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */,
+			);
+			path = LYCountDownLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,6 +742,7 @@
 				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
 				C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */,
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
+				C6F6721A209DA2AF00735D75 /* LYCountDownLabel.m in Sources */,
 				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
 				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
 				C66C689220298218007628A7 /* GCDViewController.m in Sources */,
@@ -725,6 +752,7 @@
 				C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */,
 				C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */,
 				C66D7E29200A08DE00BE7D9A /* UUIDKeychainManager.m in Sources */,
+				C6F6721D209DA2CA00735D75 /* CountDownViewController.m in Sources */,
 				C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */,
 				C63A16431FFCCFC70030974E /* HomeViewController.m in Sources */,
 				C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */,

@@ -108,6 +108,7 @@
                       @"UUIDViewController",                //获取设备唯一标识符
                       @"CopyViewController",                //浅复制与深复制
                       @"HealthViewController",              //健康数据
+                      @"CountDownViewController",           //倒计时动画
                       nil];
     }
     return _dataArray;
@@ -139,6 +140,7 @@
                       @"获取设备唯一标识符",
                       @"浅复制与深复制",
                       @"健康数据",
+                      @"倒计时动画",
                       nil];
     }
     return _nameArray;
