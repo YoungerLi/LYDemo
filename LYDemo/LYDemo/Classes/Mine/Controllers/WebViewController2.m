@@ -1,27 +1,27 @@
 //
-//  WebViewController.m
+//  WebViewController2.m
 //  LYDemo
 //
-//  Created by liyang on 2018/1/4.
+//  Created by liyang on 2018/8/8.
 //  Copyright © 2018年 kosien. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "WebViewController2.h"
 #import "PointsViewController.h"
 
 #define URLString @"http://m.langfangtong.cn/activity/report"
 
-@interface WebViewController ()<UIWebViewDelegate>
+@interface WebViewController2 ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 
 @end
 
-@implementation WebViewController
+@implementation WebViewController2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"17326923630";
+    self.title = @"17333679562";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(lookPoints)];
     [self.view addSubview:self.webView];
@@ -46,7 +46,7 @@
                                                                [URL host], NSHTTPCookieDomain,
                                                                [URL path], NSHTTPCookiePath,
                                                                @"aid",     NSHTTPCookieName,
-                                                               @"14743",   NSHTTPCookieValue, nil]];
+                                                               @"15904",   NSHTTPCookieValue, nil]];
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
     
     //加载网址
@@ -57,8 +57,8 @@
 - (void)lookPoints
 {
     PointsViewController *VC = [[PointsViewController alloc] init];
-    VC.aid = @"14743";
-    VC.phone = @"17326923630";
+    VC.aid = @"15904";
+    VC.phone = @"17333679562";
     [self.navigationController pushViewController:VC animated:YES];
 }
 

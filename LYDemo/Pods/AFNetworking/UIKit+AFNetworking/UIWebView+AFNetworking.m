@@ -128,6 +128,7 @@
     NSURLSessionDataTask *dataTask;
     dataTask = [self.sessionManager
             GET:request.URL.absoluteString
+            version:@""
             parameters:nil
             progress:nil
             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {

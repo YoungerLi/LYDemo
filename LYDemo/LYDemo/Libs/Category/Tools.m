@@ -97,12 +97,11 @@
 
 
 // 创建Label
-+ (UILabel *)createLabelWithFrame:(CGRect)frame text:(NSString *)text font:(CGFloat)font textColor:(UIColor *)color textAlignment:(NSTextAlignment)align
++ (UILabel *)createLabelWithFrame:(CGRect)frame text:(NSString *)text textColor:(UIColor *)color textAlignment:(NSTextAlignment)align
 {
     UILabel * label = [[UILabel alloc] init];
     label.frame = frame;
     label.text = text;
-    label.font = UIFont(font);
     if (color == nil) {
         label.textColor = [UIColor darkTextColor];
     } else {

@@ -46,7 +46,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-    cell.textLabel.font = [UIFont fontWithName:@"迷你简丫丫" size:18];
+    cell.textLabel.font = [UIFont systemFontOfSize:18];
     cell.textLabel.text       = self.nameArray[indexPath.row];
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
     
@@ -91,6 +91,10 @@
                       @"AFDownloadViewController",          //下载数据
                       @"LocalNotiViewController",           //发送本地通知
                       @"WebViewController",                 //网页
+                      @"WebViewController1",                //网页1
+                      @"WebViewController2",                //网页2
+                      @"WebViewController3",                //网页3
+                      @"WebViewController4",                //网页4
                       @"OpenURLViewController",             //应用跳转
                       @"FileManagerViewController",         //文件操作&沙盒路径
                       @"AudioViewController",               //音频播放 http://www.cnblogs.com/kenshincui/p/4186022.html
@@ -109,6 +113,7 @@
                       @"CopyViewController",                //浅复制与深复制
                       @"HealthViewController",              //健康数据
                       @"CountDownViewController",           //倒计时动画
+                      @"QRCodeViewController",              //二维码扫描
                       nil];
     }
     return _dataArray;
@@ -122,25 +127,30 @@
                       @"画图",
                       @"下载数据",
                       @"发送本地通知",
-                      @"网页",
+                      @"网页-17326923630",
+                      @"网页-18500070368",
+                      @"网页-17333679562",
+                      @"网页-13311175462",
+                      @"网页-17301259715",
                       @"应用跳转",
                       @"文件操作&沙盒路径",
-                      @"音频播放",
-                      @"高德单次定位",
-                      @"地图导航",
-                      @"导航栏属性",
-                      @"监测网络状态",
+                      @"音频播放---",
+                      @"高德单次定位---",
+                      @"地图导航---",
+                      @"导航栏属性---",
+                      @"监测网络状态---",
                       @"Block",
                       @"多线程GCD",
-                      @"多线程NSOperationQueue",
-                      @"Masonry布局",
+                      @"多线程NSOperationQueue---",
+                      @"Masonry布局---",
                       @"定时器",
-                      @"冒泡排序",
+                      @"冒泡排序---",
                       @"跑马灯",
                       @"获取设备唯一标识符",
                       @"浅复制与深复制",
                       @"健康数据",
                       @"倒计时动画",
+                      @"二维码扫描",
                       nil];
     }
     return _nameArray;

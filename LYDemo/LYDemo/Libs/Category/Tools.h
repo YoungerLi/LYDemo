@@ -56,7 +56,7 @@
 #pragma mark - ********** UILabel
 
 /** 创建label */
-+ (UILabel *)createLabelWithFrame:(CGRect)frame text:(NSString *)text font:(CGFloat)font textColor:(UIColor *)color textAlignment:(NSTextAlignment)align;
++ (UILabel *)createLabelWithFrame:(CGRect)frame text:(NSString *)text textColor:(UIColor *)color textAlignment:(NSTextAlignment)align;
 
 
 

@@ -8,21 +8,18 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
+@interface BaseViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
 @implementation BaseViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-//    MSLog(@"[Super class]%@", [self class]);
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BACKGROUNDCOLOR;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
 }
 
@@ -30,10 +27,10 @@
 
 
 
-
+#pragma mark - %%%%%%%%%%%%%%%%%%%%
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 @end

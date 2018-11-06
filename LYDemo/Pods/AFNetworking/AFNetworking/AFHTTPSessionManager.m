@@ -106,10 +106,11 @@
                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
 
-    return [self GET:URLString parameters:parameters progress:nil success:success failure:failure];
+    return [self GET:URLString version:@"" parameters:parameters progress:nil success:success failure:failure];
 }
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
+                      version:(NSString *)ver
                    parameters:(id)parameters
                      progress:(void (^)(NSProgress * _Nonnull))downloadProgress
                       success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
@@ -118,6 +119,7 @@
 
     NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"GET"
                                                         URLString:URLString
+                                                          version:ver
                                                        parameters:parameters
                                                    uploadProgress:nil
                                                  downloadProgress:downloadProgress
@@ -134,7 +136,7 @@
                        success:(void (^)(NSURLSessionDataTask *task))success
                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"HEAD" URLString:URLString parameters:parameters uploadProgress:nil downloadProgress:nil success:^(NSURLSessionDataTask *task, __unused id responseObject) {
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"HEAD" URLString:URLString version:@"" parameters:parameters uploadProgress:nil downloadProgress:nil success:^(NSURLSessionDataTask *task, __unused id responseObject) {
         if (success) {
             success(task);
         }
@@ -150,16 +152,17 @@
                        success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    return [self POST:URLString parameters:parameters progress:nil success:success failure:failure];
+    return [self POST:URLString version:@"" parameters:parameters progress:nil success:success failure:failure];
 }
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
+                       version:(NSString *)ver
                     parameters:(id)parameters
                       progress:(void (^)(NSProgress * _Nonnull))uploadProgress
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST" URLString:URLString parameters:parameters uploadProgress:uploadProgress downloadProgress:nil success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST" URLString:URLString version:ver parameters:parameters uploadProgress:uploadProgress downloadProgress:nil success:success failure:failure];
 
     [dataTask resume];
 
@@ -172,10 +175,11 @@
                        success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
-    return [self POST:URLString parameters:parameters constructingBodyWithBlock:block progress:nil success:success failure:failure];
+    return [self POST:URLString version:@"" parameters:parameters constructingBodyWithBlock:block progress:nil success:success failure:failure];
 }
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
+                       version:(NSString *)ver
                     parameters:(id)parameters
      constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
                       progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
@@ -184,6 +188,7 @@
 {
     NSError *serializationError = nil;
     NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
+    [request addValue:ver forHTTPHeaderField:@"version"];
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push
@@ -219,7 +224,7 @@
                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"PUT" URLString:URLString parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"PUT" URLString:URLString version:@"" parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
 
     [dataTask resume];
 
@@ -231,7 +236,7 @@
                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"PATCH" URLString:URLString parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"PATCH" URLString:URLString version:@"" parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
 
     [dataTask resume];
 
@@ -243,7 +248,7 @@
                          success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                          failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"DELETE" URLString:URLString parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"DELETE" URLString:URLString version:@"" parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
 
     [dataTask resume];
 
@@ -252,6 +257,7 @@
 
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                        URLString:(NSString *)URLString
+                                         version:(NSString *)ver
                                       parameters:(id)parameters
                                   uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgress
                                 downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgress
@@ -260,6 +266,7 @@
 {
     NSError *serializationError = nil;
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
+    [request addValue:ver forHTTPHeaderField:@"version"];
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push

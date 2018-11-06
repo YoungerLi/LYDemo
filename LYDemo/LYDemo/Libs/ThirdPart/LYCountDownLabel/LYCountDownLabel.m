@@ -44,7 +44,7 @@
 - (void)timerEvent
 {
     if (self.count > 0) {
-        self.text = [NSString stringWithFormat:@"%d", self.count];
+        self.text = [NSString stringWithFormat:@"%zd", self.count];
         CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
         //字体变化大小
         NSValue *value1 = [NSNumber numberWithFloat:3.0f];

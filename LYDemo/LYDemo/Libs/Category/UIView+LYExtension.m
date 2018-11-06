@@ -74,6 +74,58 @@
 
 
 
+#pragma mark - ly_centerX
+
+- (void)setLy_centerX:(CGFloat)ly_centerX
+{
+    CGPoint center = self.center;
+    center.x = ly_centerX;
+    self.center = center;
+}
+- (CGFloat)ly_centerX
+{
+    return self.center.x;
+}
+
+
+
+
+#pragma mark - ly_centerY
+
+- (void)setLy_centerY:(CGFloat)ly_centerY
+{
+    CGPoint center = self.center;
+    center.y = ly_centerY;
+    self.center = center;
+}
+- (CGFloat)ly_centerY
+{
+    return self.center.y;
+}
+
+
+
+
+#pragma mark - ly_right
+
+- (CGFloat)ly_right
+{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+
+
+
+#pragma mark - ly_bottom
+
+- (CGFloat)ly_bottom
+{
+    return self.frame.origin.y + self.frame.size.height;
+}
+
+
+
+
 #pragma mark - ly_size
 
 - (void)setLy_size:(CGSize)ly_size
@@ -104,3 +156,4 @@
 }
 
 @end
+

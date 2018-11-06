@@ -157,6 +157,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see -dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:
  */
 - (nullable NSURLSessionDataTask *)GET:(NSString *)URLString
+                               version:(NSString *)ver
                             parameters:(nullable id)parameters
                               progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgress
                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
@@ -204,6 +205,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see -dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:
  */
 - (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
+                                version:(NSString *)ver
                              parameters:(nullable id)parameters
                                progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
@@ -239,6 +241,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see -dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:
  */
 - (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
+                                version:(NSString *)ver
                              parameters:(nullable id)parameters
               constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
                                progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
