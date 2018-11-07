@@ -18,13 +18,13 @@
 	<string>1.2</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>lftapp</string>
 		<string>newlife</string>
 	</array>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

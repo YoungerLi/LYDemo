@@ -31,7 +31,6 @@
     
     [self configViewController];
     [self configTabBar];
-    self.tabBar.barTintColor = [UIColor whiteColor];
 }
 
 - (void)configViewController
@@ -76,17 +75,12 @@
         index++;
     }
     
-    //设置TabBar顶部线的颜色
-    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 0.3);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, LineColor.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    [self.tabBar setShadowImage:img];
-    [self.tabBar setBackgroundImage:[Tools imageWithColor:WHITECOLOR]];
+    //背景颜色
+    //方法1
+    self.tabBar.barTintColor = [UIColor blackColor];
+    self.tabBar.translucent = NO;   //如果不加这行就不是纯黑色
+    //方法2
+//    [self.tabBar setBackgroundImage:[Tools imageWithColor:[UIColor blackColor]]];
 }
 
 @end
