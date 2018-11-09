@@ -21,6 +21,7 @@
 #define STATUS_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height    //状态栏高度
 #define NAVBAR_HEIGHT (STATUS_HEIGHT + 44)                  //导航栏高度
 #define TABBAR_HEIGHT ((SCREEN_HEIGHT > 800) ? 83 : 49)     //TabBar高度
+#define BOTTOM_MARGIN ((SCREEN_HEIGHT > 800) ? 34 : 0)
 
 // 适配字体
 #define fontScale ((SCREEN_WIDTH <= 320) ? 0.85 : 1)
