@@ -209,7 +209,7 @@
     //
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC));
     dispatch_after(time, dispatch_get_main_queue(), ^{
-        NSLog(@"5s 时间到~~%@", [NSThread currentThread]);
+        NSLog(@"5s 时间到 - %@", [NSThread currentThread]);
     });
     
     NSLog(@"完毕 - %@", [NSThread currentThread]);
