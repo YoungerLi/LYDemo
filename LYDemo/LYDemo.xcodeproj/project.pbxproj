@@ -73,6 +73,7 @@
 		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
 		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
 		C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54191206395A1007A1C36 /* FileManagerViewController.m */; };
+		C6E15EA021A2B837009B5D3B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */; };
 		C6EDB27120C50CFD00D6537D /* SendDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */; };
 		C6EDB27220C50CFD00D6537D /* ReceiveDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */; };
 		C6F2A4D920A9763D009EE64E /* saomiao1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2A4D820A9763D009EE64E /* saomiao1.png */; };
@@ -195,6 +196,7 @@
 		C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiViewController.m; sourceTree = "<group>"; };
 		C6D54191206395A1007A1C36 /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		C6D54192206395A2007A1C36 /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
+		C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C6EDB26D20C50CFC00D6537D /* ReceiveDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveDataViewController.h; sourceTree = "<group>"; };
 		C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDataViewController.m; sourceTree = "<group>"; };
 		C6EDB26F20C50CFD00D6537D /* SendDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDataViewController.h; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E15EA021A2B837009B5D3B /* CoreMotion.framework in Frameworks */,
 				C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */,
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
 				C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */,
@@ -550,6 +553,7 @@
 		C66E26092008A426007691E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */,
 				C6A6422820A9440400C73554 /* AVFoundation.framework */,
 				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
 				C66E260A2008A427007691E8 /* Security.framework */,

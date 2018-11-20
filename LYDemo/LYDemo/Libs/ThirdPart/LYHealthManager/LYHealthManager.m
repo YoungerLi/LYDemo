@@ -76,7 +76,7 @@
                     double usersHeight = [quantity doubleValueForUnit:heightUnit];
                     totleSteps += usersHeight;
                 }
-                NSLog(@"当天行走步数 = %ld", totleSteps);
+                NSLog(@"当天行走步数 = %zd", totleSteps);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (result) {
                         result(totleSteps, error);

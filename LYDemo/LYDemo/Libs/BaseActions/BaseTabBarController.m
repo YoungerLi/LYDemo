@@ -8,17 +8,6 @@
 
 #import "BaseTabBarController.h"
 
-@implementation UIImage (originalImage)
-
-+ (UIImage *)originalImageWithImageName:(NSString *)ImageName
-{
-    UIImage * image = [UIImage imageNamed:ImageName];
-    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-}
-
-@end
-
-
 @interface BaseTabBarController ()
 
 @end
@@ -27,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     [self configViewController];
     [self configTabBar];
@@ -69,8 +57,8 @@
         [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];  //选中状态
         item.titlePositionAdjustment = UIOffsetMake(0, -3);  //上移3pt
         //设置图片
-        item.image = [UIImage imageNamed:imageArray[index]];    //一般状态
-        item.selectedImage = [UIImage originalImageWithImageName:imageSelectArray[index]];  //选中状态
+        item.image = [[UIImage imageNamed:imageArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];    //一般状态
+        item.selectedImage = [[UIImage imageNamed:imageSelectArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];  //选中状态
         
         index++;
     }

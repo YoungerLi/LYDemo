@@ -11,7 +11,7 @@
 
 #define URLString @"http://m.langfangtong.cn/activity/report"
 
-@interface WebViewController1 ()<UIWebViewDelegate>
+@interface WebViewController1 ()<UIWebViewDelegate>  
 
 @property (nonatomic, strong) UIWebView *webView;
 
@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"18500070368";
+    [self addPanGesture];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(lookPoints)];
     [self.view addSubview:self.webView];

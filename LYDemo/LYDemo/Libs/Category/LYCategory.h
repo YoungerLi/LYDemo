@@ -11,7 +11,7 @@
 #import "Tools.h"
 #import "NSString+Valid.h"
 #import "UIView+LYExtension.h"
-#import "UIImageView+RotateImgV.h"
+#import "UIView+Animation.h"
 #import "NSDateFormatter+Category.h"
 
 // 屏幕宽高

@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"各种字体";
+    [self addPanGesture];
     
     [self.view addSubview:self.tableView];
 }

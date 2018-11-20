@@ -8,7 +8,9 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()<UIGestureRecognizerDelegate>
+@interface BaseViewController ()
+
+@property (nonatomic, strong) UIPanGestureRecognizer *pan;
 
 @end
 
@@ -19,10 +21,28 @@
     self.view.backgroundColor = BACKGROUNDCOLOR;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
+    //创建右滑返回手势
+    [self createPanGesture];
 }
 
+
+
+
+#pragma mark - 创建右滑返回手势
+
+- (void)createPanGesture
+{
+    id target = self.navigationController.interactivePopGestureRecognizer.delegate;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
+    pan.delegate = self;
+    _pan = pan;
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+}
+
+- (void)addPanGesture {
+    [self.view addGestureRecognizer:_pan];
+}
 
 
 

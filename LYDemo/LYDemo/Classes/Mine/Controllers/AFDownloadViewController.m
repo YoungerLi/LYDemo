@@ -31,6 +31,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"下载";
+    [self addPanGesture];
     
     //下载按钮
     _button1 = [Tools createButtonWithFrame:CGRectMake(50, 80, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<UIGestureRecognizerDelegate>
+
+// 添加右滑返回手势
+- (void)addPanGesture;
 
 @end
