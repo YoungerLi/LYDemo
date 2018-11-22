@@ -12,6 +12,7 @@
 		C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61B36341FFB8BBD0080BFDE /* Assets.xcassets */; };
 		C61B36381FFB8BBD0080BFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B36361FFB8BBD0080BFDE /* LaunchScreen.storyboard */; };
 		C61B363B1FFB8BBD0080BFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B363A1FFB8BBD0080BFDE /* main.m */; };
+		C61CDBA721A3D88E003C292E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61CDBA621A3D88E003C292E /* CoreLocation.framework */; };
 		C6381AD220F5D7F3008AFB3F /* OpenURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */; };
 		C63A16231FFC78A70030974E /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16221FFC78A70030974E /* Tools.m */; };
 		C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16241FFC79FA0030974E /* NSString+Valid.m */; };
@@ -73,9 +74,9 @@
 		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
 		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
 		C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54191206395A1007A1C36 /* FileManagerViewController.m */; };
-		C6E15EA021A2B837009B5D3B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */; };
 		C6EDB27120C50CFD00D6537D /* SendDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */; };
 		C6EDB27220C50CFD00D6537D /* ReceiveDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */; };
+		C6F2198B21A5423D000C0CBA /* LYMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2198921A5423C000C0CBA /* LYMotionManager.m */; };
 		C6F2A4D920A9763D009EE64E /* saomiao1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2A4D820A9763D009EE64E /* saomiao1.png */; };
 		C6F6721A209DA2AF00735D75 /* LYCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */; };
 		C6F6721D209DA2CA00735D75 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6721C209DA2CA00735D75 /* CountDownViewController.m */; };
@@ -92,6 +93,7 @@
 		C61B36371FFB8BBD0080BFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C61B36391FFB8BBD0080BFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61B363A1FFB8BBD0080BFDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C61CDBA621A3D88E003C292E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C6381AD020F5D7F3008AFB3F /* OpenURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenURLViewController.h; sourceTree = "<group>"; };
 		C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenURLViewController.m; sourceTree = "<group>"; };
 		C63A16171FFC73CF0030974E /* LYDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDemo.pch; sourceTree = "<group>"; };
@@ -196,11 +198,12 @@
 		C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiViewController.m; sourceTree = "<group>"; };
 		C6D54191206395A1007A1C36 /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		C6D54192206395A2007A1C36 /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
-		C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C6EDB26D20C50CFC00D6537D /* ReceiveDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveDataViewController.h; sourceTree = "<group>"; };
 		C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDataViewController.m; sourceTree = "<group>"; };
 		C6EDB26F20C50CFD00D6537D /* SendDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDataViewController.h; sourceTree = "<group>"; };
 		C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveDataViewController.m; sourceTree = "<group>"; };
+		C6F2198921A5423C000C0CBA /* LYMotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMotionManager.m; sourceTree = "<group>"; };
+		C6F2198A21A5423C000C0CBA /* LYMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMotionManager.h; sourceTree = "<group>"; };
 		C6F2A4D820A9763D009EE64E /* saomiao1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saomiao1.png; sourceTree = "<group>"; };
 		C6F67218209DA2AF00735D75 /* LYCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCountDownLabel.h; sourceTree = "<group>"; };
 		C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCountDownLabel.m; sourceTree = "<group>"; };
@@ -213,7 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6E15EA021A2B837009B5D3B /* CoreMotion.framework in Frameworks */,
+				C61CDBA721A3D88E003C292E /* CoreLocation.framework in Frameworks */,
 				C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */,
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
 				C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */,
@@ -343,6 +346,7 @@
 				C6F67217209DA2AF00735D75 /* LYCountDownLabel */,
 				C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */,
 				C63E9B4F2019DED6008D04C5 /* LYHealthManager */,
+				C6F2198821A5423C000C0CBA /* LYMotionManager */,
 				C66D7E23200A04C100BE7D9A /* LYKeychain */,
 			);
 			path = ThirdPart;
@@ -553,7 +557,7 @@
 		C66E26092008A426007691E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C6E15E9F21A2B837009B5D3B /* CoreMotion.framework */,
+				C61CDBA621A3D88E003C292E /* CoreLocation.framework */,
 				C6A6422820A9440400C73554 /* AVFoundation.framework */,
 				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
 				C66E260A2008A427007691E8 /* Security.framework */,
@@ -654,6 +658,15 @@
 				C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */,
 			);
 			name = Block;
+			sourceTree = "<group>";
+		};
+		C6F2198821A5423C000C0CBA /* LYMotionManager */ = {
+			isa = PBXGroup;
+			children = (
+				C6F2198A21A5423C000C0CBA /* LYMotionManager.h */,
+				C6F2198921A5423C000C0CBA /* LYMotionManager.m */,
+			);
+			path = LYMotionManager;
 			sourceTree = "<group>";
 		};
 		C6F67213209DA24600735D75 /* CountDown */ = {
@@ -866,6 +879,7 @@
 				C67AF468211A92CC000384F8 /* WebViewController3.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
+				C6F2198B21A5423D000C0CBA /* LYMotionManager.m in Sources */,
 				C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */,
 				C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */,
 			);
