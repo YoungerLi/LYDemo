@@ -108,6 +108,12 @@
 
 #pragma mark - ly_right
 
+- (void)setLy_right:(CGFloat)ly_right
+{
+    CGRect frame = self.frame;
+    frame.origin.x = ly_right - frame.size.width;
+    self.frame = frame;
+}
 - (CGFloat)ly_right
 {
     return self.frame.origin.x + self.frame.size.width;
@@ -118,6 +124,12 @@
 
 #pragma mark - ly_bottom
 
+- (void)setLy_bottom:(CGFloat)ly_bottom
+{
+    CGRect frame = self.frame;
+    frame.origin.y = ly_bottom - frame.size.height;
+    self.frame = frame;
+}
 - (CGFloat)ly_bottom
 {
     return self.frame.origin.y + self.frame.size.height;

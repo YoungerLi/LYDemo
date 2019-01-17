@@ -116,6 +116,10 @@
 {
     NSLog(@"页面加载完成, %@", webView.title);
     self.title = webView.title;
+    //修改字体大小
+    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust = '300%'" completionHandler:nil];
+    //修改字体颜色
+    [ webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#222222'"completionHandler:nil];
 }
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {

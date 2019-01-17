@@ -7,16 +7,22 @@
 //
 
 #import "SecondViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface SecondViewController ()<CLLocationManagerDelegate>
 {
     NSMutableArray *_angleArray;
 }
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CMMotionManager *motionManager;
 
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UIProgressView *progress;
+
+@property (nonatomic, assign) float horizontalAngle;    //水平角度（0~360）
+@property (nonatomic, assign) float verticalAngle;      //垂直角度（-1~1）
 
 @end
 
@@ -24,6 +30,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self.locationManager stopUpdatingHeading];
+    [self.motionManager stopDeviceMotionUpdates];
     [super viewWillDisappear:animated];
 }
 
@@ -43,26 +50,94 @@
     [self.view addSubview:_progress];
 }
 
-- (CLLocationManager *)locationManager
-{
-    if (_locationManager == nil) {
-        _locationManager = [[CLLocationManager alloc] init];
-        _locationManager.delegate = self;
-    }
-    return _locationManager;
-}
 
 - (void)begin
 {
-    if (![CLLocationManager headingAvailable]) {
+    [_angleArray addObjectsFromArray:@[@210, @0.5, @220, @-0.9, @230]];
+    _progress.progress = 0.0;
+    _button.enabled = NO;
+    [self startHeading];
+    [self startMotion];
+}
+
+
+- (void)startHeading
+{
+    if ([CLLocationManager headingAvailable]) {
+        [self.locationManager startUpdatingHeading];
+    } else {
         [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"您的设备不支持磁力计"];
+    }
+}
+
+
+- (void)startMotion
+{
+    if (![self.motionManager isDeviceMotionActive] && [self.motionManager isDeviceMotionAvailable]) {
+        
+        [self.motionManager startDeviceMotionUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+            
+            //该属性返回只是地球重力对该设备施加的重力加速度
+            CMAcceleration gravity = motion.gravity;
+            _verticalAngle = gravity.z;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self updatePoint];
+            });
+        }];
+    }
+}
+
+- (void)updatePoint
+{
+    NSLog(@"水平方向 = %.0f, 垂直方向 = %f", _horizontalAngle, _verticalAngle);
+    
+    if (_angleArray.count == 0) {
+        _button.enabled = YES;
+        [_button setTitle:@"开始" forState:UIControlStateNormal];
+        _label.text = @"恭喜你！找到啦";
+        [self.locationManager stopUpdatingHeading];
+        [self.motionManager stopDeviceMotionUpdates];
         return;
     }
     
-    [_angleArray addObjectsFromArray:@[@210, @180, @220, @200, @230]];
-    _progress.progress = 0.0;
-    _button.enabled = NO;
-    [self.locationManager startUpdatingHeading];
+    float targetAngle = [[_angleArray firstObject] floatValue];
+    if (targetAngle > -1.0 && targetAngle < 1.0) {
+        //上下移动
+        if (_verticalAngle < targetAngle) {
+            _label.text = @"↑";
+        } else {
+            _label.text = @"↓";
+        }
+        
+        if (fabs(targetAngle - _verticalAngle) < 0.01) {
+            [_angleArray removeObjectAtIndex:0];
+            [_progress setProgress:(5-_angleArray.count)/5.0 animated:YES];
+        }
+        
+    } else {
+        //左右移动
+        if (targetAngle < 180.0) {
+            if (_horizontalAngle > targetAngle && _horizontalAngle < targetAngle + 180.0) {
+                _label.text = @"←";
+            } else {
+                _label.text = @"→";
+            }
+            
+        } else {
+            if (_horizontalAngle < targetAngle && _horizontalAngle > targetAngle - 180.0) {
+                _label.text = @"→";
+            } else {
+                _label.text = @"←";
+            }
+        }
+        
+        if (fabs(targetAngle - _horizontalAngle) < 1.0) {
+            [_angleArray removeObjectAtIndex:0];
+            [_progress setProgress:(5-_angleArray.count)/5.0 animated:YES];
+        }
+    }
+    
 }
 
 
@@ -72,38 +147,32 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
-    //角度
-    CGFloat angle = newHeading.magneticHeading;
-    [_button setTitle:[NSString stringWithFormat:@"%.0f", angle] forState:UIControlStateNormal];
-    
-    if (_angleArray.count == 0) {
-        _button.enabled = YES;
-        [_button setTitle:@"开始" forState:UIControlStateNormal];
-        _label.text = @"恭喜你！找到啦";
-        [self.locationManager stopUpdatingHeading];
-        return;
-    }
-    float targetAngle = [[_angleArray firstObject] floatValue];
-    
-    if (targetAngle < 180) {
-        if (angle > targetAngle && angle < targetAngle + 180) {
-            _label.text = @"<---";
-        } else {
-            _label.text = @"--->";
-        }
-        
-    } else {
-        if (angle < targetAngle && angle > targetAngle - 180) {
-            _label.text = @"--->";
-        } else {
-            _label.text = @"<---";
-        }
-    }
-    if (fabs(targetAngle - angle) < 1.0) {
-        [_angleArray removeObjectAtIndex:0];
-        [_progress setProgress:(5-_angleArray.count)/5.0 animated:YES];
-    }
+    //水平角度
+    _horizontalAngle = newHeading.magneticHeading;
+    [_button setTitle:[NSString stringWithFormat:@"%.0f", _horizontalAngle] forState:UIControlStateNormal];
 }
 
+
+
+
+#pragma mark - 懒加载
+
+- (CLLocationManager *)locationManager
+{
+    if (_locationManager == nil) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+    }
+    return _locationManager;
+}
+
+- (CMMotionManager *)motionManager
+{
+    if (_motionManager == nil) {
+        _motionManager = [[CMMotionManager alloc] init];
+        _motionManager.deviceMotionUpdateInterval = 0.1;   //更新频率，以秒为单位
+    }
+    return _motionManager;
+}
 
 @end

@@ -41,7 +41,7 @@
 
 // 创建一个UIView（一般用来创建一条线）
 + (UIView *)lineWithFrame:(CGRect)frame {
-    return [self lineWithFrame:frame color:LineColor];
+    return [self lineWithFrame:frame color:LINECOLOR];
 }
 + (UIView *)lineWithFrame:(CGRect)frame color:(UIColor *)color {
     UIView *line = [[UIView alloc] initWithFrame:frame];
@@ -128,7 +128,7 @@
 }
 // 自适应size（字体有比例）
 + (CGSize)getMySizeWithString:(NSString *)string size:(CGSize)size font:(CGFloat)fontSize {
-    CGRect frame = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:UIFont(fontSize)} context:nil];
+    CGRect frame = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontOfSize:fontSize]} context:nil];
     return frame.size;
 }
 
@@ -171,7 +171,7 @@
         [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
     }
     if (font) {
-        [attributedStr addAttribute:NSFontAttributeName value:UIFont(font) range:range];
+        [attributedStr addAttribute:NSFontAttributeName value:[UIFont fontOfSize:font] range:range];
     }
     return attributedStr;
 }
@@ -387,7 +387,7 @@
     }
 }
 
-// 获取手机型号
+// 获取手机型号（https://www.theiphonewiki.com/wiki/Models）
 + (NSString *)getSystemModel
 {
     struct utsname systemInfo;
@@ -419,6 +419,10 @@
     if ([platform isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";
     if ([platform isEqualToString:@"iPhone10,3"])   return @"iPhone X";
     if ([platform isEqualToString:@"iPhone10,6"])   return @"iPhone X";
+    if ([platform isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
+    if ([platform isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
     if ([platform isEqualToString:@"iPod1,1"])      return @"iPod Touch 1G";
     if ([platform isEqualToString:@"iPod2,1"])      return @"iPod Touch 2G";
     if ([platform isEqualToString:@"iPod3,1"])      return @"iPod Touch 3G";

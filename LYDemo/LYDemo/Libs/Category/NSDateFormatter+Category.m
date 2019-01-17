@@ -10,21 +10,23 @@
 
 @implementation NSDateFormatter (Category)
 
-+ (id)dateFormatter
-{
-    return [[self alloc] init];
-}
-
-+ (id)dateFormatterWithFormat:(NSString *)dateFormat
++ (NSDateFormatter *)dateFormatterWithFormat:(NSString *)dateFormat
 {
     NSDateFormatter *dateFormatter = [[self alloc] init];
     dateFormatter.dateFormat = dateFormat;
     return dateFormatter;
 }
 
-+ (id)defaultDateFormatter
-{
++ (NSDateFormatter *)defaultDateFormatter {
     return [self dateFormatterWithFormat:@"yyyy-MM-dd HH:mm:ss"];
+}
+
++ (NSDateFormatter *)dateFormatterOfDate {
+    return [self dateFormatterWithFormat:@"yyyy-MM-dd"];
+}
+
++ (NSDateFormatter *)dateFormatterOfTime {
+    return [self dateFormatterWithFormat:@"HH:mm:ss"];
 }
 
 @end

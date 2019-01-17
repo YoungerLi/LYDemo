@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0026B7AB050C4BC8D604D4AD /* libPods-LYDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B3CB7DA9EB7635964ACEEF /* libPods-LYDemo.a */; };
+		C60778A621B13DE400A54E1B /* UIFont+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = C60778A421B13DE400A54E1B /* UIFont+Scale.m */; };
 		C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */; };
 		C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61B36341FFB8BBD0080BFDE /* Assets.xcassets */; };
 		C61B36381FFB8BBD0080BFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B36361FFB8BBD0080BFDE /* LaunchScreen.storyboard */; };
 		C61B363B1FFB8BBD0080BFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B363A1FFB8BBD0080BFDE /* main.m */; };
 		C61CDBA721A3D88E003C292E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61CDBA621A3D88E003C292E /* CoreLocation.framework */; };
 		C6381AD220F5D7F3008AFB3F /* OpenURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */; };
-		C63A16231FFC78A70030974E /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16221FFC78A70030974E /* Tools.m */; };
 		C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16241FFC79FA0030974E /* NSString+Valid.m */; };
 		C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */; };
 		C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63A16301FFCBC980030974E /* AppDelegate+RootController.m */; };
@@ -28,6 +28,7 @@
 		C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E9B46201978E9008D04C5 /* HealthKit.framework */; };
 		C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B49201980A4008D04C5 /* LYHealthManager.m */; };
 		C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */; };
+		C642F3B821C10A0A00ED652B /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = C642F3B621C10A0A00ED652B /* Tools.m */; };
 		C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646EA5F2007590D00BF17BE /* PaoMaViewController.m */; };
 		C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B75202BF15D0094E87E /* BezierViewController.m */; };
 		C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6510B78202BF1650094E87E /* UIBezierPathView.m */; };
@@ -70,13 +71,14 @@
 		C687113C219A6FAF001D3ECE /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C687113B219A6FAF001D3ECE /* UIView+Animation.m */; };
 		C6A6422720A9433500C73554 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A6422520A9433400C73554 /* QRCodeViewController.m */; };
 		C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A6422820A9440400C73554 /* AVFoundation.framework */; };
+		C6B05DFE21A6A8CB00012E9C /* LYMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B05DFC21A6A8CB00012E9C /* LYMotionManager.m */; };
+		C6B05E0021A6AE6300012E9C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B05DFF21A6AE6300012E9C /* CoreMotion.framework */; };
 		C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17B19202599480081FBFA /* WKWebViewController.m */; };
 		C6C4F2CE2049430000CB5E5D /* AFDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */; };
 		C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */; };
 		C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54191206395A1007A1C36 /* FileManagerViewController.m */; };
 		C6EDB27120C50CFD00D6537D /* SendDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */; };
 		C6EDB27220C50CFD00D6537D /* ReceiveDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */; };
-		C6F2198B21A5423D000C0CBA /* LYMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F2198921A5423C000C0CBA /* LYMotionManager.m */; };
 		C6F2A4D920A9763D009EE64E /* saomiao1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F2A4D820A9763D009EE64E /* saomiao1.png */; };
 		C6F6721A209DA2AF00735D75 /* LYCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */; };
 		C6F6721D209DA2CA00735D75 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6721C209DA2CA00735D75 /* CountDownViewController.m */; };
@@ -86,6 +88,8 @@
 		32B3CB7DA9EB7635964ACEEF /* libPods-LYDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3A87205056319D42429D43 /* Pods-LYDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9B67FAC31D49778428557633 /* Pods-LYDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C60778A421B13DE400A54E1B /* UIFont+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scale.m"; sourceTree = "<group>"; };
+		C60778A521B13DE400A54E1B /* UIFont+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scale.h"; sourceTree = "<group>"; };
 		C61B36281FFB8BBD0080BFDE /* LYDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61B362B1FFB8BBD0080BFDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,8 +102,6 @@
 		C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenURLViewController.m; sourceTree = "<group>"; };
 		C63A16171FFC73CF0030974E /* LYDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDemo.pch; sourceTree = "<group>"; };
 		C63A16201FFC78880030974E /* LYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCategory.h; sourceTree = "<group>"; };
-		C63A16211FFC78A70030974E /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
-		C63A16221FFC78A70030974E /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		C63A16241FFC79FA0030974E /* NSString+Valid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Valid.m"; sourceTree = "<group>"; };
 		C63A16251FFC79FA0030974E /* NSString+Valid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Valid.h"; sourceTree = "<group>"; };
 		C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
@@ -126,6 +128,8 @@
 		C63E9B49201980A4008D04C5 /* LYHealthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHealthManager.m; sourceTree = "<group>"; };
 		C63E9B4C2019DAB0008D04C5 /* HealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
 		C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
+		C642F3B621C10A0A00ED652B /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		C642F3B721C10A0A00ED652B /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		C646EA5E2007590D00BF17BE /* PaoMaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
 		C646EA5F2007590D00BF17BE /* PaoMaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
 		C6510B75202BF15D0094E87E /* BezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierViewController.m; sourceTree = "<group>"; };
@@ -190,6 +194,9 @@
 		C6A6422520A9433400C73554 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C6A6422620A9433400C73554 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C6A6422820A9440400C73554 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C6B05DFC21A6A8CB00012E9C /* LYMotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMotionManager.m; sourceTree = "<group>"; };
+		C6B05DFD21A6A8CB00012E9C /* LYMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMotionManager.h; sourceTree = "<group>"; };
+		C6B05DFF21A6AE6300012E9C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C6C17B18202599480081FBFA /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		C6C17B19202599480081FBFA /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		C6C4F2CC2049430000CB5E5D /* AFDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadViewController.h; sourceTree = "<group>"; };
@@ -202,8 +209,6 @@
 		C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDataViewController.m; sourceTree = "<group>"; };
 		C6EDB26F20C50CFD00D6537D /* SendDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDataViewController.h; sourceTree = "<group>"; };
 		C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveDataViewController.m; sourceTree = "<group>"; };
-		C6F2198921A5423C000C0CBA /* LYMotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMotionManager.m; sourceTree = "<group>"; };
-		C6F2198A21A5423C000C0CBA /* LYMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMotionManager.h; sourceTree = "<group>"; };
 		C6F2A4D820A9763D009EE64E /* saomiao1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saomiao1.png; sourceTree = "<group>"; };
 		C6F67218209DA2AF00735D75 /* LYCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCountDownLabel.h; sourceTree = "<group>"; };
 		C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCountDownLabel.m; sourceTree = "<group>"; };
@@ -216,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B05E0021A6AE6300012E9C /* CoreMotion.framework in Frameworks */,
 				C61CDBA721A3D88E003C292E /* CoreLocation.framework in Frameworks */,
 				C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */,
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
@@ -325,10 +331,12 @@
 			isa = PBXGroup;
 			children = (
 				C63A16201FFC78880030974E /* LYCategory.h */,
-				C63A16211FFC78A70030974E /* Tools.h */,
-				C63A16221FFC78A70030974E /* Tools.m */,
+				C642F3B721C10A0A00ED652B /* Tools.h */,
+				C642F3B621C10A0A00ED652B /* Tools.m */,
 				C63A16251FFC79FA0030974E /* NSString+Valid.h */,
 				C63A16241FFC79FA0030974E /* NSString+Valid.m */,
+				C60778A521B13DE400A54E1B /* UIFont+Scale.h */,
+				C60778A421B13DE400A54E1B /* UIFont+Scale.m */,
 				C66E2602200893CD007691E8 /* UIView+LYExtension.h */,
 				C66E2603200893CD007691E8 /* UIView+LYExtension.m */,
 				C687113A219A6FAF001D3ECE /* UIView+Animation.h */,
@@ -346,7 +354,7 @@
 				C6F67217209DA2AF00735D75 /* LYCountDownLabel */,
 				C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */,
 				C63E9B4F2019DED6008D04C5 /* LYHealthManager */,
-				C6F2198821A5423C000C0CBA /* LYMotionManager */,
+				C6B05DFB21A6A8CB00012E9C /* LYMotionManager */,
 				C66D7E23200A04C100BE7D9A /* LYKeychain */,
 			);
 			path = ThirdPart;
@@ -557,6 +565,7 @@
 		C66E26092008A426007691E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6B05DFF21A6AE6300012E9C /* CoreMotion.framework */,
 				C61CDBA621A3D88E003C292E /* CoreLocation.framework */,
 				C6A6422820A9440400C73554 /* AVFoundation.framework */,
 				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
@@ -622,6 +631,15 @@
 			name = QRCode;
 			sourceTree = "<group>";
 		};
+		C6B05DFB21A6A8CB00012E9C /* LYMotionManager */ = {
+			isa = PBXGroup;
+			children = (
+				C6B05DFD21A6A8CB00012E9C /* LYMotionManager.h */,
+				C6B05DFC21A6A8CB00012E9C /* LYMotionManager.m */,
+			);
+			path = LYMotionManager;
+			sourceTree = "<group>";
+		};
 		C6C4F2CB204942E200CB5E5D /* AFDownload */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,15 +676,6 @@
 				C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */,
 			);
 			name = Block;
-			sourceTree = "<group>";
-		};
-		C6F2198821A5423C000C0CBA /* LYMotionManager */ = {
-			isa = PBXGroup;
-			children = (
-				C6F2198A21A5423C000C0CBA /* LYMotionManager.h */,
-				C6F2198921A5423C000C0CBA /* LYMotionManager.m */,
-			);
-			path = LYMotionManager;
 			sourceTree = "<group>";
 		};
 		C6F67213209DA24600735D75 /* CountDown */ = {
@@ -836,9 +845,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67AF46B211A9330000384F8 /* WebViewController4.m in Sources */,
-				C63A16231FFC78A70030974E /* Tools.m in Sources */,
 				C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */,
 				C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */,
+				C642F3B821C10A0A00ED652B /* Tools.m in Sources */,
 				C67AF46E211A9FF7000384F8 /* AFNetHelper.m in Sources */,
 				C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */,
 				C63A16491FFCD0640030974E /* SecondViewController.m in Sources */,
@@ -868,6 +877,7 @@
 				C6C4F2D2204955A400CB5E5D /* LocalNotiViewController.m in Sources */,
 				C67AF472211AA37B000384F8 /* PointsViewController.m in Sources */,
 				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
+				C60778A621B13DE400A54E1B /* UIFont+Scale.m in Sources */,
 				C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */,
 				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C6EDB27120C50CFD00D6537D /* SendDataViewController.m in Sources */,
@@ -879,7 +889,7 @@
 				C67AF468211A92CC000384F8 /* WebViewController3.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
-				C6F2198B21A5423D000C0CBA /* LYMotionManager.m in Sources */,
+				C6B05DFE21A6A8CB00012E9C /* LYMotionManager.m in Sources */,
 				C63E9B4E2019DAB0008D04C5 /* HealthViewController.m in Sources */,
 				C63A16321FFCBC980030974E /* AppDelegate+RootController.m in Sources */,
 			);

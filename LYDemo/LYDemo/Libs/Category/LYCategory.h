@@ -7,11 +7,11 @@
 //
 //  用法：将LYCategory文件夹导入工程中，然后在pch文件中引入头文件"LYCategory.h"
 
-
 #import "Tools.h"
 #import "NSString+Valid.h"
 #import "UIView+LYExtension.h"
 #import "UIView+Animation.h"
+#import "UIFont+Scale.h"
 #import "NSDateFormatter+Category.h"
 
 // 屏幕宽高
@@ -23,13 +23,8 @@
 #define TABBAR_HEIGHT ((SCREEN_HEIGHT > 800) ? 83 : 49)     //TabBar高度
 #define BOTTOM_MARGIN ((SCREEN_HEIGHT > 800) ? 34 : 0)
 
-// 适配字体
-#define fontScale ((SCREEN_WIDTH <= 320) ? 0.85 : 1)
-#define UIFont(float) [UIFont systemFontOfSize:fontScale * float]
-#define UIFontBold(float) [UIFont boldSystemFontOfSize:fontScale * float]
-
 // 颜色
-#define LineColor [UIColor colorWithRed:211/255.0f green:211/255.0f blue:211/255.0f alpha:1]    //d3d3d3
+#define LINECOLOR [UIColor colorWithRed:211/255.0f green:211/255.0f blue:211/255.0f alpha:1]    //d3d3d3
 #define BACKGROUNDCOLOR [UIColor colorWithRed:246/255.0f green:246/255.0f blue:246/255.0f alpha:1] //f6f6f6
 #define WHITECOLOR [UIColor whiteColor]
 

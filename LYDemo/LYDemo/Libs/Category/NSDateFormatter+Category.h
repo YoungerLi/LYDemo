@@ -10,11 +10,16 @@
 
 @interface NSDateFormatter (Category)
 
-+ (id)dateFormatter;
-
-+ (id)dateFormatterWithFormat:(NSString *)dateFormat;
+/** 自定义时间样式 */
++ (NSDateFormatter *)dateFormatterWithFormat:(NSString *)dateFormat;
 
 /** yyyy-MM-dd HH:mm:ss */
-+ (id)defaultDateFormatter;
++ (NSDateFormatter *)defaultDateFormatter;
+
+/** yyyy-MM-dd */
++ (NSDateFormatter *)dateFormatterOfDate;
+
+/** HH:mm:ss */
++ (NSDateFormatter *)dateFormatterOfTime;
 
 @end
