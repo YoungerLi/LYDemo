@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"接收数据";
+    self.title = @"发送数据";
     self.view.backgroundColor = [UIColor whiteColor];
     
     
@@ -46,8 +46,4 @@
     self.dataBlock1(@"123abcd");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end
