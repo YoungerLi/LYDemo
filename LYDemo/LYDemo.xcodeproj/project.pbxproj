@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E1B92C6D29C5795503B07D7 /* Pods_LYDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69AA1D2B03EA3EFEEF9E4A7 /* Pods_LYDemo.framework */; };
+		7C551A6BCEF643075F3A2FF5 /* libPods-LYDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1463F82CCCCA12F3A56A21FF /* libPods-LYDemo.a */; };
 		C60778A621B13DE400A54E1B /* UIFont+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = C60778A421B13DE400A54E1B /* UIFont+Scale.m */; };
 		C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */; };
 		C61B36351FFB8BBD0080BFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61B36341FFB8BBD0080BFDE /* Assets.xcassets */; };
@@ -85,9 +85,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1463F82CCCCA12F3A56A21FF /* libPods-LYDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3A87205056319D42429D43 /* Pods-LYDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9B67FAC31D49778428557633 /* Pods-LYDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYDemo/Pods-LYDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		A69AA1D2B03EA3EFEEF9E4A7 /* Pods_LYDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60778A421B13DE400A54E1B /* UIFont+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scale.m"; sourceTree = "<group>"; };
 		C60778A521B13DE400A54E1B /* UIFont+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scale.h"; sourceTree = "<group>"; };
 		C61B36281FFB8BBD0080BFDE /* LYDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +226,7 @@
 				C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */,
 				C66E260B2008A71D007691E8 /* Security.framework in Frameworks */,
 				C63E9B47201978E9008D04C5 /* HealthKit.framework in Frameworks */,
-				0E1B92C6D29C5795503B07D7 /* Pods_LYDemo.framework in Frameworks */,
+				7C551A6BCEF643075F3A2FF5 /* libPods-LYDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +570,7 @@
 				C6A6422820A9440400C73554 /* AVFoundation.framework */,
 				C63E9B46201978E9008D04C5 /* HealthKit.framework */,
 				C66E260A2008A427007691E8 /* Security.framework */,
-				A69AA1D2B03EA3EFEEF9E4A7 /* Pods_LYDemo.framework */,
+				1463F82CCCCA12F3A56A21FF /* libPods-LYDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -707,7 +707,6 @@
 				C61B36241FFB8BBD0080BFDE /* Sources */,
 				C61B36251FFB8BBD0080BFDE /* Frameworks */,
 				C61B36261FFB8BBD0080BFDE /* Resources */,
-				AC4EA2D2E886D4AFCD30A936 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -804,26 +803,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC4EA2D2E886D4AFCD30A936 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYDemo/Pods-LYDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LYDemo/Pods-LYDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
