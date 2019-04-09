@@ -730,7 +730,7 @@
 				TargetAttributes = {
 					C61B36271FFB8BBD0080BFDE = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -1021,17 +1021,16 @@
 				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZE26F429EL;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N99BE2U29Z;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyang.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1853099-0aa3-4132-b9f8-2b1cb811d002";
-				PROVISIONING_PROFILE_SPECIFIER = "Demo-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1044,17 +1043,16 @@
 				CODE_SIGN_ENTITLEMENTS = LYDemo/LYDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZE26F429EL;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N99BE2U29Z;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";
 				INFOPLIST_FILE = LYDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kosien.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyang.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a1853099-0aa3-4132-b9f8-2b1cb811d002";
-				PROVISIONING_PROFILE_SPECIFIER = "Demo-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
