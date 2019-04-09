@@ -1,6 +1,14 @@
-platform :ios, ‘8.0’
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
-target ‘LYDemo’ do
-pod 'AFNetworking'
-pod 'MBProgressHUD'
+use_frameworks!
+inhibit_all_warnings!
+
+def common_pods
+    pod 'AFNetworking'
+    pod 'MBProgressHUD'
+end
+
+target 'LYDemo' do
+    common_pods
 end
