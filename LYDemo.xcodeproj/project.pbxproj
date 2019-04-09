@@ -35,7 +35,6 @@
 		C6585585202D97B2005AAC69 /* LYSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6585584202D97B2005AAC69 /* LYSpeechSynthesizer.m */; };
 		C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B6200DA1360080AF4D /* CopyViewController.m */; };
 		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
-		C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C66326D11FFE000F00A98E29 /* IronMan.jpg */; };
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
 		C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326DD1FFE1EE700A98E29 /* WebViewController.m */; };
@@ -142,7 +141,6 @@
 		C65C39B6200DA1360080AF4D /* CopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		C65C39B8200DA1F20080AF4D /* CopyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyModel.h; sourceTree = "<group>"; };
 		C65C39B9200DA1F20080AF4D /* CopyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyModel.m; sourceTree = "<group>"; };
-		C66326D11FFE000F00A98E29 /* IronMan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IronMan.jpg; sourceTree = "<group>"; };
 		C66326D61FFE0C5400A98E29 /* FontNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontNameViewController.h; sourceTree = "<group>"; };
 		C66326D71FFE0C5400A98E29 /* FontNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontNameViewController.m; sourceTree = "<group>"; };
 		C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简丫丫.ttf"; sourceTree = "<group>"; };
@@ -524,7 +522,6 @@
 			isa = PBXGroup;
 			children = (
 				C6F2A4D820A9763D009EE64E /* saomiao1.png */,
-				C66326D11FFE000F00A98E29 /* IronMan.jpg */,
 				C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */,
 			);
 			path = Common;
@@ -780,7 +777,6 @@
 				C66D545620181C17009FF2F3 /* msgBoard@2x.png in Resources */,
 				C66D545020181C17009FF2F3 /* home_select@2x.png in Resources */,
 				C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */,
-				C66326D21FFE000F00A98E29 /* IronMan.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
