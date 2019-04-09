@@ -34,21 +34,21 @@
 - (void)click
 {
     //跳转系统APP
-    NSURL *URL;
-    URL = [NSURL URLWithString:@"tel://1234567"];           //拨打电话
-    URL = [NSURL URLWithString:@"sms://1234567"];           //发送短信
-    URL = [NSURL URLWithString:@"http://www.baidu.com"];    //Safari
-    URL = [NSURL URLWithString:@"mailto://admin@abt.com"];  //邮箱
-    URL = [NSURL URLWithString:@"maps://"];                 //地图
-    URL = [NSURL URLWithString:@"facetime://1234567"];      //facetime
+//    NSURL *URL;
+//    URL = [NSURL URLWithString:@"tel://1234567"];           //拨打电话
+//    URL = [NSURL URLWithString:@"sms://1234567"];           //发送短信
+//    URL = [NSURL URLWithString:@"http://www.baidu.com"];    //Safari
+//    URL = [NSURL URLWithString:@"mailto://admin@abt.com"];  //邮箱
+//    URL = [NSURL URLWithString:@"maps://"];                 //地图
+//    URL = [NSURL URLWithString:@"facetime://1234567"];      //facetime
     
     //跳转到系统设置
-    NSURL *URL2;
-    if (IOS_10) {
-        URL2 = [NSURL URLWithString:UIApplicationOpenSettingsURLString];    //适用于iOS >= 8
-    } else {
-        URL2 = [NSURL URLWithString:@"Prefs:root=General"]; //适用于iOS < 10
-    }
+//    NSURL *URL2;
+//    if (IOS_10) {
+//        URL2 = [NSURL URLWithString:UIApplicationOpenSettingsURLString];    //适用于iOS >= 8
+//    } else {
+//        URL2 = [NSURL URLWithString:@"Prefs:root=General"]; //适用于iOS < 10
+//    }
     
     //跳转第三方APP
     NSURL *URL3 = [NSURL URLWithString:@"newlife://123456"];
