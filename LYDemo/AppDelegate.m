@@ -15,24 +15,12 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"程序启动");
     [self createRootViewControllers];
     
     return YES;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 #pragma mark - **********系统前后台切换
@@ -56,6 +44,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     NSLog(@"结束程序");
 }
-
 
 @end
