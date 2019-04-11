@@ -26,8 +26,6 @@
 }
 
 
-
-
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,8 +37,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *ID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
@@ -49,11 +46,9 @@
     cell.textLabel.font = [UIFont systemFontOfSize:18];
     cell.textLabel.text       = self.nameArray[indexPath.row];
     cell.detailTextLabel.text = self.dataArray[indexPath.row];
-    
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     Class class = NSClassFromString(self.dataArray[indexPath.row]);
     UIViewController *VC = [[class alloc] init];
@@ -61,12 +56,9 @@
 }
 
 
-
-
 #pragma mark - Getters and Setters
 
-- (UITableView *)tableView
-{
+- (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
@@ -82,8 +74,7 @@
     return _tableView;
 }
 
-- (NSArray *)dataArray
-{
+- (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = [[NSArray alloc] initWithObjects:
                       @"FontNameViewController",            //各种字体
@@ -119,8 +110,7 @@
     return _dataArray;
 }
 
-- (NSArray *)nameArray
-{
+- (NSArray *)nameArray {
     if (!_nameArray) {
         _nameArray = [[NSArray alloc] initWithObjects:
                       @"各种字体",

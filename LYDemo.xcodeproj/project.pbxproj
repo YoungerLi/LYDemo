@@ -274,15 +274,6 @@
 			path = LYDemo;
 			sourceTree = "<group>";
 		};
-		C6381ACF20F5D7C8008AFB3F /* OpenURL */ = {
-			isa = PBXGroup;
-			children = (
-				C6381AD020F5D7F3008AFB3F /* OpenURLViewController.h */,
-				C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */,
-			);
-			name = OpenURL;
-			sourceTree = "<group>";
-		};
 		C63A16161FFC716C0030974E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,15 +399,6 @@
 			path = Second;
 			sourceTree = "<group>";
 		};
-		C63E9B4B2019DA6E008D04C5 /* HealthKit */ = {
-			isa = PBXGroup;
-			children = (
-				C63E9B4C2019DAB0008D04C5 /* HealthViewController.h */,
-				C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */,
-			);
-			name = HealthKit;
-			sourceTree = "<group>";
-		};
 		C63E9B4F2019DED6008D04C5 /* LYHealthManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,15 +406,6 @@
 				C63E9B49201980A4008D04C5 /* LYHealthManager.m */,
 			);
 			path = LYHealthManager;
-			sourceTree = "<group>";
-		};
-		C646EA5D200758D300BF17BE /* PaoMa */ = {
-			isa = PBXGroup;
-			children = (
-				C646EA5E2007590D00BF17BE /* PaoMaViewController.h */,
-				C646EA5F2007590D00BF17BE /* PaoMaViewController.m */,
-			);
-			name = PaoMa;
 			sourceTree = "<group>";
 		};
 		C6585582202D97B2005AAC69 /* LYSpeechSynthesizer */ = {
@@ -447,75 +420,25 @@
 		C66326D01FFDC81A00A98E29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C66326D31FFE0BEC00A98E29 /* FontName */,
-				C66326D41FFE0C0C00A98E29 /* Bezier */,
-				C6C4F2CB204942E200CB5E5D /* AFDownload */,
-				C6C4F2CF2049558A00CB5E5D /* LocalNotification */,
-				C66326DB1FFE1EC700A98E29 /* WKWebView */,
-				C6381ACF20F5D7C8008AFB3F /* OpenURL */,
-				C6D5419020639595007A1C36 /* FileManager */,
-				C6EDB26C20C50CE500D6537D /* Block */,
-				C66C688F202981F2007628A7 /* GCD */,
-				C66FFF1F202196AC004A6F45 /* NSTimer */,
-				C689783F1FFF1D6600454D6A /* Delegate */,
-				C646EA5D200758D300BF17BE /* PaoMa */,
-				C66E260C2008B0A1007691E8 /* UUID */,
-				C676E7521FFF82F900230716 /* Copy&MutableCopy */,
-				C63E9B4B2019DA6E008D04C5 /* HealthKit */,
-				C6F67213209DA24600735D75 /* CountDown */,
-				C6A6422420A9430000C73554 /* QRCode */,
+				CAFD820A225F10BA001D52D3 /* NSTimer */,
+				CAFD81FF225F0F3D001D52D3 /* FontName */,
+				CAFD8202225F0F8D001D52D3 /* Bezier */,
+				CAFD8203225F0FA5001D52D3 /* AFDownload */,
+				CAFD8204225F0FC4001D52D3 /* LocalNotification */,
+				CAFD8205225F0FEA001D52D3 /* WKWebView */,
+				CAFD8206225F1025001D52D3 /* OpenURL */,
+				CAFD8207225F1049001D52D3 /* FileManager */,
+				CAFD8208225F1068001D52D3 /* Block */,
+				CAFD8209225F1096001D52D3 /* GCD */,
+				CAFD820B225F10E2001D52D3 /* Delegate */,
+				CAFD820C225F10EB001D52D3 /* PaoMa */,
+				CAFD820D225F110A001D52D3 /* UUID */,
+				CAFD820E225F1125001D52D3 /* Copy&MutableCopy */,
+				CAFD820F225F113E001D52D3 /* HealthKit */,
+				CAFD8210225F115C001D52D3 /* CountDown */,
+				CAFD8211225F117D001D52D3 /* QRCode */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		C66326D31FFE0BEC00A98E29 /* FontName */ = {
-			isa = PBXGroup;
-			children = (
-				C66326D61FFE0C5400A98E29 /* FontNameViewController.h */,
-				C66326D71FFE0C5400A98E29 /* FontNameViewController.m */,
-			);
-			name = FontName;
-			sourceTree = "<group>";
-		};
-		C66326D41FFE0C0C00A98E29 /* Bezier */ = {
-			isa = PBXGroup;
-			children = (
-				C6510B76202BF15D0094E87E /* BezierViewController.h */,
-				C6510B75202BF15D0094E87E /* BezierViewController.m */,
-				C6510B79202BF1650094E87E /* UIBezierPathView.h */,
-				C6510B78202BF1650094E87E /* UIBezierPathView.m */,
-			);
-			name = Bezier;
-			sourceTree = "<group>";
-		};
-		C66326DB1FFE1EC700A98E29 /* WKWebView */ = {
-			isa = PBXGroup;
-			children = (
-				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
-				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
-				C67AF460211A8F68000384F8 /* WebViewController1.h */,
-				C67AF461211A8F68000384F8 /* WebViewController1.m */,
-				C67AF463211A8F90000384F8 /* WebViewController2.h */,
-				C67AF464211A8F90000384F8 /* WebViewController2.m */,
-				C67AF466211A92CC000384F8 /* WebViewController3.h */,
-				C67AF467211A92CC000384F8 /* WebViewController3.m */,
-				C67AF469211A9330000384F8 /* WebViewController4.h */,
-				C67AF46A211A9330000384F8 /* WebViewController4.m */,
-				C67AF470211AA37B000384F8 /* PointsViewController.h */,
-				C67AF471211AA37B000384F8 /* PointsViewController.m */,
-				C6C17B18202599480081FBFA /* WKWebViewController.h */,
-				C6C17B19202599480081FBFA /* WKWebViewController.m */,
-			);
-			name = WKWebView;
-			sourceTree = "<group>";
-		};
-		C66C688F202981F2007628A7 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-				C66C689120298218007628A7 /* GCDViewController.h */,
-				C66C689020298218007628A7 /* GCDViewController.m */,
-			);
-			name = GCD;
 			sourceTree = "<group>";
 		};
 		C66D543820181BCE009FF2F3 /* Common */ = {
@@ -572,37 +495,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C66E260C2008B0A1007691E8 /* UUID */ = {
-			isa = PBXGroup;
-			children = (
-				C66E260D2008B0D2007691E8 /* UUIDViewController.h */,
-				C66E260E2008B0D2007691E8 /* UUIDViewController.m */,
-				C66D7E27200A08DE00BE7D9A /* UUIDKeychainManager.h */,
-				C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */,
-			);
-			name = UUID;
-			sourceTree = "<group>";
-		};
-		C66FFF1F202196AC004A6F45 /* NSTimer */ = {
-			isa = PBXGroup;
-			children = (
-				C66FFF20202196B7004A6F45 /* NSTimerViewController.h */,
-				C66FFF21202196B7004A6F45 /* NSTimerViewController.m */,
-			);
-			name = NSTimer;
-			sourceTree = "<group>";
-		};
-		C676E7521FFF82F900230716 /* Copy&MutableCopy */ = {
-			isa = PBXGroup;
-			children = (
-				C65C39B5200DA1360080AF4D /* CopyViewController.h */,
-				C65C39B6200DA1360080AF4D /* CopyViewController.m */,
-				C65C39B8200DA1F20080AF4D /* CopyModel.h */,
-				C65C39B9200DA1F20080AF4D /* CopyModel.m */,
-			);
-			name = "Copy&MutableCopy";
-			sourceTree = "<group>";
-		};
 		C67AF46F211AA2A5000384F8 /* AFNetHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,22 +502,6 @@
 				C67AF46C211A9FF7000384F8 /* AFNetHelper.m */,
 			);
 			path = AFNetHelper;
-			sourceTree = "<group>";
-		};
-		C689783F1FFF1D6600454D6A /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Delegate;
-			sourceTree = "<group>";
-		};
-		C6A6422420A9430000C73554 /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				C6A6422620A9433400C73554 /* QRCodeViewController.h */,
-				C6A6422520A9433400C73554 /* QRCodeViewController.m */,
-			);
-			name = QRCode;
 			sourceTree = "<group>";
 		};
 		C6B05DFB21A6A8CB00012E9C /* LYMotionManager */ = {
@@ -637,53 +513,6 @@
 			path = LYMotionManager;
 			sourceTree = "<group>";
 		};
-		C6C4F2CB204942E200CB5E5D /* AFDownload */ = {
-			isa = PBXGroup;
-			children = (
-				C6C4F2CC2049430000CB5E5D /* AFDownloadViewController.h */,
-				C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */,
-			);
-			name = AFDownload;
-			sourceTree = "<group>";
-		};
-		C6C4F2CF2049558A00CB5E5D /* LocalNotification */ = {
-			isa = PBXGroup;
-			children = (
-				C6C4F2D0204955A400CB5E5D /* LocalNotiViewController.h */,
-				C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */,
-			);
-			name = LocalNotification;
-			sourceTree = "<group>";
-		};
-		C6D5419020639595007A1C36 /* FileManager */ = {
-			isa = PBXGroup;
-			children = (
-				C6D54192206395A2007A1C36 /* FileManagerViewController.h */,
-				C6D54191206395A1007A1C36 /* FileManagerViewController.m */,
-			);
-			name = FileManager;
-			sourceTree = "<group>";
-		};
-		C6EDB26C20C50CE500D6537D /* Block */ = {
-			isa = PBXGroup;
-			children = (
-				C6EDB26D20C50CFC00D6537D /* ReceiveDataViewController.h */,
-				C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */,
-				C6EDB26F20C50CFD00D6537D /* SendDataViewController.h */,
-				C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */,
-			);
-			name = Block;
-			sourceTree = "<group>";
-		};
-		C6F67213209DA24600735D75 /* CountDown */ = {
-			isa = PBXGroup;
-			children = (
-				C6F6721B209DA2CA00735D75 /* CountDownViewController.h */,
-				C6F6721C209DA2CA00735D75 /* CountDownViewController.m */,
-			);
-			name = CountDown;
-			sourceTree = "<group>";
-		};
 		C6F67217209DA2AF00735D75 /* LYCountDownLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +520,177 @@
 				C6F67219209DA2AF00735D75 /* LYCountDownLabel.m */,
 			);
 			path = LYCountDownLabel;
+			sourceTree = "<group>";
+		};
+		CAFD81FF225F0F3D001D52D3 /* FontName */ = {
+			isa = PBXGroup;
+			children = (
+				C66326D61FFE0C5400A98E29 /* FontNameViewController.h */,
+				C66326D71FFE0C5400A98E29 /* FontNameViewController.m */,
+			);
+			path = FontName;
+			sourceTree = "<group>";
+		};
+		CAFD8202225F0F8D001D52D3 /* Bezier */ = {
+			isa = PBXGroup;
+			children = (
+				C6510B76202BF15D0094E87E /* BezierViewController.h */,
+				C6510B75202BF15D0094E87E /* BezierViewController.m */,
+				C6510B79202BF1650094E87E /* UIBezierPathView.h */,
+				C6510B78202BF1650094E87E /* UIBezierPathView.m */,
+			);
+			path = Bezier;
+			sourceTree = "<group>";
+		};
+		CAFD8203225F0FA5001D52D3 /* AFDownload */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4F2CC2049430000CB5E5D /* AFDownloadViewController.h */,
+				C6C4F2CD2049430000CB5E5D /* AFDownloadViewController.m */,
+			);
+			path = AFDownload;
+			sourceTree = "<group>";
+		};
+		CAFD8204225F0FC4001D52D3 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4F2D0204955A400CB5E5D /* LocalNotiViewController.h */,
+				C6C4F2D1204955A400CB5E5D /* LocalNotiViewController.m */,
+			);
+			path = LocalNotification;
+			sourceTree = "<group>";
+		};
+		CAFD8205225F0FEA001D52D3 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
+				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
+				C67AF460211A8F68000384F8 /* WebViewController1.h */,
+				C67AF461211A8F68000384F8 /* WebViewController1.m */,
+				C67AF463211A8F90000384F8 /* WebViewController2.h */,
+				C67AF464211A8F90000384F8 /* WebViewController2.m */,
+				C67AF466211A92CC000384F8 /* WebViewController3.h */,
+				C67AF467211A92CC000384F8 /* WebViewController3.m */,
+				C67AF469211A9330000384F8 /* WebViewController4.h */,
+				C67AF46A211A9330000384F8 /* WebViewController4.m */,
+				C67AF470211AA37B000384F8 /* PointsViewController.h */,
+				C67AF471211AA37B000384F8 /* PointsViewController.m */,
+				C6C17B18202599480081FBFA /* WKWebViewController.h */,
+				C6C17B19202599480081FBFA /* WKWebViewController.m */,
+			);
+			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		CAFD8206225F1025001D52D3 /* OpenURL */ = {
+			isa = PBXGroup;
+			children = (
+				C6381AD020F5D7F3008AFB3F /* OpenURLViewController.h */,
+				C6381AD120F5D7F3008AFB3F /* OpenURLViewController.m */,
+			);
+			path = OpenURL;
+			sourceTree = "<group>";
+		};
+		CAFD8207225F1049001D52D3 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54192206395A2007A1C36 /* FileManagerViewController.h */,
+				C6D54191206395A1007A1C36 /* FileManagerViewController.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		CAFD8208225F1068001D52D3 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				C6EDB26D20C50CFC00D6537D /* ReceiveDataViewController.h */,
+				C6EDB27020C50CFD00D6537D /* ReceiveDataViewController.m */,
+				C6EDB26F20C50CFD00D6537D /* SendDataViewController.h */,
+				C6EDB26E20C50CFC00D6537D /* SendDataViewController.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		CAFD8209225F1096001D52D3 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C66C689120298218007628A7 /* GCDViewController.h */,
+				C66C689020298218007628A7 /* GCDViewController.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		CAFD820A225F10BA001D52D3 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C66FFF20202196B7004A6F45 /* NSTimerViewController.h */,
+				C66FFF21202196B7004A6F45 /* NSTimerViewController.m */,
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		CAFD820B225F10E2001D52D3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		CAFD820C225F10EB001D52D3 /* PaoMa */ = {
+			isa = PBXGroup;
+			children = (
+				C646EA5E2007590D00BF17BE /* PaoMaViewController.h */,
+				C646EA5F2007590D00BF17BE /* PaoMaViewController.m */,
+			);
+			path = PaoMa;
+			sourceTree = "<group>";
+		};
+		CAFD820D225F110A001D52D3 /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				C66E260D2008B0D2007691E8 /* UUIDViewController.h */,
+				C66E260E2008B0D2007691E8 /* UUIDViewController.m */,
+				C66D7E27200A08DE00BE7D9A /* UUIDKeychainManager.h */,
+				C66D7E28200A08DE00BE7D9A /* UUIDKeychainManager.m */,
+			);
+			path = UUID;
+			sourceTree = "<group>";
+		};
+		CAFD820E225F1125001D52D3 /* Copy&MutableCopy */ = {
+			isa = PBXGroup;
+			children = (
+				C65C39B5200DA1360080AF4D /* CopyViewController.h */,
+				C65C39B6200DA1360080AF4D /* CopyViewController.m */,
+				C65C39B8200DA1F20080AF4D /* CopyModel.h */,
+				C65C39B9200DA1F20080AF4D /* CopyModel.m */,
+			);
+			path = "Copy&MutableCopy";
+			sourceTree = "<group>";
+		};
+		CAFD820F225F113E001D52D3 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				C63E9B4C2019DAB0008D04C5 /* HealthViewController.h */,
+				C63E9B4D2019DAB0008D04C5 /* HealthViewController.m */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		CAFD8210225F115C001D52D3 /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				C6F6721B209DA2CA00735D75 /* CountDownViewController.h */,
+				C6F6721C209DA2CA00735D75 /* CountDownViewController.m */,
+			);
+			path = CountDown;
+			sourceTree = "<group>";
+		};
+		CAFD8211225F117D001D52D3 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C6A6422620A9433400C73554 /* QRCodeViewController.h */,
+				C6A6422520A9433400C73554 /* QRCodeViewController.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
