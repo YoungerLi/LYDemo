@@ -98,6 +98,7 @@
                       @"NSOperationQueueViewController",    //多线程NSOperationQueue
                       @"MasonryViewController",             //Masonry布局
                       @"NSTimerViewController",             //定时器
+                      @"MessageCenterViewController",       //Delegate&Protocol
                       @"BubbleSequenceViewController",      //冒泡排序
                       @"PaoMaViewController",               //跑马灯
                       @"UUIDViewController",                //获取设备唯一标识符
@@ -134,6 +135,7 @@
                       @"多线程NSOperationQueue---",
                       @"Masonry布局---",
                       @"定时器",
+                      @"Delegate&Protocol",
                       @"冒泡排序---",
                       @"跑马灯",
                       @"获取设备唯一标识符",
