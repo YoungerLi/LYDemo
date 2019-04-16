@@ -84,15 +84,14 @@
         
         if ([absoluteString hasPrefix:@"lftapp://"]) {
             if ([absoluteString isEqualToString:@"lftapp://login"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"未登录"];
+                [self showAlertControllerWithTitle:@"提示" message:@"未登录"];
             } else if ([absoluteString isEqualToString:@"lftapp://shopCart"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"购物车"];
+                [self showAlertControllerWithTitle:@"提示" message:@"购物车"];
             } else if ([absoluteString hasPrefix:@"lftapp://tel"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"打电话"];
+                [self showAlertControllerWithTitle:@"提示" message:@"打电话"];
             } else if ([absoluteString hasPrefix:@"lftapp://goodDetail"]) {
-                [Tools showAlertViewOfSystemWithTitle:@"提示" andMessage:@"商品详情"];
+                [self showAlertControllerWithTitle:@"提示" message:@"商品详情"];
             }
-            policy = WKNavigationActionPolicyCancel;
         }
     }
     

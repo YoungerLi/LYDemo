@@ -83,14 +83,6 @@
 
 
 
-#pragma mark - ********** 展示AlertView
-
-/** 展示系统 UIAlertView */
-+ (void)showAlertViewOfSystemWithTitle:(NSString *)title andMessage:(NSString *)message;
-
-
-
-
 #pragma mark - ********** 富文本
 
 /** 自定义某些个文字的颜色大小 */

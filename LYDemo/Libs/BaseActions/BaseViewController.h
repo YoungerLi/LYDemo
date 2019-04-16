@@ -10,7 +10,10 @@
 
 @interface BaseViewController : UIViewController<UIGestureRecognizerDelegate>
 
-// 添加右滑返回手势
+/// 添加右滑返回手势
 - (void)addPanGesture;
+
+/// show Alert
+- (void)showAlertControllerWithTitle:(NSString *)title message:(NSString *)message;
 
 @end

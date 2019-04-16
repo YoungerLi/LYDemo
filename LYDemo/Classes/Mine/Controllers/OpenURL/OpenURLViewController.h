@@ -6,8 +6,8 @@
 //  Copyright © 2017年 kosienDGL. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface OpenURLViewController : UIViewController
+@interface OpenURLViewController : BaseViewController
 
 @end

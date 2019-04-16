@@ -57,7 +57,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:URL3]) {
         [self openURL:URL3];
     } else {
-        [Tools showAlertViewOfSystemWithTitle:@"没有安装" andMessage:nil];
+        [self showAlertControllerWithTitle:@"没有安装" message:nil];
     }
 }
 

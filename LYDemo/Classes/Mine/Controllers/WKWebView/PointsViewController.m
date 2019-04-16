@@ -9,9 +9,9 @@
 #import "PointsViewController.h"
 
 @interface PointsViewController ()
-{
-    UILabel *_label;
-}
+
+@property (nonatomic, strong) UILabel *label;
+
 @end
 
 @implementation PointsViewController
@@ -26,8 +26,8 @@
 // 创建界面
 - (void)createUI
 {
-    _label = [Tools createLabelWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT) text:nil textColor:[UIColor redColor] textAlignment:1];
-    [self.view addSubview:_label];
+    self.label = [Tools createLabelWithFrame:CGRectMake(0, NAVBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT) text:nil textColor:[UIColor redColor] textAlignment:1];
+    [self.view addSubview:self.label];
 }
 
 // 获取积分
@@ -36,9 +36,9 @@
     [AFNetHelper postWithAPI:@"balance" andParam:@{@"aid":self.aid} success:^(id data) {
         MSLog(@"用户余额等信息 == %@", data);
         if ([data[@"code"] integerValue] == 1) {
-            _label.text = [NSString stringWithFormat:@"当前积分为：%@", data[@"integral"]];
+            self.label.text = [NSString stringWithFormat:@"当前积分为：%@", data[@"integral"]];
         } else {
-            _label.text = @"获取信息失败";
+            self.label.text = @"获取信息失败";
         }
     } failure:^(NSError *error) {
         

@@ -155,14 +155,6 @@
 
 
 
-//展示系统的alert
-+ (void)showAlertViewOfSystemWithTitle:(NSString *)title andMessage:(NSString *)message
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
-}
-
-
 //设置某个文字的颜色
 + (NSMutableAttributedString *)attributString:(NSString *)string range:(NSRange)range color:(UIColor *)color font:(CGFloat)font
 {

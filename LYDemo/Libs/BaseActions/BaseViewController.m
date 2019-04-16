@@ -27,8 +27,6 @@
 }
 
 
-
-
 #pragma mark - 创建右滑返回手势
 
 - (void)createPanGesture
@@ -45,12 +43,12 @@
 }
 
 
+#pragma mark - UIAlertController
 
-
-#pragma mark - %%%%%%%%%%%%%%%%%%%%
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)showAlertControllerWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

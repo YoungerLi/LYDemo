@@ -9,10 +9,10 @@
 #import "PaoMaViewController.h"
 
 @interface PaoMaViewController ()
-{
-    UILabel *_label;
-    CGFloat _width;
-}
+
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) CGFloat width;
+
 @end
 
 @implementation PaoMaViewController
@@ -37,8 +37,8 @@
     
     NSString *string = @"我是跑马灯呀，啦啦啦啦啦，跑呀跑呀，一遍又一遍呀！";
     //创建label
-    _label = [Tools createLabelWithFrame:CGRectZero text:string textColor:WHITECOLOR textAlignment:0];
-    _label.font = [UIFont systemFontOfSize:16];
+    self.label = [Tools createLabelWithFrame:CGRectZero text:string textColor:WHITECOLOR textAlignment:0];
+    self.label.font = [UIFont systemFontOfSize:16];
     [backView addSubview:_label];
     
     //计算文字的宽度
@@ -49,12 +49,12 @@
 //开始跑
 - (void)beginAnimation
 {
-    _label.frame = CGRectMake(SCREEN_WIDTH, 0, _width, 50);
+    self.label.frame = CGRectMake(SCREEN_WIDTH, 0, self.width, 50);
     NSTimeInterval duration = _width / 30;  //时间 = 宽度 / 速度  （自行设置）
     
     //这里的 UIViewAnimationOptionCurveLinear 代表匀速运动， UIViewAnimationOptionRepeat 代表循环
     [UIView animateWithDuration:duration delay:0.5 options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionRepeat animations:^{
-        _label.frame = CGRectMake(-_width, 0, _width, 50);
+        self.label.frame = CGRectMake(-self.width, 0, self.width, 50);
     } completion:^(BOOL finished) {
         NSLog(@"动画结束 = %d", finished);
     }];

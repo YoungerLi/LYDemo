@@ -17,12 +17,12 @@
 #define PATH [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/minion_01.mp4"]
 
 @interface AFDownloadViewController ()
-{
-    MBProgressHUD *_HUD;
-    UIButton *_button1;
-    UIButton *_button2;
-    UIButton *_button3;
-}
+
+@property (nonatomic, strong) MBProgressHUD *HUD;
+@property (nonatomic, strong) UIButton *button1;
+@property (nonatomic, strong) UIButton *button2;
+@property (nonatomic, strong) UIButton *button3;
+
 @end
 
 @implementation AFDownloadViewController
@@ -34,33 +34,33 @@
     [self addPanGesture];
     
     //下载按钮
-    _button1 = [Tools createButtonWithFrame:CGRectMake(50, 80, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
-    [self.view addSubview:_button1];
+    self.button1 = [Tools createButtonWithFrame:CGRectMake(50, 80, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
+    [self.view addSubview:self.button1];
     
     //删除按钮
-    _button2 = [Tools createButtonWithFrame:CGRectMake(50, SCREEN_HEIGHT-100, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"删除" addTarget:self action:@selector(deleteClick)];
-    [self.view addSubview:_button2];
+    self.button2 = [Tools createButtonWithFrame:CGRectMake(50, SCREEN_HEIGHT-100, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"删除" addTarget:self action:@selector(deleteClick)];
+    [self.view addSubview:self.button2];
     
     //检查有没有
-    _button3 = [Tools createButtonWithFrame:CGRectMake(50, 150, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
-    [self.view addSubview:_button3];
+    self.button3 = [Tools createButtonWithFrame:CGRectMake(50, 150, SCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
+    [self.view addSubview:self.button3];
     
     
     //进度条
-    _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:_HUD];
-    _HUD.mode = MBProgressHUDModeAnnularDeterminate;//设置圆形
-    _HUD.label.text = @"下载中...";
+    self.HUD = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.HUD];
+    self.HUD.mode = MBProgressHUDModeAnnularDeterminate;//设置圆形
+    self.HUD.label.text = @"下载中...";
 }
 
 //下载按钮
 - (void)downloadClick
 {
     if ([LYFileManager fileExistsAtPath:PATH]) {
-        [Tools showAlertViewOfSystemWithTitle:@"已存在" andMessage:nil];
+        [self showAlertControllerWithTitle:@"已存在" message:nil];
         return;
     }
-    [_HUD showAnimated:YES];
+    [self.HUD showAnimated:YES];
     
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -69,7 +69,7 @@
         //下载进度
         NSLog(@"下载进度 == %f", downloadProgress.fractionCompleted);
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            _HUD.progress = downloadProgress.fractionCompleted;
+            self.HUD.progress = downloadProgress.fractionCompleted;
         }];
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
@@ -82,7 +82,7 @@
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         //下载完成
         NSLog(@"下载完成 == %@", filePath);
-        [_HUD hideAnimated:YES];
+        [self.HUD hideAnimated:YES];
     }];
     [task resume];
 }
@@ -100,9 +100,9 @@
 {
     if ([LYFileManager fileExistsAtPath:PATH]) {
         float size = [Tools fileSizeAtPath:PATH];
-        [_button3 setTitle:[NSString stringWithFormat:@"存在(%.1fM)", size] forState:UIControlStateNormal];
+        [self.button3 setTitle:[NSString stringWithFormat:@"存在(%.1fM)", size] forState:UIControlStateNormal];
     } else {
-        [_button3 setTitle:@"不存在" forState:UIControlStateNormal];
+        [self.button3 setTitle:@"不存在" forState:UIControlStateNormal];
     }
 }
 

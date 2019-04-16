@@ -10,9 +10,9 @@
 #import "LYHealthManager.h"
 
 @interface HealthViewController ()
-{
-    UIButton *_button;
-}
+
+@property (nonatomic, strong) UIButton *button;
+
 @end
 
 @implementation HealthViewController
@@ -21,8 +21,8 @@
     [super viewDidLoad];
     self.navigationItem.title = @"健康数据";
     
-    _button = [Tools createButtonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:nil addTarget:self action:@selector(click)];
-    [self.view addSubview:_button];
+    self.button = [Tools createButtonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:nil addTarget:self action:@selector(click)];
+    [self.view addSubview:self.button];
 }
 
 - (void)click
@@ -31,7 +31,7 @@
         if (error) {
             NSLog(@"error = %@", error);
         } else {
-            [_button setTitle:[NSString stringWithFormat:@"今日走了%zd步", steps] forState:UIControlStateNormal];
+            [self.button setTitle:[NSString stringWithFormat:@"今日走了%zd步", steps] forState:UIControlStateNormal];
         }
     }];
 }

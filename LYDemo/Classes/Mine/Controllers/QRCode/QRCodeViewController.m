@@ -9,26 +9,17 @@
 #import "QRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate, UIAlertViewDelegate>
+@interface QRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 {
     UIImageView                 *_backView;     //最大的背景（透明）
     AVCaptureSession            *_session;      //捕捉会话
     AVCaptureVideoPreviewLayer  *_previewLayer; //展示layer
-    
-    UILabel                     *_showLabel;    //
 }
+@property (nonatomic, strong) UILabel *showLabel;
+
 @end
 
 @implementation QRCodeViewController
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self startReading];//开始扫描
-}
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +35,10 @@
     [self.view addSubview:_showLabel];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self startReading];//开始扫描
+}
 
 
 #pragma mark - 开始扫描
@@ -57,9 +52,11 @@
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
     if (error) {
         MSLog(@"error == %@", [error localizedDescription]);
-        UIAlertView *aleart = [[UIAlertView alloc] initWithTitle:@"未获得授权使用摄像头" message:@"请在“设置”-“隐私”-“相机”中打开" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-        aleart.tag = 1000;
-        [aleart show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"未获得授权使用摄像头" message:@"请在“设置”-“隐私”-“相机”中打开" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
         return;
     }
     //3.创建媒体数据输出流
@@ -90,6 +87,7 @@
     [_session startRunning];
 }
 
+
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 //扫描完成
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
@@ -100,26 +98,10 @@
         MSLog(@"扫描结果 == %@", stringValue);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            _showLabel.text = stringValue;
+            self.showLabel.text = stringValue;
         });
     }
 }
-
-
-
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView.tag == 1000) {
-        if (buttonIndex == 0) {
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-    }
-}
-
-
 
 
 #pragma mark - 停止扫描
@@ -130,6 +112,5 @@
     [_previewLayer removeFromSuperlayer];
     [super viewWillDisappear:YES];
 }
-
 
 @end
