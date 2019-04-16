@@ -26,11 +26,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setTitle:@"扫一扫"];
     
-    _backView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _backView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, kSCREEN_HEIGHT)];
     _backView.image = [UIImage imageNamed:@"saomiao1"];
     [self.view addSubview:_backView];
     
-    _showLabel = [Tools createLabelWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 50) text:nil textColor:WHITECOLOR textAlignment:1];
+    _showLabel = [Tools createLabelWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, 50) text:nil textColor:WHITECOLOR textAlignment:1];
     _showLabel.numberOfLines = 0;
     [self.view addSubview:_showLabel];
 }

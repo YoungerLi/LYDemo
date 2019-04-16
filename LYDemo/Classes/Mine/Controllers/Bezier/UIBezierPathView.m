@@ -13,7 +13,7 @@
 - (instancetype)initWithCGPoint:(CGPoint)point
 {
     if (self = [super init]) {
-        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        self.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT);
         _point = point;
     }
     return self;
@@ -26,9 +26,9 @@
     NSLog(@"%@", NSStringFromCGRect(rect));
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:_point];
-    [path addLineToPoint:CGPointMake(SCREEN_WIDTH-40, 200)];
-    [path addLineToPoint:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT-40)];
-    [path addLineToPoint:CGPointMake(SCREEN_WIDTH/2, 74)];
+    [path addLineToPoint:CGPointMake(kSCREEN_WIDTH-40, 200)];
+    [path addLineToPoint:CGPointMake(kSCREEN_WIDTH/2, kSCREEN_HEIGHT-40)];
+    [path addLineToPoint:CGPointMake(kSCREEN_WIDTH/2, 74)];
     [path closePath];
     
     path.lineWidth = 2;

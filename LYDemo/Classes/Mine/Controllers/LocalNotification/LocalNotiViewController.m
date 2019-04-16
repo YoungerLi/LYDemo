@@ -20,7 +20,7 @@
     self.title = @"本地通知";
     [self addPanGesture];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, SCREEN_WIDTH-20, 50)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, kSCREEN_WIDTH-20, 50)];
     button.backgroundColor = [UIColor redColor];
     [button setTitle:@"发送一个本地通知" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];

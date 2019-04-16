@@ -61,7 +61,7 @@
                            @"10、计算该路径的大小",
                            @"11、数据写入文件"];
     for (int i = 0; i < nameArray.count; i++) {
-        UIButton *button = [Tools createButtonWithFrame:CGRectMake(50, 70+i*40, SCREEN_WIDTH-100, 30) backgroundColor:[UIColor redColor] title:nameArray[i] addTarget:self action:@selector(click:)];
+        UIButton *button = [Tools createButtonWithFrame:CGRectMake(50, 70+i*40, kSCREEN_WIDTH-100, 30) backgroundColor:[UIColor redColor] title:nameArray[i] addTarget:self action:@selector(click:)];
         button.tag = 1 + i;
         [self.view addSubview:button];
     }

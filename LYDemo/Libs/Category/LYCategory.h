@@ -15,13 +15,13 @@
 #import "NSDateFormatter+Category.h"
 
 // 屏幕宽高
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define kSCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #define STATUS_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height    //状态栏高度
 #define NAVBAR_HEIGHT (STATUS_HEIGHT + 44)                  //导航栏高度
-#define TABBAR_HEIGHT ((SCREEN_HEIGHT > 800) ? 83 : 49)     //TabBar高度
-#define BOTTOM_MARGIN ((SCREEN_HEIGHT > 800) ? 34 : 0)
+#define TABBAR_HEIGHT ((kSCREEN_HEIGHT > 800) ? 83 : 49)     //TabBar高度
+#define BOTTOM_MARGIN ((kSCREEN_HEIGHT > 800) ? 34 : 0)
 
 // 颜色
 #define LINECOLOR [UIColor colorWithRed:211/255.0f green:211/255.0f blue:211/255.0f alpha:1]    //d3d3d3
@@ -50,8 +50,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MAX_LENGTH (MAX(kSCREEN_WIDTH, kSCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(kSCREEN_WIDTH, kSCREEN_HEIGHT))
 
 
 //打印日志

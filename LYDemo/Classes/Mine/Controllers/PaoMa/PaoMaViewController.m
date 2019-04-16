@@ -31,7 +31,7 @@
     //当程序进入到后台时，动画会被中断结束，因此在程序回到前台时需要重新开启动画
     //还有一种情况，当离开此页面时（push到下一页面、切换TabBar）也会中断结束动画，所以应该在 - (void)viewWillAppear 中开启动画。
     
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 50)];
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, kSCREEN_WIDTH, 50)];
     backView.backgroundColor = [UIColor magentaColor];
     [self.view addSubview:backView];
     
@@ -49,7 +49,7 @@
 //开始跑
 - (void)beginAnimation
 {
-    self.label.frame = CGRectMake(SCREEN_WIDTH, 0, self.width, 50);
+    self.label.frame = CGRectMake(kSCREEN_WIDTH, 0, self.width, 50);
     NSTimeInterval duration = _width / 30;  //时间 = 宽度 / 速度  （自行设置）
     
     //这里的 UIViewAnimationOptionCurveLinear 代表匀速运动， UIViewAnimationOptionRepeat 代表循环
