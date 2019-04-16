@@ -281,20 +281,20 @@
 // URL编码（不包含特殊符号）
 + (NSString *)URLEncodedString:(NSString *)string
 {
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));  //不需要进行编码的字符集合
-    return result;
+//    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));  //不需要进行编码的字符集合
+    return string;
 }
 // URL编码（包含特殊符号）
 + (NSString *)URLEncodedStringIncludeCharacter:(NSString *)string
 {
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR("!*();+$,%#[] "), kCFStringEncodingUTF8));   //需要进行编码的字符集合
-    return result;
+//    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR("!*();+$,%#[] "), kCFStringEncodingUTF8));   //需要进行编码的字符集合
+    return string;
 }
 // URL解码
 + (NSString*)URLDecodedString:(NSString *)string
 {
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)string, CFSTR(""), kCFStringEncodingUTF8));
-    return result;
+//    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)string, CFSTR(""), kCFStringEncodingUTF8));
+    return string;
 }
 
 
