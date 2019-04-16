@@ -25,7 +25,7 @@
     //[self.navigationBar setBackgroundImage:[Tools imageWithColor:[UIColor blackColor]] forBarMetrics:UIBarMetricsDefault];
     
     //设置导航栏title的属性
-    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName:WHITECOLOR}];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 

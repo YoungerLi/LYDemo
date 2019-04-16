@@ -10,7 +10,18 @@
 
 @interface NSString (Valid)
 
-#pragma mark - ***********判断************
+/**
+ 获取字符串的高度
+ */
+- (CGFloat)heightWithSize:(CGSize)size font:(UIFont *)font;
+
+/**
+ 获取字符串的宽度
+ */
+- (CGFloat)widthWithSize:(CGSize)size font:(UIFont *)font;
+
+
+#pragma mark - 判断
 
 /** 判断是不是纯汉字 */
 - (BOOL)isChinesePurely;
@@ -41,7 +52,5 @@
 
 /** 判断obj是不是有效字串，如果是返回obj，如果不是，返回defaultString */
 + (NSString *)isValidStringWithObject:(id)obj defaultString:(NSString *)defaultString;
-
-
 
 @end

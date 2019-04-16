@@ -26,6 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)colorWithHexRGB:(NSUInteger)rgbValue alpha:(CGFloat)alpha;
 
 /**
+ 随机颜色
+ */
++ (UIColor *)colorWithRandomColor;
+
+/**
  普通的255颜色转换，转换为UIKit的 0.0 - 1.0 颜色值, alpha = 1.0
  */
 + (UIColor *)colorWith255Red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;

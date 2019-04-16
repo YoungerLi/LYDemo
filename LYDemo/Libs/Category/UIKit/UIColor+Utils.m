@@ -65,6 +65,13 @@
 }
 
 
+#pragma mark - 随机颜色
+
++ (UIColor *)colorWithRandomColor {
+    return [self colorWith255Red:arc4random()%256 green:arc4random()%256 blue:arc4random()%256 alpha:1.0];
+}
+
+
 #pragma mark - 普通的255颜色转换
 
 + (UIColor *)colorWith255Red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {

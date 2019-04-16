@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"健康数据";
     
-    self.button = [Tools createButtonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:nil addTarget:self action:@selector(click)];
+    self.button = [UIButton buttonWithFrame:CGRectMake(100, 100, 200, 100) backgroundColor:[UIColor redColor] title:nil addTarget:self action:@selector(click)];
     [self.view addSubview:self.button];
 }
 

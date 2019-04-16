@@ -37,12 +37,11 @@
     
     NSString *string = @"我是跑马灯呀，啦啦啦啦啦，跑呀跑呀，一遍又一遍呀！";
     //创建label
-    self.label = [Tools createLabelWithFrame:CGRectZero text:string textColor:WHITECOLOR textAlignment:0];
-    self.label.font = [UIFont systemFontOfSize:16];
+    self.label = [UILabel labelWithFrame:CGRectZero text:string textColor:[UIColor whiteColor] font:16 textAlignment:0];
     [backView addSubview:_label];
     
     //计算文字的宽度
-    _width = [Tools getMyWidthWithString:string size:CGSizeMake(CGFLOAT_MAX, 50) rFont:16];
+    _width = [string widthWithSize:CGSizeMake(CGFLOAT_MAX, 50) font:[UIFont systemFontOfSize:16]];
 }
 
 

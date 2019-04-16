@@ -30,7 +30,7 @@
     _backView.image = [UIImage imageNamed:@"saomiao1"];
     [self.view addSubview:_backView];
     
-    _showLabel = [Tools createLabelWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, 50) text:nil textColor:WHITECOLOR textAlignment:1];
+    _showLabel = [UILabel labelWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, 50) text:nil textColor:[UIColor whiteColor] font:16 textAlignment:1];
     _showLabel.numberOfLines = 0;
     [self.view addSubview:_showLabel];
 }

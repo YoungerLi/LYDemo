@@ -34,15 +34,15 @@
     [self addPanGesture];
     
     //下载按钮
-    self.button1 = [Tools createButtonWithFrame:CGRectMake(50, 80, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
+    self.button1 = [UIButton buttonWithFrame:CGRectMake(50, 80, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
     [self.view addSubview:self.button1];
     
     //删除按钮
-    self.button2 = [Tools createButtonWithFrame:CGRectMake(50, kSCREEN_HEIGHT-100, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"删除" addTarget:self action:@selector(deleteClick)];
+    self.button2 = [UIButton buttonWithFrame:CGRectMake(50, kSCREEN_HEIGHT-100, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"删除" addTarget:self action:@selector(deleteClick)];
     [self.view addSubview:self.button2];
     
     //检查有没有
-    self.button3 = [Tools createButtonWithFrame:CGRectMake(50, 150, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
+    self.button3 = [UIButton buttonWithFrame:CGRectMake(50, 150, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
     [self.view addSubview:self.button3];
     
     

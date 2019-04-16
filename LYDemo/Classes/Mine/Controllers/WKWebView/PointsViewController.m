@@ -26,7 +26,7 @@
 // 创建界面
 - (void)createUI
 {
-    self.label = [Tools createLabelWithFrame:CGRectMake(0, NAVBAR_HEIGHT, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT) text:nil textColor:[UIColor redColor] textAlignment:1];
+    self.label = [UILabel labelWithFrame:CGRectMake(0, NAVBAR_HEIGHT, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT) text:nil textColor:[UIColor redColor] font:18 textAlignment:1];
     [self.view addSubview:self.label];
 }
 

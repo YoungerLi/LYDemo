@@ -26,14 +26,14 @@
     dispatch_queue_t queue = dispatch_queue_create("bing", DISPATCH_QUEUE_CONCURRENT);  //并行队列
     */
     
-    UIButton *button1 = [Tools createButtonWithFrame:CGRectMake(100, 70, 200, 30) backgroundColor:[UIColor redColor] title:@"同步串行" addTarget:self action:@selector(GCDSyncC)];
-    UIButton *button2 = [Tools createButtonWithFrame:CGRectMake(100, 110, 200, 30) backgroundColor:[UIColor redColor] title:@"同步并行" addTarget:self action:@selector(GCDSyncB)];
-    UIButton *button3 = [Tools createButtonWithFrame:CGRectMake(100, 150, 200, 30) backgroundColor:[UIColor redColor] title:@"异步串行" addTarget:self action:@selector(GCDAsyncC)];
-    UIButton *button4 = [Tools createButtonWithFrame:CGRectMake(100, 190, 200, 30) backgroundColor:[UIColor redColor] title:@"异步并行" addTarget:self action:@selector(GCDAsyncB)];
-    UIButton *button5 = [Tools createButtonWithFrame:CGRectMake(100, 230, 200, 30) backgroundColor:[UIColor redColor] title:@"全局并行" addTarget:self action:@selector(GCDGlobal)];
-    UIButton *button6 = [Tools createButtonWithFrame:CGRectMake(100, 270, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_after" addTarget:self action:@selector(GCDTime)];
-    UIButton *button7 = [Tools createButtonWithFrame:CGRectMake(100, 310, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_barrier_async" addTarget:self action:@selector(GCDBarrier)];
-    UIButton *button8 = [Tools createButtonWithFrame:CGRectMake(100, 350, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_group" addTarget:self action:@selector(GCDGroup)];
+    UIButton *button1 = [UIButton buttonWithFrame:CGRectMake(100, 70, 200, 30) backgroundColor:[UIColor redColor] title:@"同步串行" addTarget:self action:@selector(GCDSyncC)];
+    UIButton *button2 = [UIButton buttonWithFrame:CGRectMake(100, 110, 200, 30) backgroundColor:[UIColor redColor] title:@"同步并行" addTarget:self action:@selector(GCDSyncB)];
+    UIButton *button3 = [UIButton buttonWithFrame:CGRectMake(100, 150, 200, 30) backgroundColor:[UIColor redColor] title:@"异步串行" addTarget:self action:@selector(GCDAsyncC)];
+    UIButton *button4 = [UIButton buttonWithFrame:CGRectMake(100, 190, 200, 30) backgroundColor:[UIColor redColor] title:@"异步并行" addTarget:self action:@selector(GCDAsyncB)];
+    UIButton *button5 = [UIButton buttonWithFrame:CGRectMake(100, 230, 200, 30) backgroundColor:[UIColor redColor] title:@"全局并行" addTarget:self action:@selector(GCDGlobal)];
+    UIButton *button6 = [UIButton buttonWithFrame:CGRectMake(100, 270, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_after" addTarget:self action:@selector(GCDTime)];
+    UIButton *button7 = [UIButton buttonWithFrame:CGRectMake(100, 310, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_barrier_async" addTarget:self action:@selector(GCDBarrier)];
+    UIButton *button8 = [UIButton buttonWithFrame:CGRectMake(100, 350, 200, 30) backgroundColor:[UIColor redColor] title:@"dispatch_group" addTarget:self action:@selector(GCDGroup)];
     [self.view addSubview:button1];
     [self.view addSubview:button2];
     [self.view addSubview:button3];

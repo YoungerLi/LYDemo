@@ -1,17 +1,22 @@
 //
-//  UIView+Animation.m
-//  LYHeadNews
+//  UIView+Utils.m
+//  LYDemo
 //
-//  Created by liyang on 2018/11/10.
-//  Copyright © 2018 kosien. All rights reserved.
+//  Created by wukongzuche on 2019/4/16.
+//  Copyright © 2019 kosien. All rights reserved.
 //
 
-#import "UIView+Animation.h"
+#import "UIView+Utils.h"
 
-@implementation UIView (Animation)
+@implementation UIView (Utils)
 
-- (void)rotationAnimation
-{
++ (UIView *)viewWithFrame:(CGRect)frame color:(UIColor *)color {
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = color;
+    return view;
+}
+
+- (void)rotationAnimation {
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
     rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI * 2];
@@ -21,8 +26,7 @@
     [self.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 
-- (void)stopRotation
-{
+- (void)stopRotation {
     if ([self.layer animationForKey:@"rotationAnimation"]) {
         [self.layer removeAnimationForKey:@"rotationAnimation"];
     }

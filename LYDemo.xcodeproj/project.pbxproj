@@ -67,7 +67,6 @@
 		C67AF46B211A9330000384F8 /* WebViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF46A211A9330000384F8 /* WebViewController4.m */; };
 		C67AF46E211A9FF7000384F8 /* AFNetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF46C211A9FF7000384F8 /* AFNetHelper.m */; };
 		C67AF472211AA37B000384F8 /* PointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF471211AA37B000384F8 /* PointsViewController.m */; };
-		C687113C219A6FAF001D3ECE /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C687113B219A6FAF001D3ECE /* UIView+Animation.m */; };
 		C6A6422720A9433500C73554 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A6422520A9433400C73554 /* QRCodeViewController.m */; };
 		C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A6422820A9440400C73554 /* AVFoundation.framework */; };
 		C6B05DFE21A6A8CB00012E9C /* LYMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B05DFC21A6A8CB00012E9C /* LYMotionManager.m */; };
@@ -83,6 +82,10 @@
 		C6F6721D209DA2CA00735D75 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6721C209DA2CA00735D75 /* CountDownViewController.m */; };
 		CA0B08DF226582B6005C296D /* ReactiveObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08DE226582B6005C296D /* ReactiveObjcViewController.m */; };
 		CA0B08E222658645005C296D /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08E122658645005C296D /* UIColor+Utils.m */; };
+		CA0B08E52265AD6E005C296D /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08E42265AD6E005C296D /* UIImage+Utils.m */; };
+		CA0B08E82265AE62005C296D /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08E72265AE62005C296D /* UIView+Utils.m */; };
+		CA0B08EB2265B0D7005C296D /* UIButton+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08EA2265B0D7005C296D /* UIButton+Utils.m */; };
+		CA0B08EE2265B539005C296D /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08ED2265B539005C296D /* UILabel+Utils.m */; };
 		CAFD8214225F14CA001D52D3 /* LYAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFD8213225F14CA001D52D3 /* LYAPIBaseManager.m */; };
 		CAFD8217225F1542001D52D3 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFD8216225F1542001D52D3 /* MessageCenterViewController.m */; };
 /* End PBXBuildFile section */
@@ -191,8 +194,6 @@
 		C67AF46D211A9FF7000384F8 /* AFNetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetHelper.h; sourceTree = "<group>"; };
 		C67AF470211AA37B000384F8 /* PointsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointsViewController.h; sourceTree = "<group>"; };
 		C67AF471211AA37B000384F8 /* PointsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointsViewController.m; sourceTree = "<group>"; };
-		C687113A219A6FAF001D3ECE /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
-		C687113B219A6FAF001D3ECE /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		C6A6422520A9433400C73554 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C6A6422620A9433400C73554 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C6A6422820A9440400C73554 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -220,6 +221,14 @@
 		CA0B08DE226582B6005C296D /* ReactiveObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveObjcViewController.m; sourceTree = "<group>"; };
 		CA0B08E022658645005C296D /* UIColor+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
 		CA0B08E122658645005C296D /* UIColor+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		CA0B08E32265AD6E005C296D /* UIImage+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		CA0B08E42265AD6E005C296D /* UIImage+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
+		CA0B08E62265AE62005C296D /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		CA0B08E72265AE62005C296D /* UIView+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		CA0B08E92265B0D7005C296D /* UIButton+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Utils.h"; sourceTree = "<group>"; };
+		CA0B08EA2265B0D7005C296D /* UIButton+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Utils.m"; sourceTree = "<group>"; };
+		CA0B08EC2265B539005C296D /* UILabel+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
+		CA0B08ED2265B539005C296D /* UILabel+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		CAFD8212225F14CA001D52D3 /* LYAPIBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAPIBaseManager.h; sourceTree = "<group>"; };
 		CAFD8213225F14CA001D52D3 /* LYAPIBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAPIBaseManager.m; sourceTree = "<group>"; };
 		CAFD8215225F1542001D52D3 /* MessageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
@@ -335,18 +344,8 @@
 				C63A16201FFC78880030974E /* LYCategory.h */,
 				C642F3B721C10A0A00ED652B /* Tools.h */,
 				C642F3B621C10A0A00ED652B /* Tools.m */,
-				C63A16251FFC79FA0030974E /* NSString+Valid.h */,
-				C63A16241FFC79FA0030974E /* NSString+Valid.m */,
-				C60778A521B13DE400A54E1B /* UIFont+Scale.h */,
-				C60778A421B13DE400A54E1B /* UIFont+Scale.m */,
-				CA0B08E022658645005C296D /* UIColor+Utils.h */,
-				CA0B08E122658645005C296D /* UIColor+Utils.m */,
-				C66E2602200893CD007691E8 /* UIView+LYExtension.h */,
-				C66E2603200893CD007691E8 /* UIView+LYExtension.m */,
-				C687113A219A6FAF001D3ECE /* UIView+Animation.h */,
-				C687113B219A6FAF001D3ECE /* UIView+Animation.m */,
-				C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */,
-				C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */,
+				CA0B08EF2265C116005C296D /* UIKit */,
+				CA0B08F02265C11E005C296D /* Foundation */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -545,6 +544,38 @@
 				CA0B08DE226582B6005C296D /* ReactiveObjcViewController.m */,
 			);
 			path = ReactiveObjc;
+			sourceTree = "<group>";
+		};
+		CA0B08EF2265C116005C296D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CA0B08E62265AE62005C296D /* UIView+Utils.h */,
+				CA0B08E72265AE62005C296D /* UIView+Utils.m */,
+				C66E2602200893CD007691E8 /* UIView+LYExtension.h */,
+				C66E2603200893CD007691E8 /* UIView+LYExtension.m */,
+				CA0B08E92265B0D7005C296D /* UIButton+Utils.h */,
+				CA0B08EA2265B0D7005C296D /* UIButton+Utils.m */,
+				CA0B08EC2265B539005C296D /* UILabel+Utils.h */,
+				CA0B08ED2265B539005C296D /* UILabel+Utils.m */,
+				CA0B08E32265AD6E005C296D /* UIImage+Utils.h */,
+				CA0B08E42265AD6E005C296D /* UIImage+Utils.m */,
+				C60778A521B13DE400A54E1B /* UIFont+Scale.h */,
+				C60778A421B13DE400A54E1B /* UIFont+Scale.m */,
+				CA0B08E022658645005C296D /* UIColor+Utils.h */,
+				CA0B08E122658645005C296D /* UIColor+Utils.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CA0B08F02265C11E005C296D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				C63A16251FFC79FA0030974E /* NSString+Valid.h */,
+				C63A16241FFC79FA0030974E /* NSString+Valid.m */,
+				C63A162B1FFC87AC0030974E /* NSDateFormatter+Category.h */,
+				C63A162C1FFC87AC0030974E /* NSDateFormatter+Category.m */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		CAFD81FF225F0F3D001D52D3 /* FontName */ = {
@@ -844,21 +875,24 @@
 				C642F3B821C10A0A00ED652B /* Tools.m in Sources */,
 				C67AF46E211A9FF7000384F8 /* AFNetHelper.m in Sources */,
 				C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */,
+				CA0B08E52265AD6E005C296D /* UIImage+Utils.m in Sources */,
 				C63A16491FFCD0640030974E /* SecondViewController.m in Sources */,
 				C63A163B1FFCBE9A0030974E /* BaseViewController.m in Sources */,
 				C63A16461FFCD0540030974E /* MineViewController.m in Sources */,
 				CA0B08DF226582B6005C296D /* ReactiveObjcViewController.m in Sources */,
 				C6EDB27220C50CFD00D6537D /* ReceiveDataViewController.m in Sources */,
+				CA0B08E82265AE62005C296D /* UIView+Utils.m in Sources */,
+				CA0B08EB2265B0D7005C296D /* UIButton+Utils.m in Sources */,
 				C6510B7A202BF1650094E87E /* UIBezierPathView.m in Sources */,
 				C63A162F1FFC87AC0030974E /* NSDateFormatter+Category.m in Sources */,
 				C6F6721A209DA2AF00735D75 /* LYCountDownLabel.m in Sources */,
 				C646EA602007590D00BF17BE /* PaoMaViewController.m in Sources */,
 				CA0B08E222658645005C296D /* UIColor+Utils.m in Sources */,
 				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
+				CA0B08EE2265B539005C296D /* UILabel+Utils.m in Sources */,
 				C67AF465211A8F90000384F8 /* WebViewController2.m in Sources */,
 				C66C689220298218007628A7 /* GCDViewController.m in Sources */,
 				CAFD8217225F1542001D52D3 /* MessageCenterViewController.m in Sources */,
-				C687113C219A6FAF001D3ECE /* UIView+Animation.m in Sources */,
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
 				C67AF462211A8F68000384F8 /* WebViewController1.m in Sources */,

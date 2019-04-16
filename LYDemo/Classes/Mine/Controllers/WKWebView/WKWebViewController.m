@@ -135,7 +135,7 @@
     if (!_webView) {
         _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT)];
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _webView.backgroundColor = WHITECOLOR;
+        _webView.backgroundColor = [UIColor whiteColor];
         _webView.navigationDelegate = self;
     }
     return _webView;
