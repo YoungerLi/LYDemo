@@ -86,6 +86,7 @@
 		CA0B08E82265AE62005C296D /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08E72265AE62005C296D /* UIView+Utils.m */; };
 		CA0B08EB2265B0D7005C296D /* UIButton+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08EA2265B0D7005C296D /* UIButton+Utils.m */; };
 		CA0B08EE2265B539005C296D /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08ED2265B539005C296D /* UILabel+Utils.m */; };
+		CA0B08F32265D9F2005C296D /* RACView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0B08F22265D9F2005C296D /* RACView.m */; };
 		CAFD8214225F14CA001D52D3 /* LYAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFD8213225F14CA001D52D3 /* LYAPIBaseManager.m */; };
 		CAFD8217225F1542001D52D3 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFD8216225F1542001D52D3 /* MessageCenterViewController.m */; };
 /* End PBXBuildFile section */
@@ -229,6 +230,8 @@
 		CA0B08EA2265B0D7005C296D /* UIButton+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Utils.m"; sourceTree = "<group>"; };
 		CA0B08EC2265B539005C296D /* UILabel+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		CA0B08ED2265B539005C296D /* UILabel+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
+		CA0B08F12265D9F2005C296D /* RACView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACView.h; sourceTree = "<group>"; };
+		CA0B08F22265D9F2005C296D /* RACView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACView.m; sourceTree = "<group>"; };
 		CAFD8212225F14CA001D52D3 /* LYAPIBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAPIBaseManager.h; sourceTree = "<group>"; };
 		CAFD8213225F14CA001D52D3 /* LYAPIBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAPIBaseManager.m; sourceTree = "<group>"; };
 		CAFD8215225F1542001D52D3 /* MessageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
@@ -542,6 +545,8 @@
 			children = (
 				CA0B08DD226582B6005C296D /* ReactiveObjcViewController.h */,
 				CA0B08DE226582B6005C296D /* ReactiveObjcViewController.m */,
+				CA0B08F12265D9F2005C296D /* RACView.h */,
+				CA0B08F22265D9F2005C296D /* RACView.m */,
 			);
 			path = ReactiveObjc;
 			sourceTree = "<group>";
@@ -890,6 +895,7 @@
 				CA0B08E222658645005C296D /* UIColor+Utils.m in Sources */,
 				C66E2604200893CD007691E8 /* UIView+LYExtension.m in Sources */,
 				CA0B08EE2265B539005C296D /* UILabel+Utils.m in Sources */,
+				CA0B08F32265D9F2005C296D /* RACView.m in Sources */,
 				C67AF465211A8F90000384F8 /* WebViewController2.m in Sources */,
 				C66C689220298218007628A7 /* GCDViewController.m in Sources */,
 				CAFD8217225F1542001D52D3 /* MessageCenterViewController.m in Sources */,
@@ -1058,6 +1064,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = N99BE2U29Z;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYDemo/LYDemo.pch";

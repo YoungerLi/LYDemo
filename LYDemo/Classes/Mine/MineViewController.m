@@ -106,6 +106,7 @@
                       @"HealthViewController",              //健康数据
                       @"CountDownViewController",           //倒计时动画
                       @"QRCodeViewController",              //二维码扫描
+                      @"ReactiveObjcViewController",        //ReactiveObjc
                       nil];
     }
     return _dataArray;
@@ -143,6 +144,7 @@
                       @"健康数据",
                       @"倒计时动画",
                       @"二维码扫描",
+                      @"ReactiveObjc",
                       nil];
     }
     return _nameArray;
