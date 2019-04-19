@@ -28,17 +28,20 @@
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
+    //代替监听事件方法(按钮点击)
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         NSLog(@"点击了button，哈哈");
         CGRect frame = x.frame;
         frame.size.width += 2;
         x.frame = frame;
     }];
+    //代替KVO
     [[button rac_valuesAndChangesForKeyPath:@"frame" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew observer:self] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
         NSLog(@"KVO == %@", x.second);
     }];
 }
 
+// 传值
 - (void)demo2 {
     RACView *racView = [[RACView alloc] initWithFrame:CGRectMake(50, 170, 200, 50)];
     [self.view addSubview:racView];
