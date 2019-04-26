@@ -10,7 +10,7 @@
 
 @implementation UIImage (Utils)
 
-// 通过文件路径加载图片，该方法加载图片优势：不会将图片加到内存缓存中（适用类型：较大图片的处理）图片名需加.png/.jpg
+// 通过文件路径加载图片
 + (UIImage *)imageWithName:(NSString *)imgName {
     if (imgName) {
         NSString *path = [[NSBundle mainBundle] pathForResource:imgName ofType:nil];

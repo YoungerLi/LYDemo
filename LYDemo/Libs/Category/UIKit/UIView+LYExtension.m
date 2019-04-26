@@ -22,8 +22,6 @@
 }
 
 
-
-
 #pragma mark - ly_y
 
 - (void)setLy_y:(CGFloat)ly_y {
@@ -34,8 +32,6 @@
 - (CGFloat)ly_y {
     return self.frame.origin.y;
 }
-
-
 
 
 #pragma mark - ly_w
@@ -50,8 +46,6 @@
 }
 
 
-
-
 #pragma mark - ly_h
 
 - (void)setLy_h:(CGFloat)ly_h {
@@ -62,8 +56,6 @@
 - (CGFloat)ly_h {
     return self.frame.size.height;
 }
-
-
 
 
 #pragma mark - ly_centerX
@@ -78,8 +70,6 @@
 }
 
 
-
-
 #pragma mark - ly_centerY
 
 - (void)setLy_centerY:(CGFloat)ly_centerY {
@@ -90,8 +80,6 @@
 - (CGFloat)ly_centerY {
     return self.center.y;
 }
-
-
 
 
 #pragma mark - ly_right
@@ -106,8 +94,6 @@
 }
 
 
-
-
 #pragma mark - ly_bottom
 
 - (void)setLy_bottom:(CGFloat)ly_bottom {
@@ -120,8 +106,6 @@
 }
 
 
-
-
 #pragma mark - ly_size
 
 - (void)setLy_size:(CGSize)ly_size {
@@ -132,8 +116,6 @@
 - (CGSize)ly_size {
     return self.frame.size;
 }
-
-
 
 
 #pragma mark - ly_origin

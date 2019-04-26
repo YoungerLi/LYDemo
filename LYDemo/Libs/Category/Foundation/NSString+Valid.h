@@ -13,11 +13,13 @@
 /**
  获取字符串的高度
  */
+- (CGFloat)heightWithWidth:(CGFloat)width font:(UIFont *)font;
 - (CGFloat)heightWithSize:(CGSize)size font:(UIFont *)font;
 
 /**
  获取字符串的宽度
  */
+- (CGFloat)widthWithHeight:(CGFloat)height font:(UIFont *)font;
 - (CGFloat)widthWithSize:(CGSize)size font:(UIFont *)font;
 
 

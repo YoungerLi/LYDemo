@@ -11,7 +11,7 @@
 
 @interface Tools : NSObject
 
-#pragma mark - ********** 富文本
+#pragma mark - 富文本
 
 /** 自定义某些个文字的颜色大小 */
 + (NSMutableAttributedString *)attributString:(NSString *)string range:(NSRange)range color:(UIColor *)color font:(CGFloat)font;
@@ -19,7 +19,7 @@
 + (NSMutableAttributedString *)attributAddLineString:(NSString *)string range:(NSRange)range;
 
 
-#pragma mark - ********** 文件路径大小
+#pragma mark - 文件路径大小
 
 /** 计算该路径的大小（单位：M） */
 + (float)fileSizeAtPath:(NSString *)path;
@@ -31,7 +31,7 @@
 + (float)diskOfFreeSizeMBytes;
 
 
-#pragma mark - ********** 时间格式转换
+#pragma mark - 时间格式转换
 
 /** 把秒转化成时分秒 -- 12:59:59 */
 + (NSString *)changeTimeWithSecond:(NSInteger)seconds;
@@ -41,31 +41,31 @@
 + (NSString *)changeTimeStringWithSecond:(NSInteger)seconds;
 
 
-#pragma mark - ********** 获取粘贴板的信息
+#pragma mark - 获取粘贴板的信息
 
 /** 获取粘贴板的信息 */
 + (NSString *)getPasteString;
 
 
-#pragma mark - ********** MD5加密
+#pragma mark - MD5加密
 
 /** MD5加密 */
 + (NSString *)getMD5_32Bit_string:(NSString *)srcString;
 
 
-#pragma mark - ********** URL编码/解码
+#pragma mark - URL编码/解码
 
-/** URL编码（不包含特殊符号）（转换成 %E6%88%91%E6 这种形式的） */
+/** URL编码（特殊符号不会被编码）（转换成 %E6%88%91%E6 这种形式的） */
 + (NSString *)URLEncodedString:(NSString *)string;
 
-/** URL编码（包含特殊符号） */
+/** URL编码（特殊符号会被编码） */
 + (NSString *)URLEncodedStringIncludeCharacter:(NSString *)string;
 
 /** URL解码 */
 + (NSString *)URLDecodedString:(NSString *)string;
 
 
-#pragma mark - ********** 类型转换
+#pragma mark - 类型转换
 
 /** 字典转JSON字符串 */
 + (NSString *)convertToJsonStringFrom:(NSDictionary *)dict;
@@ -74,7 +74,7 @@
 + (NSDictionary *)convertToDictFromJsonString:(NSString *)string;
 
 
-#pragma mark - ********** 系统功能
+#pragma mark - 系统功能
 
 /** 获取当前版本号 */
 + (NSString *)getAppCurrentVersion;

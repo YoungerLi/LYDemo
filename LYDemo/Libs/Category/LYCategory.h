@@ -8,6 +8,7 @@
 //  用法：将LYCategory文件夹导入工程中，然后在pch文件中引入头文件"LYCategory.h"
 
 #import "Tools.h"
+// UIKit
 #import "UIView+Utils.h"
 #import "UIView+LYExtension.h"
 #import "UIButton+Utils.h"
@@ -15,6 +16,7 @@
 #import "UIImage+Utils.h"
 #import "UIFont+Scale.h"
 #import "UIColor+Utils.h"
+// Foundation
 #import "NSString+Valid.h"
 #import "NSDateFormatter+Category.h"
 
@@ -24,7 +26,7 @@
 
 #define STATUS_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height    //状态栏高度
 #define NAVBAR_HEIGHT (STATUS_HEIGHT + 44)                  //导航栏高度
-#define TABBAR_HEIGHT ((kSCREEN_HEIGHT > 800) ? 83 : 49)     //TabBar高度
+#define TABBAR_HEIGHT ((kSCREEN_HEIGHT > 800) ? 83 : 49)    //TabBar高度
 #define BOTTOM_MARGIN ((kSCREEN_HEIGHT > 800) ? 34 : 0)
 
 

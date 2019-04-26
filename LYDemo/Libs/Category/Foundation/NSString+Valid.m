@@ -10,11 +10,19 @@
 
 @implementation NSString (Valid)
 
+// 获取字符串的高度
+- (CGFloat)heightWithWidth:(CGFloat)width font:(UIFont *)font {
+    return [self heightWithSize:CGSizeMake(width, CGFLOAT_MAX) font:font];
+}
 - (CGFloat)heightWithSize:(CGSize)size font:(UIFont *)font {
     CGRect frame = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
     return frame.size.height;
 }
 
+// 获取字符串的宽度
+- (CGFloat)widthWithHeight:(CGFloat)height font:(UIFont *)font {
+     return [self widthWithSize:CGSizeMake(CGFLOAT_MAX, height) font:font];
+}
 - (CGFloat)widthWithSize:(CGSize)size font:(UIFont *)font {
     CGRect frame = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
     return frame.size.width;
@@ -75,7 +83,7 @@
 
 + (NSString *)isValidStringWithObject:(id)obj defaultString:(NSString *)defaultString {
     if ([NSString isStringAndLength:obj]) {
-        return [obj stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; //只去掉首尾的空格和换行
+        return [obj stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; //去掉空格和换行
     } else {
         return defaultString;
     }
