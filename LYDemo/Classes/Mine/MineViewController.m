@@ -107,6 +107,7 @@
                       @"CountDownViewController",           //倒计时动画
                       @"QRCodeViewController",              //二维码扫描
                       @"ReactiveObjcViewController",        //ReactiveObjc
+                      @"LoginViewController",               //登录
                       nil];
     }
     return _dataArray;
@@ -145,6 +146,7 @@
                       @"倒计时动画",
                       @"二维码扫描",
                       @"ReactiveObjc",
+                      @"登录",
                       nil];
     }
     return _nameArray;
