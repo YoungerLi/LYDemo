@@ -23,6 +23,16 @@
 - (CGFloat)widthWithSize:(CGSize)size font:(UIFont *)font;
 
 
+/** 判断是不是表情符号 */
+- (BOOL)isEmoji;
+
+/** 判断是否包含表情符号 */
+- (BOOL)isContainsEmoji;
+
+/** 移除表情符号 */
+- (instancetype)removedEmojiString;
+
+
 #pragma mark - 判断
 
 /** 判断是不是纯汉字 */

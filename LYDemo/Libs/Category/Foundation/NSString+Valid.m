@@ -29,6 +29,46 @@
 }
 
 
+// 判断是不是表情符号
+- (BOOL)isEmoji {
+    const unichar high = [self characterAtIndex:0];
+    // Surrogate pair (U+1D000-1F9FF)
+    if (0xd800 <= high && high <= 0xdbff) {
+        const unichar low = [self characterAtIndex: 1];
+        const int codepoint = ((high - 0xd800) * 0x400) + (low - 0xdc00) + 0x10000;
+        return (0x1d000 <= codepoint && codepoint <= 0x1f77f);
+        // Not surrogate pair (U+2100-27BF)
+    } else {
+        return (0x2100 <= high && high <= 0x27bf);
+    }
+}
+
+// 判断是否包含表情符号
+- (BOOL)isContainsEmoji {
+    __block BOOL result = NO;
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
+                             options:NSStringEnumerationByComposedCharacterSequences
+                          usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                              if ([substring isEmoji]) {
+                                  *stop = YES;
+                                  result = YES;
+                              }
+                          }];
+    return result;
+}
+
+// 移除表情符号
+- (instancetype)removedEmojiString {
+    __block NSMutableString *buffer = [NSMutableString stringWithCapacity:[self length]];
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
+                             options:NSStringEnumerationByComposedCharacterSequences
+                          usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                              [buffer appendString:[substring isEmoji] ? @"": substring];
+                          }];
+    return buffer;
+}
+
+
 #pragma mark - 判断
 
 - (BOOL)isChinesePurely {
@@ -68,7 +108,13 @@
 }
 
 - (BOOL)isEmpty {
-    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""];
+    if (![self isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL)isPositiveNumber {
