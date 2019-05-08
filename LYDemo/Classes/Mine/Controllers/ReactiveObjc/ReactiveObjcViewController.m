@@ -19,10 +19,14 @@
     [super viewDidLoad];
     self.navigationItem.title = @"ReactiveObjc";
     
-    [self demo1];
-    [self demo2];
-    [self demo3];
+//    [self demo1];
+//    [self demo2];
+//    [self demo3];
+    [self demo4];
 }
+
+
+#pragma mark - demo1
 
 - (void)demo1 {
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
@@ -41,6 +45,9 @@
     }];
 }
 
+
+#pragma mark - demo2
+
 // 传值
 - (void)demo2 {
     RACView *racView = [[RACView alloc] initWithFrame:CGRectMake(50, 170, 200, 50)];
@@ -52,6 +59,9 @@
         NSLog(@"RACView == %@, %@", x.first, x.second);
     }];
 }
+
+
+#pragma mark - demo3
 
 - (void)demo3 {
     RACSignal *signal1 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
@@ -68,6 +78,26 @@
 // 更新UI
 - (void)updateUIWithSignal:(id)signal1 signal:(id)signal2 {
     NSLog(@"更新UI == %@, %@", signal1, signal2);
+}
+
+
+#pragma mark - demo4
+
+- (void)demo4 {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"啦啦了"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"清理...");
+        }];
+    }];
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"接收到next类型事件：%@", x);
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"接收到error类型事件：%@", error);
+    } completed:^{
+        NSLog(@"接收到completed类型事件，不包含任何数据");
+    }];
 }
 
 
