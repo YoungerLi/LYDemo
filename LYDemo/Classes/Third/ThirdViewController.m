@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Thor";
     
+    //master
 }
 
 @end
