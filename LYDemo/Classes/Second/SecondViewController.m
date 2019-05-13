@@ -18,8 +18,6 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Iron Man";
     
-    //master
-    //commit1
 }
 
 @end

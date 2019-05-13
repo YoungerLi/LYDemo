@@ -18,9 +18,6 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Thor";
     
-    //master
-    //commit2
-    //commit3
 }
 
 @end
