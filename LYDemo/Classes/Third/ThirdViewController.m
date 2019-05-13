@@ -19,6 +19,7 @@
     self.navigationItem.title = @"Thor";
     
     //master
+    //commit2
 }
 
 @end
