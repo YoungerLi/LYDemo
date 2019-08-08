@@ -2,8 +2,7 @@
 //  UIColor+Utils.m
 //  LYDemo
 //
-//  Created by wukongzuche on 2019/4/16.
-//  Copyright © 2019 kosien. All rights reserved.
+//  Created by 李杨 on 2019/4/16.
 //
 
 #import "UIColor+Utils.h"
