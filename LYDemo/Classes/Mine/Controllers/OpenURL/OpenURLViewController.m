@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"跳转";
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, kSCREEN_WIDTH-20, 50)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, kSCREEN_WIDTH-20, 50)];
     button.backgroundColor = [UIColor redColor];
     [button setTitle:@"跳转" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
@@ -62,8 +62,7 @@
 }
 
 
-- (void)openURL:(NSURL *)URL
-{
+- (void)openURL:(NSURL *)URL {
     if (@available(iOS 10.0, *)) {
         [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:nil];
     } else {
@@ -71,9 +70,4 @@
     }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end

@@ -26,15 +26,13 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(lookPoints)];
     [self.view addSubview:self.webView];
     [self loadRequest];
+    NSLog(@"frame == %@", NSStringFromCGRect(self.webView.frame));
 }
-
-
 
 
 #pragma mark - Private Methods
 
-- (void)loadRequest
-{
+- (void)loadRequest {
     //清空cookie
     for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
@@ -54,8 +52,7 @@
     [self.webView loadRequest:request];
 }
 
-- (void)lookPoints
-{
+- (void)lookPoints {
     PointsViewController *VC = [[PointsViewController alloc] init];
     VC.aid = @"14743";
     VC.phone = @"17326923630";
@@ -67,8 +64,7 @@
 
 #pragma mark - UIWebViewDelegate
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *absoluteString = request.URL.absoluteString;
     NSLog(@"absoluteString == %@", absoluteString);
     
@@ -87,16 +83,13 @@
     
     return YES;
 }
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
+- (void)webViewDidStartLoad:(UIWebView *)webView {
     NSLog(@"页面开始加载");
 }
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"页面加载成功");
 }
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"页面加载失败");
 }
 
@@ -105,12 +98,10 @@
 
 #pragma mark - Getters
 
-- (UIWebView *)webView
-{
+- (UIWebView *)webView {
     if (_webView == nil) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT)];
-        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _webView.backgroundColor = [UIColor whiteColor];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT)];
+        _webView.backgroundColor = [UIColor redColor];
         _webView.scalesPageToFit = YES;
         _webView.delegate = self;
     }

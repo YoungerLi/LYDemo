@@ -33,15 +33,20 @@
     self.title = @"下载";
     
     //下载按钮
-    self.button1 = [UIButton buttonWithFrame:CGRectMake(50, 80, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
+    self.button1 = [UIButton buttonWithFrame:CGRectMake(50, 20, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
     [self.view addSubview:self.button1];
     
     //删除按钮
     self.button2 = [UIButton buttonWithFrame:CGRectMake(50, kSCREEN_HEIGHT-100, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"删除" addTarget:self action:@selector(deleteClick)];
     [self.view addSubview:self.button2];
+    self.button2.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.button2.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:50].active = YES;
+    [self.button2.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-50].active = YES;
+    [self.button2.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-50].active = YES;
+    [self.button2.heightAnchor constraintEqualToConstant:50].active = YES;
     
     //检查有没有
-    self.button3 = [UIButton buttonWithFrame:CGRectMake(50, 150, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
+    self.button3 = [UIButton buttonWithFrame:CGRectMake(50, self.button1.ly_bottom + 20, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
     [self.view addSubview:self.button3];
     
     //进度条

@@ -20,16 +20,16 @@
     [super viewDidLoad];
     self.navigationItem.title = @"登录";
     
-    UIButton *loginButton = [UIButton buttonWithFrame:CGRectMake(0, 100, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"登录" addTarget:self action:@selector(loginClick)];
+    UIButton *loginButton = [UIButton buttonWithFrame:CGRectMake(0, 50, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"登录" addTarget:self action:@selector(loginClick)];
     [self.view addSubview:loginButton];
     
-    UIButton *logoutButton = [UIButton buttonWithFrame:CGRectMake(0, 200, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"退出" addTarget:self action:@selector(logoutClick)];
+    UIButton *logoutButton = [UIButton buttonWithFrame:CGRectMake(0, 150, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"退出" addTarget:self action:@selector(logoutClick)];
     [self.view addSubview:logoutButton];
     
-    UIButton *lookButton = [UIButton buttonWithFrame:CGRectMake(0, 300, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"查看" addTarget:self action:@selector(lookClick)];
+    UIButton *lookButton = [UIButton buttonWithFrame:CGRectMake(0, 250, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"查看" addTarget:self action:@selector(lookClick)];
     [self.view addSubview:lookButton];
     
-    UIButton *changeButton = [UIButton buttonWithFrame:CGRectMake(0, 400, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"修改" addTarget:self action:@selector(changeClick)];
+    UIButton *changeButton = [UIButton buttonWithFrame:CGRectMake(0, 350, kSCREEN_WIDTH, 50) backgroundColor:[UIColor redColor] title:@"修改" addTarget:self action:@selector(changeClick)];
     [self.view addSubview:changeButton];
 }
 
