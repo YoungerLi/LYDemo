@@ -19,26 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.extendedLayoutIncludesOpaqueBars = YES;
-    
-    //创建右滑返回手势
-    [self createPanGesture];
 }
 
 
 #pragma mark - 创建右滑返回手势
 
-- (void)createPanGesture
-{
+/**
+ 实现全屏右滑返回手势：
+ 1.在当页遵守UIGestureRecognizerDelegate代理，
+ 2.在viewWillAppear:里调用此方法
+ 3.在viewWillDisappear:里写self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+ */
+- (void)addPanGesture {
     id target = self.navigationController.interactivePopGestureRecognizer.delegate;
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
     pan.delegate = self;
     _pan = pan;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-}
-
-- (void)addPanGesture {
     [self.view addGestureRecognizer:_pan];
 }
 

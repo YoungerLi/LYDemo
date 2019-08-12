@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"本地通知";
-    [self addPanGesture];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, kSCREEN_WIDTH-20, 50)];
     button.backgroundColor = [UIColor redColor];
@@ -29,8 +28,7 @@
 }
 
 #pragma mark - 发送一个本地通知
-- (void)click
-{
+- (void)click {
     if (@available(iOS 10.0, *)) {
         //iOS10以上
         //设置内容
@@ -94,10 +92,4 @@
     
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end

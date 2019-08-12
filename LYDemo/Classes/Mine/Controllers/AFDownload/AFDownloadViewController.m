@@ -31,7 +31,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"下载";
-    [self addPanGesture];
     
     //下载按钮
     self.button1 = [UIButton buttonWithFrame:CGRectMake(50, 80, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"下载" addTarget:self action:@selector(downloadClick)];
@@ -45,7 +44,6 @@
     self.button3 = [UIButton buttonWithFrame:CGRectMake(50, 150, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
     [self.view addSubview:self.button3];
     
-    
     //进度条
     self.HUD = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:self.HUD];
@@ -54,8 +52,7 @@
 }
 
 //下载按钮
-- (void)downloadClick
-{
+- (void)downloadClick {
     if ([LYFileManager fileExistsAtPath:PATH]) {
         [self showAlertControllerWithTitle:@"已存在" message:nil];
         return;
@@ -88,16 +85,14 @@
 }
 
 //删除按钮
-- (void)deleteClick
-{
+- (void)deleteClick {
     if ([LYFileManager fileExistsAtPath:PATH]) {
         [LYFileManager removeItemAtPath:PATH error:nil];
     }
 }
 
 //检查有没有
-- (void)checkClick
-{
+- (void)checkClick {
     if ([LYFileManager fileExistsAtPath:PATH]) {
         float size = [Tools fileSizeAtPath:PATH];
         [self.button3 setTitle:[NSString stringWithFormat:@"存在(%.1fM)", size] forState:UIControlStateNormal];
@@ -105,6 +100,5 @@
         [self.button3 setTitle:@"不存在" forState:UIControlStateNormal];
     }
 }
-
 
 @end

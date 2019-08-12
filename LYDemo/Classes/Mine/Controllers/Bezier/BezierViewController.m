@@ -19,17 +19,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"画图";
-    [self addPanGesture];
-    
     
     //画图
     UIBezierPathView *pathView = [[UIBezierPathView alloc] initWithCGPoint:CGPointMake(5, 400)];
     pathView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:pathView];
 }
-
-
-
-
 
 @end

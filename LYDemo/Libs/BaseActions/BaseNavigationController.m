@@ -22,15 +22,14 @@
     self.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationBar.translucent = NO; //如果不加这行会导致颜色不纯，加上这行又会导致view的frame下移64，所以还需设置extendedLayoutIncludesOpaqueBars = YES
     //方法2   （此方法也会导致view的frame下移64，所以仍需设置extendedLayoutIncludesOpaqueBars = YES）
-    //[self.navigationBar setBackgroundImage:[Tools imageWithColor:[UIColor blackColor]] forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]] forBarMetrics:UIBarMetricsDefault];
     
     //设置导航栏title的属性
     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.childViewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
