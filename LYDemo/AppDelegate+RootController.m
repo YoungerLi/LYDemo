@@ -10,8 +10,7 @@
 
 @implementation AppDelegate (RootController)
 
-- (void)createRootViewControllers
-{
+- (void)createRootViewControllers {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -25,8 +24,7 @@
 
 #pragma mark - UITabBarControllerDelegate
 
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
-{
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     if (viewController == tabBarController.selectedViewController && tabBarController.selectedIndex == 0) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"tabBarClick" object:nil];
     }
