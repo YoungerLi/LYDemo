@@ -1,6 +1,0 @@
-framework module Pods_LYDemo {
-  umbrella header "Pods-LYDemo-umbrella.h"
-
-  export *
-  module * { export * }
-}
