@@ -10,7 +10,7 @@ def common_pods
     pod 'AFNetworking'
     pod 'MBProgressHUD'
     pod 'ReactiveObjC', '3.1.0'
-    pod 'YYModel'
+    pod 'YYKit'
 end
 
 target 'LYDemo' do
