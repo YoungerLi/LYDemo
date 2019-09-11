@@ -11,6 +11,7 @@ def common_pods
     pod 'MBProgressHUD'
     pod 'ReactiveObjC', '3.1.0'
     pod 'YYKit'
+    pod 'MJRefresh'
 end
 
 target 'LYDemo' do

@@ -35,7 +35,7 @@ static NSString *const kUserDataKey = @"LYUserLoginInfo";
     if (self) {
         NSDictionary *dic = [LYUserDefault objectForKey:kUserDataKey];
         if (dic) {
-            self.user = [LYUser yy_modelWithDictionary:dic];
+            self.user = [LYUser modelWithDictionary:dic];
         }
     }
     return self;
@@ -43,7 +43,7 @@ static NSString *const kUserDataKey = @"LYUserLoginInfo";
 
 - (void)loginWithUser:(LYUser *)user {
     self.user = user;
-    NSDictionary *dic = [user yy_modelToJSONObject];
+    NSDictionary *dic = [user modelToJSONObject];
     if (dic) {
         [LYUserDefault setObject:dic forKey:kUserDataKey];
         [LYUserDefault synchronize];
@@ -67,7 +67,7 @@ static NSString *const kUserDataKey = @"LYUserLoginInfo";
 - (void)updateAge:(NSString *)age {
     if (age.length > 0) {
         self.user.age = age;
-        NSDictionary *dic = [self.user yy_modelToJSONObject];
+        NSDictionary *dic = [self.user modelToJSONObject];
         if (dic) {
             [LYUserDefault setObject:dic forKey:kUserDataKey];
             [LYUserDefault synchronize];

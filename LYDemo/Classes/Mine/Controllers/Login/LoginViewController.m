@@ -36,7 +36,7 @@
 // 登录
 - (void)loginClick {
     NSDictionary *dic = @{@"mingzi":@"李杨", @"age":@"27", @"address":@"河北邢台"};
-    LYUser *user = [LYUser yy_modelWithDictionary:dic];
+    LYUser *user = [LYUser modelWithDictionary:dic];
     [[LYApp sharedInstance] loginWithUser:user];
 }
 

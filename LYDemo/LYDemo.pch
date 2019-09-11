@@ -63,7 +63,8 @@
 #import <AFNetworking.h>
 #import <MBProgressHUD.h>
 #import <ReactiveObjC.h>
-#import <YYModel.h>
+#import <YYKit.h>
+#import <MJRefresh.h>
 
 
 #endif /* LYDemo_pch */
