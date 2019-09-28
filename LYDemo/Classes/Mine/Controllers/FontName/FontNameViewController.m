@@ -17,16 +17,6 @@
 
 @implementation FontNameViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self addPanGesture];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"各种字体";

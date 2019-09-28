@@ -19,16 +19,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
+
 + (instancetype)sharedInstance;
 
-///登录
+/// 登录
 - (void)loginWithUser:(LYUser *)user;
 
-///退出
+/// 退出
 - (void)logout;
 
 
-///更改年龄
+/// 更改年龄
 - (void)updateAge:(NSString *)age;
 
 @end

@@ -10,33 +10,18 @@
 
 @interface BaseViewController ()
 
-@property (nonatomic, strong) UIPanGestureRecognizer *pan;
-
 @end
 
 @implementation BaseViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:self.navigationBarHidden animated:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-}
-
-
-#pragma mark - 创建右滑返回手势
-
-/**
- 实现全屏右滑返回手势：
- 1.在当页遵守UIGestureRecognizerDelegate代理，
- 2.在viewWillAppear:里调用此方法
- 3.在viewWillDisappear:里写self.navigationController.interactivePopGestureRecognizer.enabled = YES;
- */
-- (void)addPanGesture {
-    id target = self.navigationController.interactivePopGestureRecognizer.delegate;
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
-    pan.delegate = self;
-    _pan = pan;
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    [self.view addGestureRecognizer:_pan];
 }
 
 

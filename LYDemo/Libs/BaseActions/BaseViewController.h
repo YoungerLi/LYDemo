@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface BaseViewController : UIViewController
 
-/// 添加右滑返回手势
-- (void)addPanGesture;
+@property (nonatomic, assign) BOOL navigationBarHidden;
 
 /// show Alert
 - (void)showAlertControllerWithTitle:(NSString *)title message:(NSString *)message;
