@@ -19,11 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)imageWithName:(NSString *)imgName;
 
-/**
- 根据UIColor生成一个图片
- */
-+ (UIImage *)imageWithColor:(UIColor *)color;
-
 @end
 
 NS_ASSUME_NONNULL_END

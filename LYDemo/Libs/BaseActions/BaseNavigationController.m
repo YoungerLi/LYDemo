@@ -39,7 +39,7 @@
     //[self addPanGesture];
 }
 
-// 添加全局右滑返回手势
+/// 添加全局右滑返回手势
 - (void)addPanGesture {
     id target = self.interactivePopGestureRecognizer.delegate;
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
@@ -48,8 +48,8 @@
     [self.view addGestureRecognizer:pan];
 }
 
-// 设置是否允许右滑返回手势
-// 此方法是防止在根视图进行右滑返回手势导致的错误
+/// 设置是否允许右滑返回手势
+/// 此方法是防止在根视图进行右滑返回手势导致的错误
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     return self.childViewControllers.count > 1;
 }

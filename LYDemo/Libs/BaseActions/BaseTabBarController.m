@@ -17,12 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configViewController];
-    [self configTabBar];
+    [self configViewControllers];
+    [self configTabBarItems];
 }
 
-- (void)configViewController
-{
+- (void)configViewControllers {
     HomeViewController *VC1 = [[HomeViewController alloc] init];
     BaseNavigationController *NC1 = [[BaseNavigationController alloc] initWithRootViewController:VC1];
     
@@ -39,8 +38,7 @@
 }
 
 
-- (void)configTabBar
-{
+- (void)configTabBarItems {
     //文字属性
     NSArray *titleArray = @[@"美国队长", @"钢铁侠", @"雷神", @"绿巨人"];
     NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor grayColor]};
@@ -53,22 +51,23 @@
     for (UITabBarItem *item in self.tabBar.items) {
         //设置文字
         item.title = titleArray[index];
-        [item setTitleTextAttributes:attribute forState:UIControlStateNormal];  //一般状态
-        [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];  //选中状态
+        [item setTitleTextAttributes:attribute forState:UIControlStateNormal];
+        [item setTitleTextAttributes:selectAttribute forState:UIControlStateSelected];
         item.titlePositionAdjustment = UIOffsetMake(0, -3);  //上移3pt
         //设置图片
-        item.image = [[UIImage imageNamed:imageArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];    //一般状态
-        item.selectedImage = [[UIImage imageNamed:imageSelectArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];  //选中状态
+        item.image = [[UIImage imageNamed:imageArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        item.selectedImage = [[UIImage imageNamed:imageSelectArray[index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         index++;
     }
     
-    //背景颜色
-    //方法1
-    self.tabBar.barTintColor = [UIColor blackColor];
-    self.tabBar.translucent = NO;   //如果不加这行就不是纯黑色
-    //方法2
-//    [self.tabBar setBackgroundImage:[Tools imageWithColor:[UIColor blackColor]]];
+    // 设置文字在iOS 13下的属性
+    if (@available(iOS 13.0, *)) {
+        UITabBarAppearance *appearance = [self.tabBar.standardAppearance copy];
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = attribute;
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectAttribute;
+        self.tabBar.standardAppearance = appearance;
+    }
 }
 
 @end

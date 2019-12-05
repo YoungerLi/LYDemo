@@ -12,19 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIColor (Utils)
 
 /**
- 十六进制字符串转换颜色
- */
-+ (UIColor *)colorWithHexString:(NSString *)color;
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
-
-/**
- 十六进制RGB转换
- @param rgbValue 十六进制 RGB，如：0xaabbcc
- */
-+ (UIColor *)colorWithHexRGB:(NSUInteger)rgbValue;
-+ (UIColor *)colorWithHexRGB:(NSUInteger)rgbValue alpha:(CGFloat)alpha;
-
-/**
  随机颜色
  */
 + (UIColor *)colorWithRandomColor;

@@ -297,8 +297,8 @@
 			children = (
 				C63E9B43201978AF008D04C5 /* LYDemo.entitlements */,
 				C63A16191FFC74F30030974E /* Classes */,
-				C63A16181FFC74DA0030974E /* Resource */,
 				C63A161A1FFC75050030974E /* Libs */,
+				C63A16181FFC74DA0030974E /* Resource */,
 				C61B362B1FFB8BBD0080BFDE /* AppDelegate.h */,
 				C61B362C1FFB8BBD0080BFDE /* AppDelegate.m */,
 				C63A16311FFCBC980030974E /* AppDelegate+RootController.h */,

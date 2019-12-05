@@ -10,6 +10,7 @@
 
 @interface BaseViewController : UIViewController
 
+/// 是否隐藏导航栏
 @property (nonatomic, assign) BOOL navigationBarHidden;
 
 /// show Alert
