@@ -7,6 +7,12 @@
 //
 
 #import "BaseTabBarController.h"
+#import "BaseNavigationController.h"
+#import "BaseTabBarController.h"
+#import "HomeViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "MineViewController.h"
 
 @interface BaseTabBarController ()
 

@@ -1,29 +1,61 @@
 //
-//  Tools.m
-//  test
+//  LYTools.m
+//  LYDemo
 //
-//  Created by liyang on 15/8/31.
-//  Copyright (c) 2015年 liyang. All rights reserved.
+//  Created by 李杨 on 2020/1/14.
+//  Copyright © 2020 kosien. All rights reserved.
 //
 
-#import "Tools.h"
+#import "LYTools.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <sys/utsname.h>
 
-@implementation Tools
+@implementation LYTools
 
-//设置某个文字的颜色
-+ (NSMutableAttributedString *)attributString:(NSString *)string range:(NSRange)range color:(UIColor *)color font:(CGFloat)font {
+/// 获取当前显示界面的controller
++ (UIViewController *)getCurrentViewController {
+    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    if (window.windowLevel != UIWindowLevelNormal) {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for (UIWindow * tmpWin in windows) {
+            if (tmpWin.windowLevel == UIWindowLevelNormal) {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    UIViewController *topViewController = window.rootViewController;
+    while (true) {
+        if (topViewController.presentedViewController != nil) {
+            topViewController = topViewController.presentedViewController;
+        } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navi = (UINavigationController *)topViewController;
+            topViewController = navi.topViewController;
+        } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
+            UITabBarController *tab = (UITabBarController *)topViewController;
+            topViewController = tab.selectedViewController;
+        } else {
+            break;
+        }
+    }
+    return topViewController;
+}
+
+/// 设置某个文字的颜色
++ (NSMutableAttributedString *)attributString:(NSString *)string
+                                        range:(NSRange)range
+                                        color:(UIColor *)color
+                                         font:(UIFont *)font {
     NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:string];
     if (color) {
         [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
     }
     if (font) {
-        [attributedStr addAttribute:NSFontAttributeName value:[UIFont fontOfSize:font] range:range];
+        [attributedStr addAttribute:NSFontAttributeName value:font range:range];
     }
     return attributedStr;
 }
-//为某些个文字添加下划线
+/// 为某些个文字添加下划线
 + (NSMutableAttributedString *)attributAddLineString:(NSString *)string range:(NSRange)range {
     NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:string];
     [attributedStr addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:range];
@@ -33,15 +65,15 @@
 
 
 
-//计算该路径的大小（单位：M）
+/// 计算该路径的大小（单位：M）
 + (float)fileSizeAtPath:(NSString *)path {
-    //判断路径是否存在并且是否是文件夹
+    // 判断路径是否存在并且是否是文件夹
     BOOL isDirectory;
     BOOL ret = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory];
     if (ret) {
-        //路径存在
+        // 路径存在
         if (isDirectory) {
-            //是文件夹
+            // 是文件夹
             long long size = 0;
             NSArray *childerFiles = [[NSFileManager defaultManager] subpathsAtPath:path];
             for (NSString *fileName in childerFiles) {
@@ -51,68 +83,67 @@
             }
             return size/1000.0/1000.0;
         } else {
-            //不是文件夹,是文件
+            // 不是文件夹,是文件
             long long size = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
             return size/1000.0/1000.0;
         }
     } else {
-        //路径不存在
+        // 路径不存在
         return 0;
     }
 }
-//删除该路径
+/// 删除该路径
 + (void)clearCache:(NSString *)path {
     [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
-//磁盘总空间（单位：M）
+/// 磁盘总空间（单位：M）
 + (float)diskOfAllSizeMBytes {
     NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
     NSNumber *number = [dic objectForKey:NSFileSystemSize];
-    return [number floatValue]/1000/1000;
+    return [number floatValue] / 1000 / 1000;
 }
-//磁盘可用空间（单位：M）
+/// 磁盘可用空间（单位：M）
 + (float)diskOfFreeSizeMBytes {
     NSDictionary *dic = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
     NSNumber *number = [dic objectForKey:NSFileSystemFreeSize];
-    return [number floatValue]/1000/1000;
+    return [number floatValue] / 1000 / 1000;
 }
 
 
-
-//把秒转化成时分秒（数字格式）
+/// 把秒转化成时分秒（数字格式）
 + (NSString *)changeTimeWithSecond:(NSInteger)seconds {
-    NSUInteger hour   = seconds/3600;       //时
-    NSUInteger minute = (seconds%3600)/60;  //分
-    NSUInteger second = seconds%60;         //秒
+    NSUInteger hour   = seconds / 3600;         // 时
+    NSUInteger minute = (seconds % 3600) / 60;  // 分
+    NSUInteger second = seconds % 60;           // 秒
     NSString *time = [NSString stringWithFormat:@"%.2lu:%.2lu:%.2lu", (unsigned long)hour, (unsigned long)minute, (unsigned long)second];
     return time;
 }
-//把秒转化成分秒
+/// 把秒转化成分秒
 + (NSString *)changeTimeMSWithSecond:(NSInteger)seconds {
-    NSUInteger minute = (seconds%3600)/60;  //分
-    NSUInteger second = seconds%60;         //秒
+    NSUInteger minute = (seconds % 3600) / 60;  // 分
+    NSUInteger second = seconds % 60;           // 秒
     NSString *time = [NSString stringWithFormat:@"%.2lu:%.2lu", (unsigned long)minute, (unsigned long)second];
     return time;
 }
-//把秒转化成时分秒（文字格式）
+/// 把秒转化成时分秒（文字格式）
 + (NSString *)changeTimeStringWithSecond:(NSInteger)seconds {
     if (seconds < 60) {
         return [NSString stringWithFormat:@"%zd秒", seconds];
     } else if (seconds < 3600) {
-        return [NSString stringWithFormat:@"%zd分钟", seconds/60];
+        return [NSString stringWithFormat:@"%zd分钟", seconds / 60];
     } else if (seconds < 86400) {
-        return [NSString stringWithFormat:@"%zd小时%zd分钟", seconds/3600, (seconds%3600)/60];
+        return [NSString stringWithFormat:@"%zd小时%zd分钟", seconds / 3600, (seconds % 3600) / 60];
     } else {
-        return [NSString stringWithFormat:@"%zd天%zd小时%zd分钟",seconds/86400, (seconds%86400)/3600, (seconds%3600)/60];
+        return [NSString stringWithFormat:@"%zd天%zd小时%zd分钟", seconds / 86400, (seconds % 86400) / 3600, (seconds % 3600) / 60];
     }
 }
 
-//获取粘贴板的信息
+/// 获取粘贴板的信息
 + (NSString *)getPasteString {
     return [UIPasteboard generalPasteboard].string;
 }
 
-//MD5加密
+/// MD5加密
 + (NSString *)getMD5_32Bit_string:(NSString *)srcString {
     const char *cStr = [srcString UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
@@ -120,39 +151,39 @@
     
     NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [result appendFormat:@"%02x", digest[i]];        
+        [result appendFormat:@"%02x", digest[i]];
     }
     return result;
 }
 
 
 
-// URL编码（特殊符号不会被编码）
+/// URL编码（特殊符号不会被编码）
 + (NSString *)URLEncodedString:(NSString *)string {
 //    NSCharacterSet *characterSet = [NSCharacterSet URLQueryAllowedCharacterSet].invertedSet;
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"!$&'()*+,-./:;=?@_~%#[]"];
     return [string stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
 }
-// URL编码（特殊符号会被编码）
+/// URL编码（特殊符号会被编码）
 + (NSString *)URLEncodedStringIncludeCharacter:(NSString *)string {
 //    NSCharacterSet *characterSet = [NSCharacterSet URLQueryAllowedCharacterSet];
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"!*();+$,%#[] "].invertedSet;
     return [string stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
 }
-// URL解码
+/// URL解码
 + (NSString *)URLDecodedString:(NSString *)string {
     return [string stringByRemovingPercentEncoding];
 }
 
 
-// 字典转JSON字符串
+/// 字典转JSON字符串
 + (NSString *)convertToJsonStringFrom:(NSDictionary *)dict {
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     
     NSString *jsonString;
     if (error) {
-        MSLog(@"字典转JSON字符串-Json解析失败 = %@", error);
+        NSLog(@"字典转JSON字符串-Json解析失败 = %@", error);
         return nil;
     } else {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -160,18 +191,18 @@
     
     NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
     
-    //去掉字符串中的空格
+    // 去掉字符串中的空格
     NSRange range = {0, jsonString.length};
     [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
     
-    //去掉字符串中的换行符
+    // 去掉字符串中的换行符
     NSRange range2 = {0, mutStr.length};
     [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
     
     return mutStr;
 }
 
-// JSON字符串转字典
+/// JSON字符串转字典
 + (NSDictionary *)convertToDictFromJsonString:(NSString *)string {
     if (string == nil) {
         return nil;
@@ -180,7 +211,7 @@
     NSError *error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
     if (error) {
-        MSLog(@"JSON字符串转字典-Json解析失败 = %@", error);
+        NSLog(@"JSON字符串转字典-Json解析失败 = %@", error);
         return nil;
     }
     return dict;
@@ -188,14 +219,14 @@
 
 
 
-// 获取当前版本号
+/// 获取当前版本号
 + (NSString *)getAppCurrentVersion {
     NSDictionary *appInfo = [[NSBundle mainBundle] infoDictionary];
     NSString *appCurrentVersion = [appInfo objectForKey:@"CFBundleShortVersionString"];
     return appCurrentVersion;
 }
 
-// 拨打电话
+/// 拨打电话
 + (void)callPhone:(NSString *)number {
     if (![NSString isStringAndLength:number]) {
         NSLog(@"抱歉！暂无提供手机号");
@@ -209,7 +240,7 @@
     }
 }
 
-// 跳转到系统设置
+/// 跳转到系统设置
 + (void)openSettingURL {
     NSURL *URL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
     if ([[UIApplication sharedApplication] canOpenURL:URL]) {
@@ -221,7 +252,7 @@
     }
 }
 
-// 获取手机型号（https://www.theiphonewiki.com/wiki/Models）
+/// 获取手机型号（https://www.theiphonewiki.com/wiki/Models）
 + (NSString *)getSystemModel {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -299,7 +330,7 @@
 }
 
 
-// 压缩照片
+/// 压缩照片
 + (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage {
     CGFloat maxWidth = 640;
     if (sourceImage.size.width < maxWidth) {

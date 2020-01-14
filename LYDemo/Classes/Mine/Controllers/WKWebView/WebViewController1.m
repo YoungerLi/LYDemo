@@ -7,7 +7,6 @@
 //
 
 #import "WebViewController1.h"
-#import "PointsViewController.h"
 
 #define URLString @"http://m.langfangtong.cn/activity/report"
 
@@ -23,7 +22,6 @@
     [super viewDidLoad];
     self.title = @"18500070368";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(lookPoints)];
     [self.view addSubview:self.webView];
     [self loadRequest];
 }
@@ -49,13 +47,6 @@
     //加载网址
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self.webView loadRequest:request];
-}
-
-- (void)lookPoints {
-    PointsViewController *VC = [[PointsViewController alloc] init];
-    VC.aid = @"7324";
-    VC.phone = @"18500070368";
-    [self.navigationController pushViewController:VC animated:YES];
 }
 
 
@@ -97,7 +88,7 @@
 
 - (UIWebView *)webView {
     if (_webView == nil) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, kSCREEN_WIDTH, kSCREEN_HEIGHT-NAVBAR_HEIGHT)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, kNavBarAndStatusBarHeight, kSCREEN_WIDTH, kSCREEN_HEIGHT-kNavBarAndStatusBarHeight)];
         _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _webView.backgroundColor = [UIColor whiteColor];
         _webView.scalesPageToFit = YES;

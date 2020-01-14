@@ -26,4 +26,23 @@
     return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
 }
 
+
+#pragma mark - 固定颜色
+
++ (UIColor *)mainColor {
+    return [UIColor colorWithRGB:0xffde00];
+}
+
++ (UIColor *)lineColor {
+    return [UIColor colorWithRGB:0xe5e5e5];
+}
+
++ (UIColor *)textColor {
+    return [UIColor colorWithRGB:0x333333];
+}
+
++ (UIColor *)viewBackgroundColor {
+    return [UIColor colorWithRGB:0xf2f2f2];
+}
+
 @end

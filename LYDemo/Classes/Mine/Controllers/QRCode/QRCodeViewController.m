@@ -51,7 +51,7 @@
     //2.用captureDevice创建输入流
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
     if (error) {
-        MSLog(@"error == %@", [error localizedDescription]);
+        NSLog(@"error == %@", [error localizedDescription]);
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"未获得授权使用摄像头" message:@"请在“设置”-“隐私”-“相机”中打开" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [self.navigationController popViewControllerAnimated:YES];
@@ -95,7 +95,7 @@
     if (metadataObjects.count > 0) {
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         NSString *stringValue = [metadataObject stringValue];
-        MSLog(@"扫描结果 == %@", stringValue);
+        NSLog(@"扫描结果 == %@", stringValue);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.showLabel.text = stringValue;

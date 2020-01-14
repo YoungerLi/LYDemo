@@ -19,4 +19,14 @@
     return nil;
 }
 
+/// 根据UIView生成一个图片
++ (UIImage *)imageWithView:(UIView *)view {
+    CGSize size = view.bounds.size;
+    UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 @end

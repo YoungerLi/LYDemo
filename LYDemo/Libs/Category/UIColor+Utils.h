@@ -22,6 +22,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)colorWith255Red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
 + (UIColor *)colorWith255Red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
 
+/**
+ 主色
+ */
++ (UIColor *)mainColor;
+
+/**
+ 线条颜色
+ */
++ (UIColor *)lineColor;
+
+/**
+ 文字颜色
+ */
++ (UIColor *)textColor;
+
+/**
+ 页面背景颜色
+*/
++ (UIColor *)viewBackgroundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate+RootController.h"
+#import "BaseTabBarController.h"
 
 @implementation AppDelegate (RootController)
 

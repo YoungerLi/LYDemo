@@ -7,6 +7,7 @@
 //
 
 #import "AFDownloadViewController.h"
+#import <AFNetworking/AFNetworking.h>
 
 //下载的视频文件9M http://120.25.226.186:32812/resources/videos/minion_01.mp4
 //下载文件all.zip http://imgcache.qq.com/club/item/avatar/zip/7/i87/all.zip
@@ -46,7 +47,7 @@
     [self.button2.heightAnchor constraintEqualToConstant:50].active = YES;
     
     //检查有没有
-    self.button3 = [UIButton buttonWithFrame:CGRectMake(50, self.button1.ly_bottom + 20, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
+    self.button3 = [UIButton buttonWithFrame:CGRectMake(50, self.button1.bottom + 20, kSCREEN_WIDTH-100, 50) backgroundColor:[UIColor redColor] title:@"检查有没有" addTarget:self action:@selector(checkClick)];
     [self.view addSubview:self.button3];
     
     //进度条
@@ -58,7 +59,7 @@
 
 //下载按钮
 - (void)downloadClick {
-    if ([LYFileManager fileExistsAtPath:PATH]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:PATH]) {
         [self showAlertControllerWithTitle:@"已存在" message:nil];
         return;
     }
@@ -78,7 +79,7 @@
         //存放路径
         NSString *component = [NSString stringWithFormat:@"Library/Caches/%@", response.suggestedFilename];
         NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:component];
-        MSLog(@"下载存放的路径 == %@", path);
+        NSLog(@"下载存放的路径 == %@", path);
         return [NSURL fileURLWithPath:path];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
@@ -91,15 +92,15 @@
 
 //删除按钮
 - (void)deleteClick {
-    if ([LYFileManager fileExistsAtPath:PATH]) {
-        [LYFileManager removeItemAtPath:PATH error:nil];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:PATH]) {
+        [[NSFileManager defaultManager] removeItemAtPath:PATH error:nil];
     }
 }
 
 //检查有没有
 - (void)checkClick {
-    if ([LYFileManager fileExistsAtPath:PATH]) {
-        float size = [Tools fileSizeAtPath:PATH];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:PATH]) {
+        float size = [LYTools fileSizeAtPath:PATH];
         [self.button3 setTitle:[NSString stringWithFormat:@"存在(%.1fM)", size] forState:UIControlStateNormal];
     } else {
         [self.button3 setTitle:@"不存在" forState:UIControlStateNormal];

@@ -7,6 +7,7 @@
 //
 
 #import "LYHealthManager.h"
+#import <HealthKit/HealthKit.h>
 
 @interface LYHealthManager ()
 

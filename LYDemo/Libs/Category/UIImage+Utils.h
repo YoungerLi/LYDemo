@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)imageWithName:(NSString *)imgName;
 
+/**
+ 根据UIView生成一个图片
+ */
++ (UIImage *)imageWithView:(UIView *)view;
+
 @end
 
 NS_ASSUME_NONNULL_END

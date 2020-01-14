@@ -7,6 +7,7 @@
 //
 
 #import "UUIDKeychainManager.h"
+#import "LYKeychain.h"
 
 @implementation UUIDKeychainManager
 

@@ -73,29 +73,29 @@
         case 1:{
             //文件的浅度遍历
             NSError *error = nil;
-            NSArray *array1 = [LYFileManager contentsOfDirectoryAtPath:PATH error:&error];
+            NSArray *array1 = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:PATH error:&error];
             if (error) {
-                MSLog(@"error == %@",error);
+                NSLog(@"error == %@",error);
             } else {
-                MSLog(@"array1 == %@",array1);
+                NSLog(@"array1 == %@",array1);
             }
         }
             break;
         case 2:{
             //文件的深度遍历
-            NSArray *array2 = [LYFileManager subpathsOfDirectoryAtPath:PATH error:nil];
-            NSArray *array3 = [LYFileManager subpathsAtPath:PATH];
-            MSLog(@"array2 == %@", array2);
-            MSLog(@"array3 == %@", array3);
+            NSArray *array2 = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:PATH error:nil];
+            NSArray *array3 = [[NSFileManager defaultManager] subpathsAtPath:PATH];
+            NSLog(@"array2 == %@", array2);
+            NSLog(@"array3 == %@", array3);
         }
             break;
         case 3:{
             //创建文件夹(NO表示不创建中间文件夹，YES表示创建中间文件夹)
-            BOOL ret = [LYFileManager createDirectoryAtPath:[PATH stringByAppendingPathComponent:@"liyang1"] withIntermediateDirectories:YES attributes:nil error:nil];
+            BOOL ret = [[NSFileManager defaultManager] createDirectoryAtPath:[PATH stringByAppendingPathComponent:@"liyang1"] withIntermediateDirectories:YES attributes:nil error:nil];
             if (ret) {
-                MSLog(@"创建成功");
+                NSLog(@"创建成功");
             } else {
-                MSLog(@"创建失败");
+                NSLog(@"创建失败");
             }
         }
             break;
@@ -103,68 +103,68 @@
             //创建文件
             NSString *str = @"我喜欢写笔记";
             NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-            BOOL ret = [LYFileManager createFileAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] contents:data attributes:nil];
+            BOOL ret = [[NSFileManager defaultManager] createFileAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] contents:data attributes:nil];
             if (ret) {
-                MSLog(@"创建成功");
+                NSLog(@"创建成功");
             } else {
-                MSLog(@"创建失败");
+                NSLog(@"创建失败");
             }
         }
             break;
         case 5:{
             //删除文件或文件夹(路径是文件就删除文件，路径是文件夹就删除文件夹)
-            BOOL ret = [LYFileManager removeItemAtPath:[PATH stringByAppendingPathComponent:@"gou"] error:nil];
+            BOOL ret = [[NSFileManager defaultManager] removeItemAtPath:[PATH stringByAppendingPathComponent:@"gou"] error:nil];
             if (ret) {
-                MSLog(@"删除成功");
+                NSLog(@"删除成功");
             } else {
-                MSLog(@"删除失败");
+                NSLog(@"删除失败");
             }
         }
             break;
         case 6:{
             //判断路径是否存在
-            BOOL ret1 = [LYFileManager fileExistsAtPath:[PATH stringByAppendingPathComponent:@"gou"]];
+            BOOL ret1 = [[NSFileManager defaultManager] fileExistsAtPath:[PATH stringByAppendingPathComponent:@"gou"]];
             if (ret1) {
-                MSLog(@"存在");
+                NSLog(@"存在");
             } else {
-                MSLog(@"不存在");
+                NSLog(@"不存在");
             }
             //判断路径是否存在并且是否是文件夹
             BOOL isDirectory;
-            BOOL ret2 = [LYFileManager fileExistsAtPath:[PATH stringByAppendingPathComponent:@"gou"] isDirectory:&isDirectory];
-            MSLog(@"是否存在=%d, 是否是文件夹=%d", ret2, isDirectory);
+            BOOL ret2 = [[NSFileManager defaultManager] fileExistsAtPath:[PATH stringByAppendingPathComponent:@"gou"] isDirectory:&isDirectory];
+            NSLog(@"是否存在=%d, 是否是文件夹=%d", ret2, isDirectory);
         }
             break;
         case 7:{
             //文件/目录的移动
-            BOOL ret = [LYFileManager moveItemAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] toPath:[PATH stringByAppendingPathComponent:@"gou/dog.txt"] error:nil];
+            BOOL ret = [[NSFileManager defaultManager] moveItemAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] toPath:[PATH stringByAppendingPathComponent:@"gou/dog.txt"] error:nil];
             if (ret) {
-                MSLog(@"移动成功");
+                NSLog(@"移动成功");
             } else {
-                MSLog(@"移动失败");
+                NSLog(@"移动失败");
             }
         }
             break;
         case 8:{
             //文件/目录的拷贝
-            BOOL ret = [LYFileManager copyItemAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] toPath:[PATH stringByAppendingPathComponent:@"liyang1/file1.txt"] error:nil];
+            BOOL ret = [[NSFileManager defaultManager] copyItemAtPath:[PATH stringByAppendingPathComponent:@"file.txt"] toPath:[PATH stringByAppendingPathComponent:@"liyang1/file1.txt"] error:nil];
             if (ret) {
-                MSLog(@"拷贝成功");
+                NSLog(@"拷贝成功");
             } else {
-                MSLog(@"拷贝失败");
+                NSLog(@"拷贝失败");
             }
         }
             break;
         case 9:{
             //获取文件的属性
-            NSDictionary *dict = [LYFileManager attributesOfItemAtPath:[PATH stringByAppendingPathComponent:@"liyang1"] error:nil];
-            MSLog(@"文件的属性 == %@", dict);
+            NSDictionary *dict = [[NSFileManager defaultManager] attributesOfItemAtPath:[PATH stringByAppendingPathComponent:@"liyang1"] error:nil];
+            NSLog(@"文件的属性 == %@", dict);
         }
             break;
         case 10:{
             //计算该路径的大小
-            float size = [Tools fileSizeAtPath:[PATH stringByAppendingPathComponent:@"liyang1"]];
-            MSLog(@"该路径的大小 = %.2fM", size);
+            float size = [LYTools fileSizeAtPath:[PATH stringByAppendingPathComponent:@"liyang1"]];
+            NSLog(@"该路径的大小 = %.2fM", size);
         }
             break;
         case 11:{
@@ -172,9 +172,9 @@
             NSData *data = [NSData dataWithContentsOfFile:@"/Users/jinwenzhuo/Desktop/first.mp3"];
             BOOL ret = [data writeToFile:[PATH stringByAppendingPathComponent:@"liyang1/123.mp3"] atomically:YES];
             if (ret) {
-                MSLog(@"写入成功");
+                NSLog(@"写入成功");
             } else {
-                MSLog(@"写入失败");
+                NSLog(@"写入失败");
             }
         }
             break;

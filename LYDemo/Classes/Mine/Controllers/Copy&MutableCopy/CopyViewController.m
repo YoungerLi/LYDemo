@@ -30,7 +30,7 @@
     model2.age = @"30";
     [_dataArray addObject:model1];
     [_dataArray addObject:model2];
-    MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
+    NSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
     
     [self deepCopy1];
 }
@@ -45,8 +45,8 @@
             model.name = @"liyang";
         }
     }
-    MSLog(@"mArray == %p, %@", mArray, mArray);
-    MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
+    NSLog(@"mArray == %p, %@", mArray, mArray);
+    NSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
 
 
@@ -60,8 +60,8 @@
             model.name = @"liyang";
         }
     }
-    MSLog(@"mArray == %p, %@", mArray, mArray);
-    MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
+    NSLog(@"mArray == %p, %@", mArray, mArray);
+    NSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
 
 
@@ -75,8 +75,8 @@
             model.name = @"liyang";
         }
     }
-    MSLog(@"mArray == %p, %@", mArray, mArray);
-    MSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
+    NSLog(@"mArray == %p, %@", mArray, mArray);
+    NSLog(@"_dataArray == %p, %@", _dataArray, _dataArray);
 }
 
 @end
