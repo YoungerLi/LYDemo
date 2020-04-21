@@ -21,8 +21,7 @@
     
 }
 
-- (void)tabBarClick
-{
+- (void)tabBarClick {
     if (self.tabBarController.selectedIndex == 0) {
         NSLog(@"刷新 = 美国队长");
     }

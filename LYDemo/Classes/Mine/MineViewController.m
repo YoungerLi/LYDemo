@@ -74,11 +74,6 @@
                       @"BezierViewController",              //画图
                       @"AFDownloadViewController",          //下载数据
                       @"LocalNotiViewController",           //发送本地通知
-                      @"WebViewController",                 //网页
-                      @"WebViewController1",                //网页1
-                      @"WebViewController2",                //网页2
-                      @"WebViewController3",                //网页3
-                      @"WebViewController4",                //网页4
                       @"OpenURLViewController",             //应用跳转
                       @"FileManagerViewController",         //文件操作&沙盒路径
                       @"AudioViewController",               //音频播放 http://www.cnblogs.com/kenshincui/p/4186022.html
@@ -113,11 +108,6 @@
                       @"画图",
                       @"下载数据",
                       @"发送本地通知",
-                      @"网页-17326923630",
-                      @"网页-18500070368",
-                      @"网页-17333679562",
-                      @"网页-13311175462",
-                      @"网页-17301259715",
                       @"应用跳转",
                       @"文件操作&沙盒路径",
                       @"音频播放---",

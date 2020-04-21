@@ -14,12 +14,11 @@
 - (void)createRootViewControllers {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     BaseTabBarController *tabBar = [[BaseTabBarController alloc] init];
     tabBar.delegate = self;
     self.window.rootViewController = tabBar;
-    
-    [self.window makeKeyAndVisible];
 }
 
 

@@ -47,8 +47,10 @@
 - (void)configTabBarItems {
     //文字属性
     NSArray *titleArray = @[@"美国队长", @"钢铁侠", @"雷神", @"绿巨人"];
-    NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor grayColor]};
-    NSDictionary *selectAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11], NSForegroundColorAttributeName:[UIColor orangeColor]};
+    NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11],
+                                NSForegroundColorAttributeName:[UIColor grayColor]};
+    NSDictionary *selectAttribute = @{NSFontAttributeName:[UIFont systemFontOfSize:11],
+                                      NSForegroundColorAttributeName:[UIColor orangeColor]};
     //图片
     NSArray *imageArray = @[@"home", @"msgBoard", @"shop", @"me"];
     NSArray *imageSelectArray = @[@"home_select", @"msgBoard_select", @"shop_select", @"me_select"];
@@ -72,8 +74,19 @@
         UITabBarAppearance *appearance = [self.tabBar.standardAppearance copy];
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = attribute;
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectAttribute;
+        appearance.backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]];
+        appearance.shadowColor = [UIColor clearColor];
         self.tabBar.standardAppearance = appearance;
+    } else {
+        self.tabBar.backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]];
+        self.tabBar.shadowImage = [UIImage new];
     }
+    // 设置阴影
+    self.tabBar.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.tabBar.layer.shadowOffset = CGSizeMake(0, -3);
+    self.tabBar.layer.shadowOpacity = 0.1;
+    
+    self.tabBar.translucent = NO;
 }
 
 @end

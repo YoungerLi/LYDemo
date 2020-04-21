@@ -82,17 +82,6 @@
         NSString *absoluteString = navigationAction.request.URL.absoluteString;
         NSLog(@"发送请求之前决定是否跳转：Action-clickSchem = %@", absoluteString);
         
-        if ([absoluteString hasPrefix:@"lftapp://"]) {
-            if ([absoluteString isEqualToString:@"lftapp://login"]) {
-                [self showAlertControllerWithTitle:@"提示" message:@"未登录"];
-            } else if ([absoluteString isEqualToString:@"lftapp://shopCart"]) {
-                [self showAlertControllerWithTitle:@"提示" message:@"购物车"];
-            } else if ([absoluteString hasPrefix:@"lftapp://tel"]) {
-                [self showAlertControllerWithTitle:@"提示" message:@"打电话"];
-            } else if ([absoluteString hasPrefix:@"lftapp://goodDetail"]) {
-                [self showAlertControllerWithTitle:@"提示" message:@"商品详情"];
-            }
-        }
     }
     
     decisionHandler(policy);

@@ -60,7 +60,7 @@
 //下载按钮
 - (void)downloadClick {
     if ([[NSFileManager defaultManager] fileExistsAtPath:PATH]) {
-        [self showAlertControllerWithTitle:@"已存在" message:nil];
+        [self showTipWith:@"已存在"];
         return;
     }
     [self.HUD showAnimated:YES];

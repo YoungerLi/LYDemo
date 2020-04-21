@@ -41,7 +41,6 @@
 		C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C39B9200DA1F20080AF4D /* CopyModel.m */; };
 		C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326D71FFE0C5400A98E29 /* FontNameViewController.m */; };
 		C66326DA1FFE103900A98E29 /* 迷你简丫丫.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */; };
-		C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66326DD1FFE1EE700A98E29 /* WebViewController.m */; };
 		C66C689220298218007628A7 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66C689020298218007628A7 /* GCDViewController.m */; };
 		C66D544E20181C17009FF2F3 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C66D543C20181C17009FF2F3 /* home@2x.png */; };
 		C66D544F20181C17009FF2F3 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C66D543D20181C17009FF2F3 /* home@3x.png */; };
@@ -64,10 +63,6 @@
 		C66E260B2008A71D007691E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66E260A2008A427007691E8 /* Security.framework */; };
 		C66E260F2008B0D2007691E8 /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66E260E2008B0D2007691E8 /* UUIDViewController.m */; };
 		C66FFF22202196B8004A6F45 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66FFF21202196B7004A6F45 /* NSTimerViewController.m */; };
-		C67AF462211A8F68000384F8 /* WebViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF461211A8F68000384F8 /* WebViewController1.m */; };
-		C67AF465211A8F90000384F8 /* WebViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF464211A8F90000384F8 /* WebViewController2.m */; };
-		C67AF468211A92CC000384F8 /* WebViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF467211A92CC000384F8 /* WebViewController3.m */; };
-		C67AF46B211A9330000384F8 /* WebViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = C67AF46A211A9330000384F8 /* WebViewController4.m */; };
 		C6A6422720A9433500C73554 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A6422520A9433400C73554 /* QRCodeViewController.m */; };
 		C6A6422920A9440400C73554 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A6422820A9440400C73554 /* AVFoundation.framework */; };
 		C6B05DFE21A6A8CB00012E9C /* LYMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B05DFC21A6A8CB00012E9C /* LYMotionManager.m */; };
@@ -167,8 +162,6 @@
 		C66326D61FFE0C5400A98E29 /* FontNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontNameViewController.h; sourceTree = "<group>"; };
 		C66326D71FFE0C5400A98E29 /* FontNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontNameViewController.m; sourceTree = "<group>"; };
 		C66326D91FFE103900A98E29 /* 迷你简丫丫.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简丫丫.ttf"; sourceTree = "<group>"; };
-		C66326DC1FFE1EE700A98E29 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		C66326DD1FFE1EE700A98E29 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C66C689020298218007628A7 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		C66C689120298218007628A7 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		C66D543C20181C17009FF2F3 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
@@ -196,14 +189,6 @@
 		C66E260E2008B0D2007691E8 /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 		C66FFF20202196B7004A6F45 /* NSTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
 		C66FFF21202196B7004A6F45 /* NSTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
-		C67AF460211A8F68000384F8 /* WebViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController1.h; sourceTree = "<group>"; };
-		C67AF461211A8F68000384F8 /* WebViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController1.m; sourceTree = "<group>"; };
-		C67AF463211A8F90000384F8 /* WebViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController2.h; sourceTree = "<group>"; };
-		C67AF464211A8F90000384F8 /* WebViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController2.m; sourceTree = "<group>"; };
-		C67AF466211A92CC000384F8 /* WebViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController3.h; sourceTree = "<group>"; };
-		C67AF467211A92CC000384F8 /* WebViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController3.m; sourceTree = "<group>"; };
-		C67AF469211A9330000384F8 /* WebViewController4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController4.h; sourceTree = "<group>"; };
-		C67AF46A211A9330000384F8 /* WebViewController4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController4.m; sourceTree = "<group>"; };
 		C6A6422520A9433400C73554 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		C6A6422620A9433400C73554 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		C6A6422820A9440400C73554 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -651,16 +636,6 @@
 		CAFD8205225F0FEA001D52D3 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				C66326DC1FFE1EE700A98E29 /* WebViewController.h */,
-				C66326DD1FFE1EE700A98E29 /* WebViewController.m */,
-				C67AF460211A8F68000384F8 /* WebViewController1.h */,
-				C67AF461211A8F68000384F8 /* WebViewController1.m */,
-				C67AF463211A8F90000384F8 /* WebViewController2.h */,
-				C67AF464211A8F90000384F8 /* WebViewController2.m */,
-				C67AF466211A92CC000384F8 /* WebViewController3.h */,
-				C67AF467211A92CC000384F8 /* WebViewController3.m */,
-				C67AF469211A9330000384F8 /* WebViewController4.h */,
-				C67AF46A211A9330000384F8 /* WebViewController4.m */,
 				C6C17B18202599480081FBFA /* WKWebViewController.h */,
 				C6C17B19202599480081FBFA /* WKWebViewController.m */,
 			);
@@ -934,7 +909,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67AF46B211A9330000384F8 /* WebViewController4.m in Sources */,
 				CAB03953227310A700CDA116 /* LYUser.m in Sources */,
 				C65C39BA200DA1F20080AF4D /* CopyModel.m in Sources */,
 				C63E9B4A201980A4008D04C5 /* LYHealthManager.m in Sources */,
@@ -956,12 +930,10 @@
 				CA0B08EE2265B539005C296D /* UILabel+Utils.m in Sources */,
 				B66DDE7423CD6F5200E59C0F /* LYConstants.m in Sources */,
 				CA0B08F32265D9F2005C296D /* RACView.m in Sources */,
-				C67AF465211A8F90000384F8 /* WebViewController2.m in Sources */,
 				C66C689220298218007628A7 /* GCDViewController.m in Sources */,
 				CAFD8217225F1542001D52D3 /* MessageCenterViewController.m in Sources */,
 				C63A164C1FFCD06F0030974E /* ThirdViewController.m in Sources */,
 				C63A163C1FFCBE9A0030974E /* BaseNavigationController.m in Sources */,
-				C67AF462211A8F68000384F8 /* WebViewController1.m in Sources */,
 				B66DDE6423CC441000E59C0F /* UIViewController+HUD.m in Sources */,
 				C61B363B1FFB8BBD0080BFDE /* main.m in Sources */,
 				C66326D81FFE0C5400A98E29 /* FontNameViewController.m in Sources */,
@@ -980,14 +952,12 @@
 				C65C39B7200DA1360080AF4D /* CopyViewController.m in Sources */,
 				C60778A621B13DE400A54E1B /* UIFont+Scale.m in Sources */,
 				C6510B77202BF15D0094E87E /* BezierViewController.m in Sources */,
-				C66326DE1FFE1EE700A98E29 /* WebViewController.m in Sources */,
 				C6EDB27120C50CFD00D6537D /* SendDataViewController.m in Sources */,
 				C6C17B1A202599480081FBFA /* WKWebViewController.m in Sources */,
 				C6D54193206395A2007A1C36 /* FileManagerViewController.m in Sources */,
 				C63A163A1FFCBE9A0030974E /* BaseTabBarController.m in Sources */,
 				C66D7E26200A04DA00BE7D9A /* LYKeychain.m in Sources */,
 				C6585585202D97B2005AAC69 /* LYSpeechSynthesizer.m in Sources */,
-				C67AF468211A92CC000384F8 /* WebViewController3.m in Sources */,
 				CAFD8214225F14CA001D52D3 /* LYAPIBaseManager.m in Sources */,
 				C63A16281FFC79FA0030974E /* NSString+Valid.m in Sources */,
 				C61B362D1FFB8BBD0080BFDE /* AppDelegate.m in Sources */,
