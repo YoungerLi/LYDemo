@@ -22,7 +22,7 @@
     [self.navigationController setNavigationBarHidden:self.navigationBarHidden animated:animated];
     if (!self.navigationBarHidden) {
         self.navBarHairlineImageView.hidden = YES;
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor orangeColor]]
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBarBack"]
                                                       forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],
                                                                           NSForegroundColorAttributeName:[UIColor whiteColor]}];

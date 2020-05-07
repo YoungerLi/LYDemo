@@ -22,11 +22,13 @@
 
 + (void)showTipWith:(NSString *)text {
     [self hideHUDForView:[UIApplication sharedApplication].keyWindow animated:NO];
-    MBProgressHUD *hud = [self showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.label.numberOfLines = 0;
-    hud.label.text = text;
-    [hud hideAnimated:YES afterDelay:1.5];
+    if (text.length) {
+        MBProgressHUD *hud = [self showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.label.numberOfLines = 0;
+        hud.label.text = text;
+        [hud hideAnimated:YES afterDelay:1.5];        
+    }
 }
 
 + (void)hideHUD {

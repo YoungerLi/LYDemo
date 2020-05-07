@@ -12,11 +12,11 @@
 
 /// 1:测试
 /// 0:生产
-#ifndef HY_VERSION_TEST
-#define HY_VERSION_TEST 1
+#ifndef LY_VERSION_TEST
+#define LY_VERSION_TEST 1
 #endif
 
-#if HY_VERSION_TEST
+#if LY_VERSION_TEST
 #define ISPRODUCTION NO
 #else
 #define ISPRODUCTION YES

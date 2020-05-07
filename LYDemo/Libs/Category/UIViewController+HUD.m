@@ -22,11 +22,13 @@
 
 - (void)showTipWith:(NSString *)text {
     [MBProgressHUD hideHUDForView:self.view animated:NO];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.label.numberOfLines = 0;
-    hud.label.text = text;
-    [hud hideAnimated:YES afterDelay:1.5];
+    if (text.length) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.label.numberOfLines = 0;
+        hud.label.text = text;
+        [hud hideAnimated:YES afterDelay:1.5];        
+    }
 }
 
 - (void)hideHUD {
