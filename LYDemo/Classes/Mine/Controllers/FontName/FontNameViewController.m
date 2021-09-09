@@ -46,7 +46,7 @@
     }
     NSString *fontName = self.fontNameArray[indexPath.row];
     cell.textLabel.font = [UIFont fontWithName:fontName size:18];
-    cell.textLabel.text = [NSString stringWithFormat:@"我是李杨%zd 字体是%@", indexPath.row + 1, fontName];
+    cell.textLabel.text = [NSString stringWithFormat:@"1234567890字体%@", fontName];
     return cell;
 }
 
